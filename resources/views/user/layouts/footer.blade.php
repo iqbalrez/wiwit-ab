@@ -1,6 +1,6 @@
 <footer class="bg-white" aria-labelledby="footer-heading">
     <h2 id="footer-heading" class="sr-only">Footer</h2>
-    <div class="px-5 py-12 mx-auto max-w-7xl lg:py-16 md:px-12 lg:px-20">
+    <div class="px-5 py-12 mx-auto max-w-7xl lg:py-16 md:px-12 lg:px-0">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
             <p class="mt-2 text-sm font-normal text-[#757575]">Lorem, ipsum dolor sit amet consectetur adipisicing
                 elit. Numquam asperiores enim atque voluptas dolorum unde exercitationem neque nostrum consequuntur
