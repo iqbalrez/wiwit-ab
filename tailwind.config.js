@@ -1,7 +1,6 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 import forms from "@tailwindcss/forms";
 
-/** @type {import('tailwindcss').Config} */
 export default {
     content: [
         "./vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php",
@@ -20,12 +19,12 @@ export default {
             fontSize: {
                 xs: ".65rem",
                 tiny: "0.813rem",
-                sm: ".875rem",
+                sm: ".875rem", // 14px
                 md: "1rem",
-                lg: "1.125rem",
+                lg: "1.125rem", // 18px
                 xl: "1.25rem",
                 "2xl": "1.5rem",
-                "3xl": "1.875rem",
+                "3xl": "1.875rem", // 30px
                 "4xl": "2.25rem",
                 "5xl": "3rem",
                 "6xl": "4rem",
@@ -39,17 +38,17 @@ export default {
                 black: "900",
             },
             colors: {
-                primary: "#2C2F75",
+                primary: "#67BD65",
                 secondary: "#F3F4F6",
                 accent: "#F9FAFB",
                 danger: "#EF4444",
                 success: "#10B981",
                 warning: "#F59E0B",
-                dark: "#111827",
+                dark: "#133D4F",
                 info: "#3B82F6",
                 light: "#F9FAFB",
                 white: "#FFFFFF",
-                black: "#000000",
+                black: "#133D4F",
                 gray: {
                     50: "#F9FAFB",
                     100: "#F3F4F6",
@@ -186,7 +185,6 @@ export default {
         },
     },
 
-    plugins: [forms, require("flowbite/plugin"),
-    require('@tailwindcss/line-clamp'),
-],
+    plugins: [forms, require("flowbite"),
+    ],
 };
