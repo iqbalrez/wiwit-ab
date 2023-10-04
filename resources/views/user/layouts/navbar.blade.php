@@ -31,30 +31,34 @@
                     <div class="hidden md:inline-flex items-center gap-2 list-none lg:ml-auto">
                         <a class="flex items-center px-2 py-2 text-sm text-[#435660] lg:px-0 md:px-3 hover:text-[#67BD65]"
                             href="#">
-                            <span class="mdi mdi-phone-settings mr-2 text-xl"></span> 081392113276
+                            <ion-icon name="call" class="w-4 h-4 mr-2"></ion-icon> 081392113276
                         </a>
 
                         <a class="flex items-center px-2 py-2 text-sm text-[#435660] lg:px-6 md:px-3 hover:text-[#67BD65]"
                             href="#">
-                            <span class="mdi mdi-email mr-2 text-xl"></span> Email Me
+                            <ion-icon name="mail" class="w-4 h-4 mr-2"></ion-icon> Email Me
                         </a>
                     </div>
 
-                    <div class="items-center gap-2 lg:ml-auto hidden md:inline-flex">
-                        <a class="flex items-center text-[#435660] hover:text-[#67BD65]" href="#">
-                            <span class="mdi mdi-facebook text-xl"></span>
+                    <div class="items-center gap-1 lg:ml-auto hidden md:inline-flex">
+                        <a class="flex items-center text-[#435660] hover:text-[#67BD65]"
+                            href="https://www.facebook.com/wiwitab007">
+                            <ion-icon name="logo-facebook" class="w-4 h-4 mr-2"></ion-icon>
                         </a>
 
-                        <a class="flex items-center text-[#435660] hover:text-[#67BD65]" href="#">
-                            <span class="mdi mdi-youtube text-xl"></span>
+                        <a class="flex items-center text-[#435660] hover:text-[#67BD65]"
+                            href="https://www.youtube.com/c/WiwitABChannel">
+                            <ion-icon name="logo-youtube" class="w-4 h-4 mr-2"></ion-icon>
                         </a>
 
-                        <a class="flex items-center text-[#435660] hover:text-[#67BD65]" href="#">
-                            <span class="mdi mdi-instagram text-xl"></span>
+                        <a class="flex items-center text-[#435660] hover:text-[#67BD65]"
+                            href="https://instagram.com/wiwit_ab">
+                            <ion-icon name="logo-instagram" class="w-4 h-4 mr-2"></ion-icon>
                         </a>
 
-                        <a class="flex items-center text-[#435660] hover:text-[#67BD65]" href="#">
-                            <span class="mdi mdi-linkedin text-xl"></span>
+                        <a class="flex items-center text-[#435660] hover:text-[#67BD65]"
+                            href="https://www.linkedin.com/in/wiwit-ab-413324175">
+                            <ion-icon name="logo-linkedin" class="w-4 h-4 mr-2"></ion-icon>
                         </a>
                     </div>
                 </div>
@@ -62,27 +66,27 @@
                 <hr class="h-px bg-[#DAE6EB] border-0 my-3 hidden md:block mb-6">
 
                 <div class="flex flex-col py-5 px-2 md:px-0 md:py-0 md:justify-between md:flex-row">
-                    <a class="py-4 px-2 text-sm text-[#435660] transition ease-in-out transform border-b-2 border-t-2 border-transparent duration-650 focus:outline-none focus:shadow-none md:my-0 hover:border-[#67BD65] hover:text-[#67BD65]"
-                        href="#">
+                    <a class="{{ request()->is('/') ? 'text-primary border-primary' : 'border-transparent' }} py-4 px-2 text-sm text-[#435660] transition ease-in-out transform border-b-2 border-t-2 duration-650 focus:outline-none focus:shadow-none md:my-0 hover:border-[#67BD65] hover:text-[#67BD65]"
+                        href="/">
                         Home
                     </a>
-                    <a class="py-4 px-2 text-sm text-[#435660] transition ease-in-out transform border-b-2 border-t-2 border-transparent duration-650 focus:outline-none focus:shadow-none md:my-0 hover:border-[#67BD65] hover:text-[#67BD65]"
-                        href="#">
+                    <a class="{{ request()->routeIs('portofolio.index') ? 'text-primary border-primary' : 'border-transparent' }} py-4 px-2 text-sm text-[#435660] transition ease-in-out transform border-b-2 border-t-2 duration-650 focus:outline-none focus:shadow-none md:my-0 hover:border-[#67BD65] hover:text-[#67BD65]"
+                        href="{{ route('portofolio.index') }}">
                         Portfolio
                     </a>
-                    <a class="py-4 px-2 text-sm text-[#435660] transition ease-in-out transform border-b-2 border-t-2 border-transparent duration-650 focus:outline-none focus:shadow-none md:my-0 hover:border-[#67BD65] hover:text-[#67BD65]"
-                        href="#">
+                    <a class="{{ request()->routeIs('events.index') ? 'text-primary border-primary' : 'border-transparent' }} py-4 px-2 text-sm text-[#435660] transition ease-in-out transform border-b-2 border-t-2 duration-650 focus:outline-none focus:shadow-none md:my-0 hover:border-[#67BD65] hover:text-[#67BD65]"
+                        href="{{ route('events.index') }}">
                         Events
                     </a>
-                    <a class="py-4 px-2 text-sm text-[#435660] transition ease-in-out transform border-b-2 border-t-2 border-transparent duration-650 focus:outline-none focus:shadow-none md:my-0 hover:border-[#67BD65] hover:text-[#67BD65]"
-                        href="#">
+                    <a class="{{ request()->routeIs('material.index') ? 'text-primary border-primary' : 'border-transparent' }} py-4 px-2 text-sm text-[#435660] transition ease-in-out transform border-b-2 border-t-2 duration-650 focus:outline-none focus:shadow-none md:my-0 hover:border-[#67BD65] hover:text-[#67BD65]"
+                        href="{{ route('material.index') }}">
                         Material
                     </a>
-                    <a class="py-4 px-2 text-sm text-[#435660] transition ease-in-out transform border-b-2 border-t-2 border-transparent duration-650 focus:outline-none focus:shadow-none md:my-0 hover:border-[#67BD65] hover:text-[#67BD65]"
-                        href="#">
+                    <a class="{{ request()->routeIs('blog.index') ? 'text-primary border-primary' : 'border-transparent' }} py-4 px-2 text-sm text-[#435660] transition ease-in-out transform border-b-2 border-t-2 duration-650 focus:outline-none focus:shadow-none md:my-0 hover:border-[#67BD65] hover:text-[#67BD65]"
+                        href="{{ route('blog.index') }}">
                         Blog
                     </a>
-                    <a class="py-4 px-2 text-sm text-[#435660] transition ease-in-out transform border-b-2 border-t-2 border-transparent duration-650 focus:outline-none focus:shadow-none md:my-0 hover:border-[#67BD65] hover:text-[#67BD65]"
+                    <a class="py-4 px-2 text-sm text-[#435660] transition ease-in-out transform border-b-2 border-t-2 duration-650 focus:outline-none focus:shadow-none md:my-0 hover:border-[#67BD65] hover:text-[#67BD65]"
                         href="#">
                         Contact Me
                     </a>
