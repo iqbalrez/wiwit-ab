@@ -124,7 +124,7 @@
     <section class="relative flex items-center w-full bg-[#F9FAFC]">
         <div class="relative w-full px-5 mt-14 mb-16 md:pb-0 mx-auto md:px-12 lg:px-14 xl:px-0 max-w-6xl">
             <div class="flex flex-col items-start justify-between lg:flex-row">
-                <div class="max-w-xl text-center mt-24 lg:text-left">
+                <div class="max-w-xl mt-24 text-left">
                     <div>
                         <p class="text-2xl 2xl:text-3xl font-semibold text-dark">
                             My Latest Work<span class="text-primary">.</span>
@@ -282,7 +282,7 @@
 
 
     {{-- Business Insight --}}
-    <section>
+    <section class="px-8 md:px-0">
         <div class="grid grid-cols-1 lg:grid-cols-3 max-w-6xl mx-auto mt-40">
             <div class="col-span-2">
                 <p class="font-bold text-3xl text-black text-center">On The Cutting Edge<span
@@ -347,8 +347,9 @@
 
 
     {{-- Personal Consultion --}}
-    <section>
-        <div class="bg-[#0E3A51] max-w-6xl w-full mx-auto mt-20  mb-44 md:mt-40 rounded-3xl flex flex-col items-center">
+    <section class="px-8 md:px-0">
+        <div
+            class="bg-[#0E3A51] max-w-6xl w-full mx-auto mt-20  mb-44 md:mt-40 rounded-3xl flex flex-col items-center">
             <div class="grid grid-cols-1 md:grid-cols-2 py-8 md:py-16 px-6 md:px-14">
                 <div class="max-w-lg py-4 md:py-0 md:px-0">
                     <p class="font-semibold text-2xl md:text-4xl text-white">Get Personal Consultation<span
