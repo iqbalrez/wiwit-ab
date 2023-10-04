@@ -25,7 +25,7 @@
     {{-- Header Blog --}}
     <section>
         <div class="relative items-center w-full px-5 pt-20 py-20 mx-auto md:px-12 lg:px-14 xl:px-0 max-w-6xl">
-            <div class="grid grid-cols-2 gap-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                     <img src=""
                         class="bg-gray rounded-2xl custom-box-shadow mb-5 w-full h-80 object-center object-cover"
@@ -107,7 +107,7 @@
     {{-- Latest Blog --}}
     <section>
         <div class="relative items-center w-full px-5 pt-20 py-20 mx-auto md:px-12 lg:px-14 xl:px-24 max-w-full">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                 @for ($i = 1; $i <= 9; $i++)
                 <div class="flex gap-3 items-center">
                     <div>
