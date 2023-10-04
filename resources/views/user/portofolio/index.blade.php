@@ -1,5 +1,4 @@
-x-guest-layout>
-<<<<<<< HEAD
+<x-guest-layout>
     {{-- Hero --}}
     <section class="relative flex items-center w-full bg-[#E1ECF0]">
         <div class="relative items-center w-full px-5 mt-14 mb-16 md:pb-0 mx-auto md:px-12 lg:px-14 xl:px-0 max-w-6xl">
@@ -381,8 +380,4 @@ x-guest-layout>
 
     </section>
 
-
-
-
 </x-guest-layout>
-=======
