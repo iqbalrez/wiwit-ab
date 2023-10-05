@@ -8,6 +8,7 @@ use App\Http\Controllers\User\ContactMeController;
 use App\Http\Controllers\User\EventsController;
 use App\Http\Controllers\User\MaterialController;
 use App\Http\Controllers\User\PortofolioController;
+use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -37,8 +38,8 @@ Route::get('portofolio', [PortofolioController::class, 'index'])->name('portofol
 // Contact Us
 Route::get('contact-me', [ContactMeController::class, 'index'])->name('contact-me.index');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
+Route::get('/admin', function () {
+    return view('admin');
 })
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
@@ -49,7 +50,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::group(['prefix' => 'user', 'middleware' => ['auth']], function () {
+Route::group(['prefix' => 'admin'], function () {
+    Route::get('/', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
 });
+
 
 require __DIR__ . '/auth.php';
