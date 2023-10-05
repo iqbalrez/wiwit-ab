@@ -8,7 +8,7 @@
                             <p class="text-sm 2xl:text-lg text-primary font-light">
                                 Events
                             </p>
-                            <p class="text-2xl font-bold tracking-tight text-dark sm:text-5xl">
+                            <p class="text-2xl font-semibold tracking-tight text-dark sm:text-5xl">
                                 Elevate your skills and network <br>Join me at upcoming events<span
                                     class="text-primary">.</span>
                             </p>
