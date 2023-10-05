@@ -1,0 +1,107 @@
+<x-guest-layout>
+    <section class="relative flex items-center w-full bg-[#E1ECF0]">
+        <div class="relative items-center w-full px-5 pt-20 py-20 mx-auto md:px-12 lg:px-14 xl:px-0 md:max-w-6xl">
+            <div class="relative flex-col items-start m-auto align-middle">
+                <div class="relative items-center m-auto lg:inline-flex sm:order-first col-span-2">
+                    <div class="text-center lg:text-left">
+                        <div>
+                            <p class="text-sm 2xl:text-lg text-primary font-light">
+                                Contact Me
+                            </p>
+                            <p class="text-2xl font-bold tracking-tight text-dark sm:text-5xl">
+                                Wanna talk or ask something<span class="text-primary">?</span>
+                            </p>
+                            <p
+                                class="mx-auto lg:mx-0 mt-3 text-sm md:text-xl tracking-tight leading-8 text-gray-600 font-light">
+                                I'm always open to discuss your project, or just to say hi. Don't hesitate to
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="relative flex items-center w-full" id="contact">
+        <div
+            class="flex justify-center relative items-center w-full px-5 pt-20 py-20 mx-auto md:px-12 lg:px-14 xl:px-0 md:max-w-6xl">
+            <div class="grid md:grid-cols-2">
+                <div class="h-full pr-6">
+                    <p class="mt-3 mb-12 text-md text-gray-600 ">
+                        If you have any questions or want to know more about me, feel free to contact me.
+                    </p>
+                    <ul class="mb-6 md:mb-0 space-y-6">
+                        <li class="flex">
+                            <div class="flex h-10 w-10 items-center justify-center rounded text-primary">
+                                <ion-icon name="location" class="w-7 h-7"></ion-icon>
+                            </div>
+                            <div class="ml-4 mb-4">
+                                <h3 class="mb-2 text-md font-medium leading-6 text-dark ">Our
+                                    Address
+                                </h3>
+                                <p class="text-gray-600 ">Pogung Dalangan, Sinduadi, Kec. Mlati, Kabupaten Sleman, DIY
+                                </p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="flex h-10 w-10 items-center justify-center rounded text-primary">
+                                <ion-icon name="call" class="w-7 h-7"></ion-icon>
+                            </div>
+                            <div class="ml-4 mb-4">
+                                <h3 class="mb-2 text-md font-medium leading-6 text-dark ">Contact
+                                </h3>
+                                <p class="text-gray-600">itmcnazma@gmail.com</p>
+                                <p class="text-gray-600">wiwitab@gmail.com</p>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <div class="flex h-10 w-10 items-center justify-center rounded text-primary">
+                                <ion-icon name="time" class="w-7 h-7"></ion-icon>
+                            </div>
+                            <div class="ml-4 mb-4">
+                                <h3 class="mb-2 text-md font-medium leading-6 text-dark ">Working
+                                    hours</h3>
+                                <p class="text-gray-600">Monday - Saturday: 8am - 6pm</p>
+                                <p class="text-gray-600">Sunday: 11am - 4pm</p>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card h-fit max-w-6xl p-5 md:p-12 ces" id="form">
+                    <h2 class="mb-4 text-2xl font-bold">
+                        Send me a message
+                    </h2>
+                    <form id="contactForm">
+                        <div class="mb-6">
+                            <div class="mx-0 mb-1 sm:mb-4 space-y-6">
+                                <div>
+                                    <label for="name" class="block mb-2 text-sm text-dark">Name *</label>
+                                    <input type="text" id="name"
+                                        class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
+                                        placeholder="Jhon" required>
+                                </div>
+                                <div>
+                                    <label for="email" class="block mb-2 text-sm text-dark">Email address *</label>
+                                    <input type="text" id="email"
+                                        class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
+                                        placeholder="example@company.com" required>
+                                </div>
+                            </div>
+                            <div class="mb-6">
+                                <label for="message" class="block mb-2 text-sm text-dark ">How we can help?</label>
+                                <textarea id="message" rows="8"
+                                    class="block p-2.5 w-full bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none "
+                                    placeholder="I need help with this problem"></textarea>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit"
+                                class="w-full bg-primary text-white px-6 py-3 font-xl rounded-md sm:mb-0">Send
+                                Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</x-guest-layout>

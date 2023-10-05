@@ -21,8 +21,8 @@
                             </div>
                             <div class="mt-10">
                                 <button
-                                    class="inline-flex items-center justify-center text-sm px-8 py-3.5 mt-4 md:mt-0 rounded-full text-white bg-[#67BD65] hover:bg-[#435660] focus:outline-none focus:text-dark">
-                                    Free Consultation
+                                    class="inline-flex items-center justify-center text-sm px-8 py-3.5 mt-4 md:mt-0 rounded-full text-white bg-[#67BD65] hover:bg-dark focus:outline-none focus:text-white">
+                                    normal Consultation
                                 </button>
                             </div>
                         </div>
@@ -88,7 +88,7 @@
             </p>
             <div class="mt-7">
                 <button
-                    class="inline-flex items-center justify-center text-sm px-8 py-3.5 mt-4 md:mt-0 rounded-full text-white bg-[#67BD65] hover:bg-[#435660] focus:outline-none focus:text-dark font-semibold">
+                    class="inline-flex items-center justify-center text-sm px-8 py-3.5 mt-4 md:mt-0 rounded-full text-white bg-[#67BD65] hover:bg-dark focus:outline-none focus:text-white font-normal">
                     How we can help?
                 </button>
             </div>
@@ -273,26 +273,26 @@
                             <div>
                                 <label for="name" class="block mb-2 text-sm text-dark">Name *</label>
                                 <input type="text" id="name"
-                                    class="bg-gray-50 border-none text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
+                                    class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
                                     placeholder="Jhon" required>
                             </div>
                             <div>
                                 <label for="phone" class="block mb-2 text-sm text-dark">Phone *</label>
                                 <input type="text" id="phone"
-                                    class="bg-gray-50 border-none text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
+                                    class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
                                     placeholder="62 xxx xxx" required>
                             </div>
                             <div>
                                 <label for="email" class="block mb-2 text-sm text-dark">Email *</label>
                                 <input type="text" id="email"
-                                    class="bg-gray-50 border-none text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
+                                    class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
                                     placeholder="email@company.com" required>
                             </div>
                             <div class="">
                                 <label for="countries" class="block mb-2 text-sm font-medium text-dark">Service
                                     interest in *</label>
                                 <select id="countries"
-                                    class="bg-gray-50 border-none text-dark text-sm rounded-lg focus:outline-none min-w-full py-3">
+                                    class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none min-w-full py-3">
                                     <option selected>Choose a country</option>
                                     <option value="US">United States</option>
                                     <option value="CA">Canada</option>
@@ -304,19 +304,17 @@
                         <div class="mb-6">
                             <label for="subject" class="block mb-2 text-sm text-dark">Subject *</label>
                             <input type="text" id="subject"
-                                class="bg-gray-50 border-none text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
+                                class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
                                 placeholder="Personal text planning" required>
                         </div>
                         <div class="mb-6">
-
                             <label for="message" class="block mb-2 text-sm text-dark ">How we can help?</label>
                             <textarea id="message" rows="8"
-                                class="block p-2.5 w-full bg-gray-50 border-none text-dark text-sm rounded-lg focus:outline-none "
+                                class="block p-2.5 w-full bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none "
                                 placeholder="I need help with this problem"></textarea>
-
                         </div>
                         <button
-                            class="inline-flex w-full items-center justify-center text-sm px-8 py-3.5 rounded-full text-white bg-[#67BD65] hover:bg-[#435660] focus:outline-none focus:text-dark font-medium">
+                            class="inline-flex w-full items-center justify-center text-md px-8 py-3.5 rounded-full text-white bg-[#67BD65] hover:bg-dark focus:outline-none focus:text-white font-normal">
                             Request a Quote
                         </button>
                     </form>

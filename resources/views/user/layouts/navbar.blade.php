@@ -86,14 +86,14 @@
                         href="{{ route('blog.index') }}">
                         Blog
                     </a>
-                    <a class="py-4 px-2 text-sm text-[#435660] transition ease-in-out transform border-b-2 border-t-2 duration-650 focus:outline-none focus:shadow-none md:my-0 hover:border-[#67BD65] hover:text-[#67BD65]"
-                        href="#footer-heading">
+                    <a class="{{ request()->routeIs('contact-me.index') ? 'text-primary border-primary' : 'border-transparent' }} py-4 px-2 text-sm text-[#435660] transition ease-in-out transform border-b-2 border-t-2 duration-650 focus:outline-none focus:shadow-none md:my-0 hover:border-[#67BD65] hover:text-[#67BD65]"
+                        href="{{ route('contact-me.index') }}">
                         Contact Me
                     </a>
                     <div>
                         <a href="#footer-heading">
                             <button
-                                class="inline-flex items-center justify-center text-sm px-8 py-3.5 mt-4 md:mt-0 rounded-full text-white bg-[#67BD65] hover:bg-[#435660] focus:outline-none focus:text-black">
+                                class="inline-flex items-center justify-center text-sm px-8 py-3.5 mt-4 md:mt-0 rounded-full text-white bg-[#67BD65] hover:bg-dark focus:outline-none focus:text-white">
                                 Free Consultation
                             </button>
                         </a>

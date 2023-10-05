@@ -7,7 +7,7 @@
                 <div class="relative items-center m-auto lg:inline-flex sm:order-first col-span-2">
                     <div class="text-center lg:text-left">
                         <div>
-                            <p class="text-sm 2xl:text-xl text-primary font-light">
+                            <p class="text-sm 2xl:text-lg text-primary font-light">
                                 Material
                             </p>
                             <p class="text-2xl font-bold tracking-tight text-dark sm:text-5xl">
@@ -26,7 +26,7 @@
     {{-- Learning Resources --}}
     <section class="relative flex items-center w-full">
         <div class="relative items-center w-full px-5 pt-20 py-20 mx-auto md:px-12 lg:px-14 xl:px-0 max-w-6xl">
-            <p class="text-3xl 2xl:text-3xl font-bold text-dark">
+            <p class="text-3xl 2xl:text-3xl font-semibold text-dark">
                 Discover the best learning resources<span class="text-primary">.</span>
             </p>
             <div class="block md:grid md:grid-cols-6 md:gap-8 mt-16">
@@ -84,7 +84,7 @@
                                             <span>Education</span>
                                         </div>
                                         <p
-                                            class="line-clamp-2 font-bold text-lg xl:text-lg tracking-tight leading-7 text-dark">
+                                            class="line-clamp-2 font-semibold text-lg xl:text-lg tracking-tight leading-7 text-dark">
                                             Lingkungan Bisnis
                                         </p>
                                         <p class="text-sm 2xl:text-sm font-normal text-gray-500 mb-3">Wiji Nurastuti</p>

@@ -6,10 +6,10 @@
                 <div class="relative items-center m-auto lg:inline-flex sm:order-first col-span-2">
                     <div class="text-center lg:text-left">
                         <div>
-                            <p class="text-sm 2xl:text-xl text-primary font-light">
+                            <p class="text-sm 2xl:text-lg text-primary font-light">
                                 Blog
                             </p>
-                            <p class="text-2xl font-bold tracking-tight text-dark sm:text-5xl">
+                            <p class="text-2xl font-semibold tracking-tight text-dark sm:text-5xl">
                                 Explore my insightful <br>perspectives in every blogs<span class="text-primary">.</span>
                             </p>
                             <p class="mx-auto lg:mx-0 mt-3 text-xl tracking-tight leading-8 text-gray-600 font-light">
@@ -36,7 +36,7 @@
                         </div>
                         <p class="text-xs 2xl:text-sm font-semibold text-dark">• 4 min</p>
                     </div>
-                    <p class="line-clamp-3 font-bold text-2xl tracking-tight leading-7 text-dark mb-6">
+                    <p class="line-clamp-3 font-semibold text-2xl tracking-tight leading-7 text-dark mb-6">
                         Tertarik Menjadi Blogger? Begini Tips Menulis Blog untuk Pemula
                     </p>
                     <p class="line-clamp-3 text-gray-500 text-xs 2xl:text-sm leading-6 font-normal">
@@ -58,7 +58,8 @@
                                 </div>
                                 <p class="text-xs 2xl:text-sm font-semibold text-dark">• 4 min</p>
                             </div>
-                            <p class="line-clamp-3 font-bold text-lg tracking-tight leading-7 text-dark mb-6">
+                            <p
+                                class="line-clamp-2 font-semibold text-md hover:line-clamp-none tracking-tight leading-7 text-dark mb-6">
                                 Tertarik Menjadi Blogger? Begini Tips Menulis Blog untuk Pemula
                             </p>
                         </div>
@@ -76,7 +77,8 @@
                                 </div>
                                 <p class="text-xs 2xl:text-sm font-semibold text-dark">• 4 min</p>
                             </div>
-                            <p class="line-clamp-3 font-bold text-lg tracking-tight leading-7 text-dark mb-6">
+                            <p
+                                class="line-clamp-2 font-semibold text-md hover:line-clamp-none tracking-tight leading-7 text-dark mb-6">
                                 Tertarik Menjadi Blogger? Begini Tips Menulis Blog untuk Pemula
                             </p>
                         </div>
@@ -94,7 +96,8 @@
                                 </div>
                                 <p class="text-xs 2xl:text-sm font-semibold text-dark">• 4 min</p>
                             </div>
-                            <p class="line-clamp-3 font-bold text-lg tracking-tight leading-7 text-dark mb-6">
+                            <p
+                                class="line-clamp-2 font-semibold text-md hover:line-clamp-none tracking-tight leading-7 text-dark mb-6">
                                 Tertarik Menjadi Blogger? Begini Tips Menulis Blog untuk Pemula
                             </p>
                         </div>
@@ -109,24 +112,25 @@
         <div class="relative items-center w-full px-5 pt-20 py-20 mx-auto md:px-12 lg:px-14 xl:px-24 max-w-full">
             <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                 @for ($i = 1; $i <= 9; $i++)
-                <div class="flex gap-3 items-center">
-                    <div>
-                        <img src="" class="w-36 h-36 object-center object-cover rounded-lg bg-gray-50 mr-4"
-                            alt="">
-                    </div>
-                    <div>
-                        <div class="flex gap-3 items-center mb-6">
-                            <div
-                                class="flex items-center rounded-lg justify-center py-2 text-sm px-6 text-white bg-primary">
-                                <span>Education</span>
-                            </div>
-                            <p class="text-xs 2xl:text-sm font-semibold text-dark">• 4 min</p>
+                    <div class="flex gap-3 items-center">
+                        <div>
+                            <img src="" class="w-36 h-36 object-center object-cover rounded-lg bg-gray-50 mr-4"
+                                alt="">
                         </div>
-                        <p class="line-clamp-3 font-bold text-md xl:text-lg tracking-tight leading-7 text-dark mb-6">
-                            Tertarik Menjadi Blogger? Begini Tips Menulis Blog untuk Pemula
-                        </p>
+                        <div>
+                            <div class="flex gap-3 items-center mb-6">
+                                <div
+                                    class="flex items-center rounded-lg justify-center py-2 text-sm px-6 text-white bg-primary">
+                                    <span>Education</span>
+                                </div>
+                                <p class="text-xs 2xl:text-sm font-semibold text-dark">• 4 min</p>
+                            </div>
+                            <p
+                                class="line-clamp-2 hover:line-clamp-none font-semibold text-md xl:text-md tracking-tight leading-7 text-dark mb-6">
+                                Tertarik Menjadi Blogger? Begini Tips Menulis Blog untuk Pemula
+                            </p>
+                        </div>
                     </div>
-                </div>
                 @endfor
             </div>
         </div>
