@@ -1,20 +1,20 @@
 <x-guest-layout>
     <section class="relative flex items-center w-full bg-[#E1ECF0]">
-        <div class="flex items-center justify-center items-center w-full px-5 pt-20 py-20 mx-auto md:px-12 lg:px-14 xl:px-0 max-w-6xl">
+        <div class="flex items-center justify-center w-full px-5 pt-20 py-20 mx-auto md:px-12 lg:px-14 xl:px-0 max-w-6xl">
             <div class="relative flex-col items-start m-auto align-middle">
                 <div class="relative items-center m-auto lg:inline-flex sm:order-first col-span-2">
                     <div class="text-center lg:text-center">
                         <div>
-                            <p class="text-sm 2xl:text-xl text-primary font-semibold">
+                            <p class="2xl:text-sm  text-primary font-semibold">
                                 Technology
                             </p>
-                            <p class="mb-8 text-2xl font-bold tracking-tight text-dark sm:text-5xl">
+                            <p class="mb-8 text-2xl font-bold tracking-tight text-dark sm:text-xl">
                                 Tertarik Menjadi Blogger? Begini Tips<br>Menulis Blog untuk Pemula
                             </p>
-                            <p class="text-sm 2xl:text-x1 font-semibold text-dark">
+                            <p class="text-sm font-semibold text-dark">
                                  Wiwit AB
                             </p>
-                            <p class="text-sm 2xl:text-x1 font-semibold text-gray-500">
+                            <p class="text-sm font-normal text-gray-500">
                                     12 August 2023
                             </p>
                         </div>
@@ -25,13 +25,13 @@
     </section>
 
     <section>
-        <div class="max-w-xl h-96 w-full mx-auto transform -translate-y-20 sm:-translate-y-14">
+        <div class="max-w-4xl w-full mx-auto transform -translate-y-20 sm:-translate-y-14">
             <img class="rounded-lg" src="https://global-uploads.webflow.com/5f6cc9cd16d59d990c8fca33/6253621fbc21de5a2a444790_diverse-stock-photography.jpg" alt="">
         </div>
 
-        <div class="flex items-center justify-center items-center w-full px-5 pt-20 py-20 mx-auto md:px-12 lg:px-14 xl:px-0 max-w-6xl">
+        <div class="flex items-center justify-center w-full px-5 mt-0  mx-auto md:px-12 lg:px-14 xl:px-0 max-w-4xl">
             <div>
-                <P class="overflow-x-auto text-sm 2xl:text-x1 font-manrope text-black leading-8">
+                <P class="overflow-x-auto font-normal text-left text-sm 2xl:text-xl text-black leading-8">
                     The American Academy of Achievement members describe how they applied these six principles to their own lives
                     — passion, vision, preparation, courage, perseverance and integrity — to set them on to their individual paths to
                     success. Learn how these core principles helped our extraordinary leaders shape their achievements and their
@@ -58,10 +58,10 @@
                     the middle of your own personal success story.
                 </P>
                 <div class="flex items-center justify-center mt-14">
-                    <button
+                    <a href="{{ route('blog.index') }}"
                         class="flex items-center justify-center text-sm px-8 py-3.5 mt-4 md:mt-0 rounded-full text-grey-500 bg-gray-200 hover:bg-[#435660] focus:outline-none focus:text-dark">
                         Kembali ke blog
-                    </button>
+                    </a>
                 </div>
 </section>
 </x-guest-layout>
