@@ -22,7 +22,7 @@ use App\Http\Controllers\User\PortofolioController;
 Route::get('/', [HomeController::class, 'index']);
 // Blog
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
-Route::get('/blog/{id}', [BlogController::class, 'show'])->name('blog.show');
+Route::get('/blog/1', [BlogController::class, 'show'])->name('blog.show');
 
 // Events
 Route::get('/events', [EventsController::class, 'index'])->name('events.index');
