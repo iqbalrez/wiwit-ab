@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="custom-box-shadow bg-white rounded-2xl flex p-4">
+        <div class="shadow-md border-2 bg-white rounded-2xl flex p-4">
             <div class="flex items-center justify-center mr-4">
                 <ion-icon name="medal-outline" class="w-10 h-10 text-dark"></ion-icon>
             </div>
@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <div class="custom-box-shadow bg-white rounded-2xl flex p-4">
+        <div class="shadow-md border-2 bg-white rounded-2xl flex p-4">
             <div class="flex items-center justify-center mr-4">
                 <ion-icon name="briefcase-outline" class="w-10 h-10 text-dark"></ion-icon>
             </div>
@@ -30,7 +30,7 @@
             </div>
         </div>
 
-        <div class="custom-box-shadow bg-white rounded-2xl flex p-4">
+        <div class="shadow-md border-2 bg-white rounded-2xl flex p-4">
             <div class="flex items-center justify-center mr-4">
                 <ion-icon name="grid-outline" class="w-10 h-10 text-dark"></ion-icon>
             </div>
@@ -45,7 +45,7 @@
             </div>
         </div>
 
-        <div class="custom-box-shadow bg-white rounded-2xl flex p-4">
+        <div class="shadow-md border-2 bg-white rounded-2xl flex p-4">
             <div class="flex items-center justify-center mr-4">
                 <ion-icon name="document-outline" class="w-10 h-10 text-dark"></ion-icon>
             </div>
@@ -60,7 +60,7 @@
             </div>
         </div>
 
-        <div class="custom-box-shadow bg-white rounded-2xl flex p-4">
+        <div class="shadow-md border-2 bg-white rounded-2xl flex p-4">
             <div class="flex items-center justify-center mr-4">
                 <ion-icon name="book-outline" class="w-10 h-10 text-dark"></ion-icon>
             </div>
@@ -75,7 +75,7 @@
             </div>
         </div>
 
-        <div class="custom-box-shadow bg-white rounded-2xl flex p-4">
+        <div class="shadow-lg border-2 bg-white rounded-2xl flex p-4">
             <div class="flex items-center justify-center mr-4">
                 <ion-icon name="chatbubble-outline" class="w-10 h-10 text-dark"></ion-icon>
             </div>
