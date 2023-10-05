@@ -25,11 +25,11 @@
     </section>
 
     <section>
-        <div class="max-w-4xl w-full mx-auto transform -translate-y-20 sm:-translate-y-14">
+        <div class="max-w-4xl w-full px-8 mx-auto transform -translate-y-20 sm:-translate-y-14">
             <img class="rounded-lg" src="https://global-uploads.webflow.com/5f6cc9cd16d59d990c8fca33/6253621fbc21de5a2a444790_diverse-stock-photography.jpg" alt="">
         </div>
 
-        <div class="flex items-center justify-center w-full px-5 mt-0  mx-auto md:px-12 lg:px-14 xl:px-0 max-w-4xl">
+        <div class="flex items-center justify-center px-8 w-full px-5 mt-0  mx-auto md:px-12 lg:px-14 xl:px-0 max-w-4xl">
             <div>
                 <P class="overflow-x-auto font-normal text-left text-sm 2xl:text-xl text-black leading-8">
                     The American Academy of Achievement members describe how they applied these six principles to their own lives
