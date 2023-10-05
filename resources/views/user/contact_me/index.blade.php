@@ -24,7 +24,7 @@
     <section class="relative flex items-center w-full" id="contact">
         <div
             class="flex justify-center relative items-center w-full px-5 pt-20 py-20 mx-auto md:px-12 lg:px-14 xl:px-0 md:max-w-6xl">
-            <div class="grid md:grid-cols-2">
+            <div class="grid md:grid-cols-2 gap-8">
                 <div class="h-full pr-6">
                     <p class="mt-3 mb-12 text-md text-gray-600 ">
                         If you have any questions or want to know more about me, feel free to contact me.
@@ -67,28 +67,28 @@
                         </li>
                     </ul>
                 </div>
-                <div class="card h-fit max-w-6xl p-5 md:p-12 ces" id="form">
-                    <h2 class="mb-4 text-2xl font-bold">
+                <div class="card h-fit max-w-6xl p-5 md:p-12 bg-dark rounded-2xl ces" id="form">
+                    <h2 class="mb-4 text-2xl font-semibold text-white">
                         Send me a message
                     </h2>
                     <form id="contactForm">
                         <div class="mb-6">
                             <div class="mx-0 mb-1 sm:mb-4 space-y-6">
                                 <div>
-                                    <label for="name" class="block mb-2 text-sm text-dark">Name *</label>
+                                    <label for="name" class="block mb-2 text-sm text-white">Name *</label>
                                     <input type="text" id="name"
                                         class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
                                         placeholder="Jhon" required>
                                 </div>
                                 <div>
-                                    <label for="email" class="block mb-2 text-sm text-dark">Email address *</label>
+                                    <label for="email" class="block mb-2 text-sm text-white">Email address *</label>
                                     <input type="text" id="email"
                                         class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
                                         placeholder="example@company.com" required>
                                 </div>
                             </div>
                             <div class="mb-6">
-                                <label for="message" class="block mb-2 text-sm text-dark ">How we can help?</label>
+                                <label for="message" class="block mb-2 text-sm text-white ">How we can help?</label>
                                 <textarea id="message" rows="8"
                                     class="block p-2.5 w-full bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none "
                                     placeholder="I need help with this problem"></textarea>
