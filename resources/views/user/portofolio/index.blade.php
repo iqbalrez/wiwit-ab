@@ -172,7 +172,7 @@
                                 <div x-show="tab==='tab1'" class="text-gray-500">
                                     <main>
                                         <div class="col-span-3">
-                                            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+                                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
                                                 id="course-list">
                                                 @for ($i = 0; $i < 6; $i++)
                                                     <div class="w-64 rounded-xl mx-auto mb-8 border h-fit">
@@ -207,7 +207,7 @@
                                 <div x-show="tab==='tab2'" class="text-gray-500" style="display:none">
                                     <main>
                                         <div class="col-span-3">
-                                            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+                                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
                                                 id="course-list">
                                                 @for ($i = 0; $i < 5; $i++)
                                                     <div class="w-64 rounded-xl mx-auto mb-8 border h-fit">
@@ -242,7 +242,7 @@
                                 <div x-show="tab==='tab3'" class="text-gray-500" style="display:none">
                                     <main>
                                         <div class="col-span-3">
-                                            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+                                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
                                                 id="course-list">
                                                 @for ($i = 0; $i < 4; $i++)
                                                     <div class="w-64 rounded-xl mx-auto mb-8 border h-fit">
