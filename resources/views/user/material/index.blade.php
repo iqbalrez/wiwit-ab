@@ -10,7 +10,7 @@
                             <p class="text-sm 2xl:text-lg text-primary font-light">
                                 Material
                             </p>
-                            <p class="text-2xl font-bold tracking-tight text-dark sm:text-5xl">
+                            <p class="text-2xl font-semibold tracking-tight text-dark sm:text-5xl">
                                 Unlock a wealth of knowledge <br>and resources<span class="text-primary">.</span>
                             </p>
                             <p class="mx-auto lg:mx-0 mt-3 text-xl tracking-tight leading-8 text-gray-600 font-light">
