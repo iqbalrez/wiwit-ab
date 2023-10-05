@@ -87,14 +87,16 @@
                         Blog
                     </a>
                     <a class="py-4 px-2 text-sm text-[#435660] transition ease-in-out transform border-b-2 border-t-2 duration-650 focus:outline-none focus:shadow-none md:my-0 hover:border-[#67BD65] hover:text-[#67BD65]"
-                        href="#">
+                        href="#footer-heading">
                         Contact Me
                     </a>
                     <div>
-                        <button
-                            class="inline-flex items-center justify-center text-sm px-8 py-3.5 mt-4 md:mt-0 rounded-full text-white bg-[#67BD65] hover:bg-[#435660] focus:outline-none focus:text-black">
-                            Free Consultation
-                        </button>
+                        <a href="#footer-heading">
+                            <button
+                                class="inline-flex items-center justify-center text-sm px-8 py-3.5 mt-4 md:mt-0 rounded-full text-white bg-[#67BD65] hover:bg-[#435660] focus:outline-none focus:text-black">
+                                Free Consultation
+                            </button>
+                        </a>
                     </div>
                 </div>
             </nav>
