@@ -31,30 +31,34 @@
                     <div class="hidden md:inline-flex items-center gap-2 list-none lg:ml-auto">
                         <a class="flex items-center px-2 py-2 text-sm text-[#435660] lg:px-0 md:px-3 hover:text-[#67BD65]"
                             href="#">
-                            <span class="mdi mdi-phone-settings mr-2 text-xl"></span> 081392113276
+                            <ion-icon name="call" class="w-4 h-4 mr-2"></ion-icon> 081392113276
                         </a>
 
                         <a class="flex items-center px-2 py-2 text-sm text-[#435660] lg:px-6 md:px-3 hover:text-[#67BD65]"
                             href="#">
-                            <span class="mdi mdi-email mr-2 text-xl"></span> Email Me
+                            <ion-icon name="mail" class="w-4 h-4 mr-2"></ion-icon> Email Me
                         </a>
                     </div>
 
-                    <div class="items-center gap-2 lg:ml-auto hidden md:inline-flex">
-                        <a class="flex items-center text-[#435660] hover:text-[#67BD65]" href="https://www.facebook.com/wiwitab007">
-                            <span class="mdi mdi-facebook text-xl"></span>
+                    <div class="items-center gap-1 lg:ml-auto hidden md:inline-flex">
+                        <a class="flex items-center text-[#435660] hover:text-[#67BD65]"
+                            href="https://www.facebook.com/wiwitab007">
+                            <ion-icon name="logo-facebook" class="w-4 h-4 mr-2"></ion-icon>
                         </a>
 
-                        <a class="flex items-center text-[#435660] hover:text-[#67BD65]" href="https://www.youtube.com/c/WiwitABChannel">
-                            <span class="mdi mdi-youtube text-xl"></span>
+                        <a class="flex items-center text-[#435660] hover:text-[#67BD65]"
+                            href="https://www.youtube.com/c/WiwitABChannel">
+                            <ion-icon name="logo-youtube" class="w-4 h-4 mr-2"></ion-icon>
                         </a>
 
-                        <a class="flex items-center text-[#435660] hover:text-[#67BD65]" href="https://instagram.com/wiwit_ab">
-                            <span class="mdi mdi-instagram text-xl"></span>
+                        <a class="flex items-center text-[#435660] hover:text-[#67BD65]"
+                            href="https://instagram.com/wiwit_ab">
+                            <ion-icon name="logo-instagram" class="w-4 h-4 mr-2"></ion-icon>
                         </a>
 
-                        <a class="flex items-center text-[#435660] hover:text-[#67BD65]" href="https://www.linkedin.com/in/wiwit-ab-413324175">
-                            <span class="mdi mdi-linkedin text-xl"></span>
+                        <a class="flex items-center text-[#435660] hover:text-[#67BD65]"
+                            href="https://www.linkedin.com/in/wiwit-ab-413324175">
+                            <ion-icon name="logo-linkedin" class="w-4 h-4 mr-2"></ion-icon>
                         </a>
                     </div>
                 </div>
@@ -67,30 +71,32 @@
                         Home
                     </a>
                     <a class="{{ request()->routeIs('portofolio.index') ? 'text-primary border-primary' : 'border-transparent' }} py-4 px-2 text-sm text-[#435660] transition ease-in-out transform border-b-2 border-t-2 duration-650 focus:outline-none focus:shadow-none md:my-0 hover:border-[#67BD65] hover:text-[#67BD65]"
-                        href="{{route('portofolio.index')}}">
+                        href="{{ route('portofolio.index') }}">
                         Portfolio
                     </a>
                     <a class="{{ request()->routeIs('events.index') ? 'text-primary border-primary' : 'border-transparent' }} py-4 px-2 text-sm text-[#435660] transition ease-in-out transform border-b-2 border-t-2 duration-650 focus:outline-none focus:shadow-none md:my-0 hover:border-[#67BD65] hover:text-[#67BD65]"
-                        href="{{route('events.index')}}">
+                        href="{{ route('events.index') }}">
                         Events
                     </a>
                     <a class="{{ request()->routeIs('material.index') ? 'text-primary border-primary' : 'border-transparent' }} py-4 px-2 text-sm text-[#435660] transition ease-in-out transform border-b-2 border-t-2 duration-650 focus:outline-none focus:shadow-none md:my-0 hover:border-[#67BD65] hover:text-[#67BD65]"
-                        href="{{route('material.index')}}">
+                        href="{{ route('material.index') }}">
                         Material
                     </a>
                     <a class="{{ request()->routeIs('blog.index') ? 'text-primary border-primary' : 'border-transparent' }} py-4 px-2 text-sm text-[#435660] transition ease-in-out transform border-b-2 border-t-2 duration-650 focus:outline-none focus:shadow-none md:my-0 hover:border-[#67BD65] hover:text-[#67BD65]"
-                        href="{{route('blog.index')}}">
+                        href="{{ route('blog.index') }}">
                         Blog
                     </a>
                     <a class="py-4 px-2 text-sm text-[#435660] transition ease-in-out transform border-b-2 border-t-2 duration-650 focus:outline-none focus:shadow-none md:my-0 hover:border-[#67BD65] hover:text-[#67BD65]"
-                        href="#">
+                        href="#footer-heading">
                         Contact Me
                     </a>
                     <div>
-                        <button
-                            class="inline-flex items-center justify-center text-sm px-8 py-3.5 mt-4 md:mt-0 rounded-full text-white bg-[#67BD65] hover:bg-[#435660] focus:outline-none focus:text-black">
-                            Free Consultation
-                        </button>
+                        <a href="#footer-heading">
+                            <button
+                                class="inline-flex items-center justify-center text-sm px-8 py-3.5 mt-4 md:mt-0 rounded-full text-white bg-[#67BD65] hover:bg-[#435660] focus:outline-none focus:text-black">
+                                Free Consultation
+                            </button>
+                        </a>
                     </div>
                 </div>
             </nav>

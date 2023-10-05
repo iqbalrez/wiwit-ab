@@ -122,7 +122,7 @@
                             </div>
                             <p class="text-xs 2xl:text-sm font-semibold text-dark">• 4 min</p>
                         </div>
-                        <p class="line-clamp-3 font-bold text-lg tracking-tight leading-7 text-dark mb-6">
+                        <p class="line-clamp-3 font-bold text-md xl:text-lg tracking-tight leading-7 text-dark mb-6">
                             Tertarik Menjadi Blogger? Begini Tips Menulis Blog untuk Pemula
                         </p>
                     </div>
