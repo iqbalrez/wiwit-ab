@@ -4,7 +4,7 @@
             <div class="flex items-center justify-start">
                 <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
                     type="button"
-                    class="inline-flex items-center p-2 text-xs 2xl:text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200  -700 -600">
+                    class="inline-flex items-center p-2 text-sm 2xl:text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200  -700 -600">
                     <span class="sr-only">Open sidebar</span>
                     <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
                         xmlns="http://www.w3.org/2000/svg">
@@ -23,7 +23,7 @@
                 <div class="flex items-center ml-3">
                     <div>
                         <button type="button"
-                            class="flex text-xs 2xl:text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 -600"
+                            class="flex text-sm 2xl:text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 -600"
                             aria-expanded="false" data-dropdown-toggle="dropdown-user">
                             <span class="sr-only">Open user menu</span>
                             <img class="w-8 h-8 rounded-full"
@@ -33,32 +33,32 @@
                     <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow  "
                         id="dropdown-user">
                         <div class="px-4 py-3" role="none">
-                            <p class="text-xs 2xl:text-sm text-gray-900  role="none">
+                            <p class="text-sm 2xl:text-sm text-gray-900  role="none">
                                 Neil Sims
                             </p>
-                            <p class="text-xs 2xl:text-sm font-medium text-gray-900 truncate " role="none">
+                            <p class="text-sm 2xl:text-sm font-medium text-gray-900 truncate " role="none">
                                 neil.sims@flowbite.com
                             </p>
                         </div>
                         <ul class="py-1" role="none">
                             <li>
                                 <a href="#"
-                                    class="block px-4 py-2 text-xs 2xl:text-sm text-gray-700 hover:bg-gray-100  -600 "
+                                    class="block px-4 py-2 text-sm 2xl:text-sm text-gray-700 hover:bg-gray-100  -600 "
                                     role="menuitem">Dashboard</a>
                             </li>
                             <li>
                                 <a href="#"
-                                    class="block px-4 py-2 text-xs 2xl:text-sm text-gray-700 hover:bg-gray-100  -600 "
+                                    class="block px-4 py-2 text-sm 2xl:text-sm text-gray-700 hover:bg-gray-100  -600 "
                                     role="menuitem">Settings</a>
                             </li>
                             <li>
                                 <a href="#"
-                                    class="block px-4 py-2 text-xs 2xl:text-sm text-gray-700 hover:bg-gray-100  -600 "
+                                    class="block px-4 py-2 text-sm 2xl:text-sm text-gray-700 hover:bg-gray-100  -600 "
                                     role="menuitem">Earnings</a>
                             </li>
                             <li>
                                 <a href="#"
-                                    class="block px-4 py-2 text-xs 2xl:text-sm text-gray-700 hover:bg-gray-100  -600 "
+                                    class="block px-4 py-2 text-sm 2xl:text-sm text-gray-700 hover:bg-gray-100  -600 "
                                     role="menuitem">Sign out</a>
                             </li>
                         </ul>
@@ -74,7 +74,7 @@
     aria-label="Sidebar">
     <div class="h-full px-3 pb-4 overflow-y-auto bg-dark ">
         <ul class="space-y-2">
-            <p class="px-3 py-3 text-xs font-semibold text-white uppercase">Umum</p>
+            <p class="px-3 py-3 text-sm font-semibold text-white uppercase">Umum</p>
             <x-sidebar-menu name="Dashboard" icon="fas fa-home" route="{{ route('admin.dashboard') }}"
                 active="{{ request()->routeIs('admin.dashboard') }}" />
             <x-sidebar-menu name="Message" icon="fas fa-envelope" route="{{ route('admin.message') }}"
@@ -86,7 +86,7 @@
             <x-sidebar-menu name="Testimonial" icon="fas fa-quote-right" route="{{ route('admin.testimonial') }}"
                 active="{{ request()->routeIs('admin.testimonial') }}" />
 
-            <p class="px-3 py-3 text-xs font-semibold text-white uppercase">Pengaturan Portofolio</p>
+            <p class="px-3 py-3 text-sm font-semibold text-white uppercase">Pengaturan Portofolio</p>
             <x-sidebar-menu name="Experience" icon="fas fa-briefcase" route="{{ route('admin.experience') }}"
                 active="{{ request()->routeIs('admin.experience') }}" />
             <x-sidebar-menu name="Work" icon="fas fa-briefcase" route="{{ route('admin.work') }}"
@@ -94,7 +94,7 @@
             <x-sidebar-menu name="Work Category" icon="fas fa-sort" route="{{ route('admin.work-category') }}"
                 active="{{ request()->routeIs('admin.work-category') }}" />
 
-            <p class="px-3 py-3 text-xs font-semibold text-white uppercase">Blog</p>
+            <p class="px-3 py-3 text-sm font-semibold text-white uppercase">Blog</p>
             <x-sidebar-menu name="Blog" icon="fas fa-blog" route="{{ route('admin.blog') }}"
                 active="{{ request()->routeIs('admin.blog') }}" />
             <x-sidebar-menu name="Blog Category" icon="fas fa-sort" route="{{ route('admin.blog-category') }}"
@@ -107,20 +107,20 @@
                 route="{{ route('admin.consultation-request-category') }}"
                 active="{{ request()->routeIs('admin.consultation-category') }}" />
 
-            <p class="px-3 py-3 text-xs font-semibold text-white uppercase">Contact</p>
+            <p class="px-3 py-3 text-sm font-semibold text-white uppercase">Contact</p>
 
             <x-sidebar-menu name="Contact Page Setting" icon="fas fa-phone"
                 route="{{ route('admin.contact-page-setting') }}"
                 active="{{ request()->routeIs('admin.contact') }}" />
 
-            <p class="px-3 py-3 text-xs font-semibold text-white uppercase">Event</p>
+            <p class="px-3 py-3 text-sm font-semibold text-white uppercase">Event</p>
             <x-sidebar-menu name="Event" icon="fas fa-calendar" route="{{ route('admin.event') }}"
                 active="{{ request()->routeIs('admin.event') }}" />
             <x-sidebar-menu name="Event Category" icon="fas fa-sort" route="{{ route('admin.event-category') }}"
                 active="{{ request()->routeIs('admin.event-category') }}" />
 
 
-            <p class="px-3 py-3 text-xs font-semibold text-white uppercase">Material</p>
+            <p class="px-3 py-3 text-sm font-semibold text-white uppercase">Material</p>
             <x-sidebar-menu name="Material" icon="fas fa-book" route="{{ route('admin.material') }}"
                 active="{{ request()->routeIs('admin.material') }}" />
             <x-sidebar-menu name="Material Category" icon="fas fa-sort"
