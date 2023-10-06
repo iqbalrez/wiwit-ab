@@ -1,4 +1,4 @@
-<nav class="fixed top-0 z-50 w-full bg-dark border-b border-dark  ">
+<nav class="fixed top-0 z-50 w-full bg-white border-b border-white  ">
     <div class="px-3 py-3 lg:px-5 lg:pl-3">
         <div class="flex items-center justify-between">
             <div class="flex items-center justify-start">
@@ -15,7 +15,8 @@
                 </button>
                 <a href="https://flowbite.com" class="flex ml-2 md:mr-24">
                     {{-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="FlowBite Logo" /> --}}
-                    <span class="self-center text-xl font-semibold text-white sm:text-lg whitespace-nowrap">Admin
+                    <span
+                        class="self-center text-xs 2xl:text-sm font-semibold text-gray-600 sm:text-lg whitespace-nowrap">Admin
                         Panel</span>
                 </a>
             </div>
@@ -71,23 +72,23 @@
 </nav>
 
 <aside id="logo-sidebar"
-    class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-dark sm:translate-x-0"
+    class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white sm:translate-x-0"
     aria-label="Sidebar">
-    <div class="h-full px-3 pb-4 overflow-y-auto bg-dark ">
+    <div class="h-full px-3 pb-4 overflow-y-auto bg-white ">
         <ul class="space-y-2">
-            <p class="px-3 py-3 text-sm font-semibold text-white uppercase">Umum</p>
+            <p class="px-3 py-3 text-xs 2xl:text-sm font-semibold text-gray-600 uppercase">Umum</p>
             <x-sidebar-menu name="Dashboard" icon="fas fa-home" route="{{ route('admin.dashboard') }}"
                 active="{{ request()->routeIs('admin.dashboard') }}" />
             <x-sidebar-menu name="Message" icon="fas fa-envelope" route="{{ route('admin.message') }}"
                 active="{{ request()->routeIs('admin.message') }}" />
-            <x-sidebar-menu name="Partner" icon="fas fa-handshake" route="{{ route('admin.partner') }}"
-                active="{{ request()->routeIs('admin.partner') }}" />
+            <x-sidebar-menu name="Partner" icon="fas fa-handshake" route="{{ route('admin.partner.index') }}"
+                active="{{ request()->routeIs('admin.partner.index') }}" />
             <x-sidebar-menu name="Social Media" icon="fas fa-share-alt" route="{{ route('admin.social-media') }}"
                 active="{{ request()->routeIs('admin.social-media') }}" />
             <x-sidebar-menu name="Testimonial" icon="fas fa-quote-right" route="{{ route('admin.testimonial') }}"
                 active="{{ request()->routeIs('admin.testimonial') }}" />
 
-            <p class="px-3 py-3 text-sm font-semibold text-white uppercase">Pengaturan Portofolio</p>
+            <p class="px-3 py-3 text-xs 2xl:text-sm font-semibold text-gray-600 uppercase">Pengaturan Portofolio</p>
             <x-sidebar-menu name="Experience" icon="fas fa-briefcase" route="{{ route('admin.experience') }}"
                 active="{{ request()->routeIs('admin.experience') }}" />
             <x-sidebar-menu name="Work" icon="fas fa-briefcase" route="{{ route('admin.work') }}"
@@ -95,7 +96,7 @@
             <x-sidebar-menu name="Work Category" icon="fas fa-sort" route="{{ route('admin.work-category') }}"
                 active="{{ request()->routeIs('admin.work-category') }}" />
 
-            <p class="px-3 py-3 text-sm font-semibold text-white uppercase">Blog</p>
+            <p class="px-3 py-3 text-xs 2xl:text-sm font-semibold text-gray-600 uppercase">Blog</p>
             <x-sidebar-menu name="Blog" icon="fas fa-blog" route="{{ route('admin.blog') }}"
                 active="{{ request()->routeIs('admin.blog') }}" />
             <x-sidebar-menu name="Blog Category" icon="fas fa-sort" route="{{ route('admin.blog-category') }}"
@@ -108,20 +109,20 @@
                 route="{{ route('admin.consultation-request-category') }}"
                 active="{{ request()->routeIs('admin.consultation-category') }}" />
 
-            <p class="px-3 py-3 text-sm font-semibold text-white uppercase">Contact</p>
+            <p class="px-3 py-3 text-xs 2xl:text-sm font-semibold text-gray-600 uppercase">Contact</p>
 
             <x-sidebar-menu name="Contact Page Setting" icon="fas fa-phone"
                 route="{{ route('admin.contact-page-setting') }}"
                 active="{{ request()->routeIs('admin.contact') }}" />
 
-            <p class="px-3 py-3 text-sm font-semibold text-white uppercase">Event</p>
+            <p class="px-3 py-3 text-xs 2xl:text-sm font-semibold text-gray-600 uppercase">Event</p>
             <x-sidebar-menu name="Event" icon="fas fa-calendar" route="{{ route('admin.event') }}"
                 active="{{ request()->routeIs('admin.event') }}" />
             <x-sidebar-menu name="Event Category" icon="fas fa-sort" route="{{ route('admin.event-category') }}"
                 active="{{ request()->routeIs('admin.event-category') }}" />
 
 
-            <p class="px-3 py-3 text-sm font-semibold text-white uppercase">Material</p>
+            <p class="px-3 py-3 text-xs 2xl:text-sm font-semibold text-gray-600 uppercase">Material</p>
             <x-sidebar-menu name="Material" icon="fas fa-book" route="{{ route('admin.material') }}"
                 active="{{ request()->routeIs('admin.material') }}" />
             <x-sidebar-menu name="Material Category" icon="fas fa-sort"
@@ -134,8 +135,8 @@
                     <a class="flex items-center py-3 pl-6 nav-item hover:text-orange-400 rounded-md"
                         onclick="event.preventDefault(); this.closest('form').submit();">
                         <i
-                            class="fas fa-sign-out-alt text-white w-4 h-4 transition duration-75  group-hover:text-orange-400 "></i>
-                        <span class="ml-3 text-white">
+                            class="fas fa-xsgn-out-alt text-gray-600 w-4 h-4 transition duration-75  group-hover:text-orange-400 "></i>
+                        <span classxsml-3 text-gray-600">
                             Keluar
                         </span>
                     </a>

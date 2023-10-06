@@ -128,7 +128,11 @@ Route::group(['prefix' => 'admin'], function () {
 
     //Partner
     Route::prefix('partner')->group(function () {
-        Route::get('/', [PartnerController::class, 'index'])->name('admin.partner');
+        Route::get('/', [PartnerController::class, 'index'])->name('admin.partner.index');
+        Route::get('{id}', [PartnerController::class, 'show'])->name('admin.partner.show');
+        Route::post('/', [PartnerController::class, 'store'])->name('admin.partner.store');
+        Route::post('{id}/update', [PartnerController::class, 'update'])->name('admin.partner.update');
+        Route::post('{id}/delete', [PartnerController::class, 'destroy'])->name('admin.partner.destroy');
     });
 
     //Social Media
@@ -150,7 +154,6 @@ Route::group(['prefix' => 'admin'], function () {
     Route::prefix('work-category')->group(function () {
         Route::get('/', [WorkCategoryController::class, 'index'])->name('admin.work-category');
     });
-
 });
 
 
