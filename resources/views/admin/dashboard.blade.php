@@ -6,10 +6,10 @@
             </div>
 
             <div class="">
-                <p class="flex items-center text-2xl font-bold">
+                <p class="flex items-center text-xl font-bold">
                     9
                 </p>
-                <p class="flex items-center text-md">
+                <p class="flex items-center text-xs 2xl:text-sm">
                     Experience
                 </p>
             </div>
@@ -21,10 +21,10 @@
             </div>
 
             <div class="">
-                <p class="flex items-center text-2xl font-bold">
+                <p class="flex items-center text-xl font-bold">
                     19
                 </p>
-                <p class="flex items-center text-md">
+                <p class="flex items-center text-xs 2xl:text-sm">
                     Works
                 </p>
             </div>
@@ -36,10 +36,10 @@
             </div>
 
             <div class="">
-                <p class="flex items-center text-2xl font-bold text-dark">
+                <p class="flex items-center text-xl font-bold text-dark">
                     12
                 </p>
-                <p class="flex items-center text-md text-dark">
+                <p class="flex items-center text-xs 2xl:text-sm text-dark">
                     Events
                 </p>
             </div>
@@ -54,7 +54,7 @@
                 <p class="flex items-center text-2xl text-dark">
                     10
                 </p>
-                <p class="flex items-center text-md text-dark">
+                <p class="flex items-center text-xs 2xl:text-sm text-dark">
                     Blogs
                 </p>
             </div>
@@ -69,7 +69,7 @@
                 <p class="flex items-center text-2xl text-dark">
                     10
                 </p>
-                <p class="flex items-center text-md text-dark">
+                <p class="flex items-center text-xs 2xl:text-sm text-dark">
                     Materials
                 </p>
             </div>
@@ -84,7 +84,7 @@
                 <p class="flex items-center text-2xl text-dark">
                     120
                 </p>
-                <p class="flex items-center text-md text-dark">
+                <p class="flex items-center text-xs 2xl:text-sm text-dark">
                     Testimonials
                 </p>
             </div>

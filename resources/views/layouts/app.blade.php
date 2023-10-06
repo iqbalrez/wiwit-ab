@@ -22,11 +22,12 @@
     <div class="min-h-screen bg-gray-100">
         @include('admin.layouts.sidebar')
 
-        <div class="p-4 sm:ml-64 h-screen overflow-y-auto">
-            <div class="p-4">
+        <div class="p-4 sm:ml-64">
+            <div class="p-4 mt-14">
                 {{ $slot }}
             </div>
         </div>
+
     </div>
 
     {{-- Flowbite --}}

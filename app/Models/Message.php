@@ -15,8 +15,4 @@ class Message extends Model
         'email',
         'message',
     ];
-
-    
-
-
 }
