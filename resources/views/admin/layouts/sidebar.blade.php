@@ -83,8 +83,8 @@
                 active="{{ request()->routeIs('admin.message.index') }}" />
             <x-sidebar-menu name="Partner" icon="fas fa-handshake" route="{{ route('admin.partner.index') }}"
                 active="{{ request()->routeIs('admin.partner.index') }}" />
-            <x-sidebar-menu name="Social Media" icon="fas fa-share-alt" route="{{ route('admin.social-media') }}"
-                active="{{ request()->routeIs('admin.social-media') }}" />
+            <x-sidebar-menu name="Social Media" icon="fas fa-share-alt" route="{{ route('admin.social-media.index') }}"
+                active="{{ request()->routeIs('admin.social-media.index') }}" />
             <x-sidebar-menu name="Testimonial" icon="fas fa-quote-right" route="{{ route('admin.testimonial') }}"
                 active="{{ request()->routeIs('admin.testimonial') }}" />
 

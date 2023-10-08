@@ -141,7 +141,11 @@ Route::group(['prefix' => 'admin'], function () {
 
     //Social Media
     Route::prefix('social-media')->group(function () {
-        Route::get('/', [SocialMediaController::class, 'index'])->name('admin.social-media');
+        Route::get('/', [SocialMediaController::class, 'index'])->name('admin.social-media.index');
+        Route::get('{id}', [SocialMediaController::class, 'show'])->name('admin.social-media.show');
+        Route::post('/', [SocialMediaController::class, 'store'])->name('admin.social-media.store');
+        Route::post('{id}/update', [SocialMediaController::class, 'update'])->name('admin.social-media.update');
+        Route::post('{id}/delete', [SocialMediaController::class, 'destroy'])->name('admin.social-media.destroy');
     });
 
     //Testimonial
