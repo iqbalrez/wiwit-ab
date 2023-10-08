@@ -79,8 +79,8 @@
             <p class="px-3 py-3 text-xs 2xl:text-sm font-semibold text-gray-600 uppercase">Umum</p>
             <x-sidebar-menu name="Dashboard" icon="fas fa-home" route="{{ route('admin.dashboard') }}"
                 active="{{ request()->routeIs('admin.dashboard') }}" />
-            <x-sidebar-menu name="Message" icon="fas fa-envelope" route="{{ route('admin.message') }}"
-                active="{{ request()->routeIs('admin.message') }}" />
+            <x-sidebar-menu name="Message" icon="fas fa-envelope" route="{{ route('admin.message.index') }}"
+                active="{{ request()->routeIs('admin.message.index') }}" />
             <x-sidebar-menu name="Partner" icon="fas fa-handshake" route="{{ route('admin.partner.index') }}"
                 active="{{ request()->routeIs('admin.partner.index') }}" />
             <x-sidebar-menu name="Social Media" icon="fas fa-share-alt" route="{{ route('admin.social-media') }}"

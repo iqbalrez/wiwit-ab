@@ -123,7 +123,11 @@ Route::group(['prefix' => 'admin'], function () {
 
     //Message
     Route::prefix('message')->group(function () {
-        Route::get('/', [MessageController::class, 'index'])->name('admin.message');
+        Route::get('/', [MessageController::class, 'index'])->name('admin.message.index');
+        Route::get('{id}', [MessageController::class, 'show'])->name('admin.message.show');
+        Route::post('/', [MessageController::class, 'store'])->name('admin.message.store');
+        Route::post('{id}/update', [MessageController::class, 'update'])->name('admin.message.update');
+        Route::post('{id}/delete', [MessageController::class, 'destroy'])->name('admin.message.destroy');
     });
 
     //Partner
