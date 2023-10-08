@@ -11,7 +11,7 @@
 ])
 
 <div>
-    <label for="name" class="block mb-2 text-sm text-dark">
+    <label for="{{ $id }}" class="block mb-2 text-sm text-dark">
         {{ $label }} @if ($required)
             <span class="text-red-500">*</span>
         @endif

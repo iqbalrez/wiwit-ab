@@ -85,8 +85,8 @@
                 active="{{ request()->routeIs('admin.partner.index') }}" />
             <x-sidebar-menu name="Social Media" icon="fas fa-share-alt" route="{{ route('admin.social-media.index') }}"
                 active="{{ request()->routeIs('admin.social-media.index') }}" />
-            <x-sidebar-menu name="Testimonial" icon="fas fa-quote-right" route="{{ route('admin.testimonial') }}"
-                active="{{ request()->routeIs('admin.testimonial') }}" />
+            <x-sidebar-menu name="Testimonial" icon="fas fa-quote-right" route="{{ route('admin.testimonial.index') }}"
+                active="{{ request()->routeIs('admin.testimonial.index') }}" />
 
             <p class="px-3 py-3 text-xs 2xl:text-sm font-semibold text-gray-600 uppercase">Pengaturan Portofolio</p>
             <x-sidebar-menu name="Experience" icon="fas fa-briefcase" route="{{ route('admin.experience') }}"

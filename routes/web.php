@@ -150,7 +150,11 @@ Route::group(['prefix' => 'admin'], function () {
 
     //Testimonial
     Route::prefix('testimonial')->group(function () {
-        Route::get('/', [TestimonialController::class, 'index'])->name('admin.testimonial');
+        Route::get('/', [TestimonialController::class, 'index'])->name('admin.testimonial.index');
+        Route::get('{id}', [TestimonialController::class, 'show'])->name('admin.testimonial.show');
+        Route::post('/', [TestimonialController::class, 'store'])->name('admin.testimonial.store');
+        Route::post('{id}/update', [TestimonialController::class, 'update'])->name('admin.testimonial.update');
+        Route::post('{id}/delete', [TestimonialController::class, 'destroy'])->name('admin.testimonial.destroy');
     });
 
     //Work
