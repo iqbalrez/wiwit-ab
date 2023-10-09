@@ -35,7 +35,7 @@ class MaterialRepository implements MaterialInterface
         $data['file']->storeAs('public/materials', $filenameFile);
 
         DB::beginTransaction();
-
+        
         try {
             $material = $this->material->create(array_merge($data, [
                 'thumbnail'      => $filenameThumbnail,
