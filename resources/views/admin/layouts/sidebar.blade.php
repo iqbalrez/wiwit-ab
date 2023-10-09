@@ -136,8 +136,8 @@
                     <a class="flex items-center py-3 pl-6 nav-item hover:text-orange-400 rounded-md"
                         onclick="event.preventDefault(); this.closest('form').submit();">
                         <i
-                            class="fas fa-xsgn-out-alt text-gray-600 w-4 h-4 transition duration-75  group-hover:text-orange-400 "></i>
-                        <span classxsml-3 text-gray-600">
+                            class="fas fa-sign-out-alt text-gray-600 w-4 h-4 transition duration-75  group-hover:text-orange-400"></i>
+                        <span class="ml-3 text-gray-600">
                             Keluar
                         </span>
                     </a>
