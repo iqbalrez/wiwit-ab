@@ -112,8 +112,8 @@
             <p class="px-3 py-3 text-xs 2xl:text-sm font-semibold text-gray-600 uppercase">Contact</p>
 
             <x-sidebar-menu name="Contact Page Setting" icon="fas fa-phone"
-                route="{{ route('admin.contact-page-setting') }}"
-                active="{{ request()->routeIs('admin.contact') }}" />
+                route="{{ route('admin.contact-page-setting.index') }}"
+                active="{{ request()->routeIs('admin.contact-page-setting.index') }}" />
 
             <p class="px-3 py-3 text-xs 2xl:text-sm font-semibold text-gray-600 uppercase">Event</p>
             <x-sidebar-menu name="Event" icon="fas fa-calendar" route="{{ route('admin.event.index') }}"

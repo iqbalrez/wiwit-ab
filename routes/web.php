@@ -25,7 +25,6 @@ use App\Http\Controllers\Admin\SocialMediaController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\WorkController;
 use App\Http\Controllers\Admin\WorkCategoryController;
-use App\Models\Work;
 
 /*
 |--------------------------------------------------------------------------
@@ -109,7 +108,7 @@ Route::group(['prefix' => 'admin'], function () {
 
     //Contact Page Setting
     Route::prefix('contact-page-setting')->group(function () {
-        Route::get('/', [ContactPageSettingController::class, 'index'])->name('admin.contact-page-setting');
+        Route::get('/', [ContactPageSettingController::class, 'index'])->name('admin.contact-page-setting.index');
     });
 
     //Event
