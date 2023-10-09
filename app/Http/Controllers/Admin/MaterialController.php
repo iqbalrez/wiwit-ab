@@ -39,7 +39,6 @@ class MaterialController extends Controller
             'thumbnail'            => ['required', 'mimes:jpg,jpeg,png'],
             'file'                 => ['required', 'mimes:pdf'],
             'author'               => ['required'],
-            'download_count'       => ['required'],
             'published_date'       => ['required'],
         ]);
 
@@ -59,7 +58,6 @@ class MaterialController extends Controller
             'thumbnail'            => ['mimes:jpg,jpeg,png'],
             'file'                 => ['mimes:pdf'],
             'author'               => ['required'],
-            'download_count'       => ['required'],
             'published_date'       => ['required'],
         ]);
 

@@ -2,11 +2,19 @@
     <div class="relative overflow-x-auto rounded-lg custom-box-shadow">
         <div class="md:flex items-center space-y-3 md:space-y-0 justify-between p-4 bg-white ">
             <div>
-                <button data-modal-target="default-modal" data-modal-toggle="default-modal" onclick="btnAdd()"
-                    class="block text-white bg-dark hover:bg-dark focus:ring-4 focus:outline-none focus:ring-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-                    type="button">
-                    Add material
-                </button>
+                @if ($materialCategories->count() > 0)
+                    <button data-modal-target="default-modal" data-modal-toggle="default-modal" onclick="btnAdd()"
+                        class="block text-white bg-dark hover:bg-dark focus:ring-4 focus:outline-none focus:ring-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                        type="button">
+                        Add material
+                    </button>
+                @else
+                    <a href="{{ route('admin.material-category.index') }}"
+                        class="block text-white bg-dark hover:bg-dark focus:ring-4 focus:outline-none focus:ring-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                        type="button">
+                        Add material category first
+                    </a>
+                @endif
             </div>
             <div class="relative">
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -59,12 +67,12 @@
                             {{ $data->title }}
                         </td>
                         <td class="px-6 py-4">
-                            <img src="{{ asset('storage/materials/' . $data->thumbnail) }}" alt=""
-                                class="w-20 h-20 object-center object-cover rounded-md">
+                            <a href="{{ asset('storage/materials/' . $data->thumbnail) }}" target="_blank"
+                                class="text-blue-500">See thumbnail</a>
                         </td>
                         <td class="px-6 py-4">
-                            <img src="{{ asset('storage/materials/' . $data->file) }}" alt=""
-                                class="w-20 h-20 object-center object-cover rounded-md">
+                            <a href="{{ asset('storage/materials/' . $data->file) }}" target="_blank"
+                                class="text-blue-500">See file</a>
                         </td>
                         <td class="px-6 py-4">
                             {{ $data->author }}
@@ -189,6 +197,9 @@
                 $('#default-modal form').trigger('reset');
                 let url = "{{ route('admin.material.store') }}";
                 $('#default-modal form').attr('action', url);
+                // add required attribute thumbnail and file
+                $('#default-modal form #thumbnail').attr('required', 'required');
+                $('#default-modal form #file').attr('required', 'required');
             }
 
             function btnEdit(id) {
@@ -199,11 +210,23 @@
                     type: "GET",
                     dataType: "JSON",
                     success: function(data) {
+                        // remove required attribute thumbnail and file
+                        $('#default-modal form #thumbnail').removeAttr('required');
+                        $('#default-modal form #file').removeAttr('required');
                         $('#default-modal form').attr('action', url);
                         $('#default-modal form').trigger('reset');
-                        $('#default-modal form #name').val(data.name);
-                        $('#default-modal form #logo').after(
-                            `<a href="{{ asset('storage/partner/${data.logo}') }}" target="_blank" class="text-blue-500">Lihat Logo</a>`
+                        // remove see thumbnail and see file
+                        $('#default-modal form #thumbnail').next().remove();
+                        $('#default-modal form #file').next().remove();
+                        $('#default-modal form #material_category_id').val(data.material_category_id);
+                        $('#default-modal form #title').val(data.title);
+                        $('#default-modal form #author').val(data.author);
+                        $('#default-modal form #published_date').val(data.published_date);
+                        $('#default-modal form #thumbnail').after(
+                            `<a href="{{ asset('storage/materials/${data.thumbnail}') }}" target="_blank" class="text-blue-500">See thumbnail</a>`
+                        );
+                        $('#default-modal form #file').after(
+                            `<a href="{{ asset('storage/materials/${data.file}') }}" target="_blank" class="text-blue-500">See file</a>`
                         );
                     },
                     error: function() {

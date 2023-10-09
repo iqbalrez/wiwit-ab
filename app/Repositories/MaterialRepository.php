@@ -38,8 +38,9 @@ class MaterialRepository implements MaterialInterface
 
         try {
             $material = $this->material->create(array_merge($data, [
-                'thumbnail' => $filenameThumbnail,
-                'file'      => $filenameFile
+                'thumbnail'      => $filenameThumbnail,
+                'file'           => $filenameFile,
+                'download_count' => 0,
             ]));
 
             DB::commit();
@@ -72,7 +73,7 @@ class MaterialRepository implements MaterialInterface
         try {
             $material->update(array_merge($data, [
                 'thumbnail' => $filenameThumbnail ?? $material->thumbnail,
-                'file'      => $filenameFile ?? $material->file
+                'file'      => $filenameFile ?? $material->file,
             ]));
 
             DB::commit();
