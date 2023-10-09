@@ -124,7 +124,11 @@ Route::group(['prefix' => 'admin'], function () {
 
     //Experience
     Route::prefix('experience')->group(function () {
-        Route::get('/', [ExperienceController::class, 'index'])->name('admin.experience');
+        Route::get('/', [ExperienceController::class, 'index'])->name('admin.experience.index');
+        Route::get('{id}', [ExperienceController::class, 'show'])->name('admin.experience.show');
+        Route::post('/', [ExperienceController::class, 'store'])->name('admin.experience.store');
+        Route::post('{id}/update', [ExperienceController::class, 'update'])->name('admin.experience.update');
+        Route::post('{id}/delete', [ExperienceController::class, 'destroy'])->name('admin.experience.destroy');
     });
 
     //Material

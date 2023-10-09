@@ -20,6 +20,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(\App\Interfaces\WorkInterface::class, \App\Repositories\WorkRepository::class);
         $this->app->bind(\App\Interfaces\EventCategoryInterface::class, \App\Repositories\EventCategoryRepository::class);
         $this->app->bind(\App\Interfaces\EventInterface::class, \App\Repositories\EventRepository::class);
+        $this->app->bind(\App\Interfaces\ExperienceInterface::class, \App\Repositories\ExperienceRepository::class);
     }
 
     /**
