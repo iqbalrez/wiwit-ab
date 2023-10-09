@@ -12,6 +12,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(\App\Interfaces\MessageInterface::class, \App\Repositories\MessageRepository::class);
         $this->app->bind(\App\Interfaces\SocialMediaInterface::class, \App\Repositories\SocialMediaRepository::class);
         $this->app->bind(\App\Interfaces\TestimonialInterface::class, \App\Repositories\TestimonialRepository::class);
+        $this->app->bind(\App\Interfaces\WorkCategoryInterface::class, \App\Repositories\WorkCategoryRepository::class);
     }
 
     /**

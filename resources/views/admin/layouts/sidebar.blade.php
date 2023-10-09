@@ -91,10 +91,10 @@
             <p class="px-3 py-3 text-xs 2xl:text-sm font-semibold text-gray-600 uppercase">Pengaturan Portofolio</p>
             <x-sidebar-menu name="Experience" icon="fas fa-briefcase" route="{{ route('admin.experience') }}"
                 active="{{ request()->routeIs('admin.experience') }}" />
-            <x-sidebar-menu name="Work" icon="fas fa-briefcase" route="{{ route('admin.work') }}"
-                active="{{ request()->routeIs('admin.work') }}" />
-            <x-sidebar-menu name="Work Category" icon="fas fa-sort" route="{{ route('admin.work-category') }}"
-                active="{{ request()->routeIs('admin.work-category') }}" />
+            <x-sidebar-menu name="Work" icon="fas fa-briefcase" route="{{ route('admin.work.index') }}"
+                active="{{ request()->routeIs('admin.work.index') }}" />
+            <x-sidebar-menu name="Work Category" icon="fas fa-sort" route="{{ route('admin.work-category.index') }}"
+                active="{{ request()->routeIs('admin.work-category.index') }}" />
 
             <p class="px-3 py-3 text-xs 2xl:text-sm font-semibold text-gray-600 uppercase">Blog</p>
             <x-sidebar-menu name="Blog" icon="fas fa-blog" route="{{ route('admin.blog') }}"

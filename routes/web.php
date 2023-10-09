@@ -25,8 +25,7 @@ use App\Http\Controllers\Admin\SocialMediaController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\WorkController;
 use App\Http\Controllers\Admin\WorkCategoryController;
-
-
+use App\Models\Work;
 
 /*
 |--------------------------------------------------------------------------
@@ -159,12 +158,20 @@ Route::group(['prefix' => 'admin'], function () {
 
     //Work
     Route::prefix('work')->group(function () {
-        Route::get('/', [WorkController::class, 'index'])->name('admin.work');
+        Route::get('/', [WorkController::class, 'index'])->name('admin.work.index');
+        Route::get('{id}', [WorkController::class, 'show'])->name('admin.work.show');
+        Route::post('/', [WorkController::class, 'store'])->name('admin.work.store');
+        Route::post('{id}/update', [WorkController::class, 'update'])->name('admin.work.update');
+        Route::post('{id}/delete', [WorkController::class, 'destroy'])->name('admin.work.destroy');
     });
 
     //Work Category
     Route::prefix('work-category')->group(function () {
-        Route::get('/', [WorkCategoryController::class, 'index'])->name('admin.work-category');
+        Route::get('/', [WorkCategoryController::class, 'index'])->name('admin.work-category.index');
+        Route::get('{id}', [WorkCategoryController::class, 'show'])->name('admin.work-category.show');
+        Route::post('/', [WorkCategoryController::class, 'store'])->name('admin.work-category.store');
+        Route::post('{id}/update', [WorkCategoryController::class, 'update'])->name('admin.work-category.update');
+        Route::post('{id}/delete', [WorkCategoryController::class, 'destroy'])->name('admin.work-category.destroy');
     });
 });
 
