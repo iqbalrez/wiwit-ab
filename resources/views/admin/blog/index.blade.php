@@ -42,7 +42,7 @@
                         Published Date
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        View Count
+                        Action
                     </th>
                 </tr>
             </thead>
@@ -50,12 +50,25 @@
                 @foreach ($blogs as $data)
                     <tr class="bg-white border-b">
                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                            {{ $data->name }}
+                            {{ $data->title }}
                         </th>
                         <td class="px-6 py-4">
-                            <img src="{{ asset('storage/blogs/' . $data->logo) }}" alt=""
+                            {{ $data->blogCategory->name }}
+                        </td>
+                        <td class="px-6 py-4">
+                            <img src="{{ asset('storage/blogs/thumbnail/' . $data->thumbnail) }}" alt=""
                                 class="w-20 h-20 object-center object-cover rounded-md">
                         </td>
+                        <td class="px-6 py-4">
+                            {{ $data->content }}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ $data->author }}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ $data->published_date }}
+                        </td>
+
                         <td class="px-6 py-4 space-x-3">
                             <ion-icon name="create" class="w-6 h-6 text-orange-600 cursor-pointer"
                                 data-modal-target="default-modal" data-modal-toggle="default-modal"
@@ -96,15 +109,15 @@
                     @csrf
                     <!-- Modal body -->
                     <div class="p-6 space-y-6">
-                        <x-input id="name" type="text" label="Name" required name="name" value=""
+                        <x-input id="title" type="text" label="Title" required name="title" value=""
                             placeholder="" class="" />
                         <x-select id="blog_category_id" name="blog_category_id" label="Kategori blog" required>
                             @foreach ($blogCategories as $data)
                                 <option value="{{ $data->id }}">{{ $data->name }}</option>
                             @endforeach
                         </x-select>
-                        <x-input id="thumbnail" type="file" label="Thumnail" required name="thumnail" value=""
-                            placeholder="" class="" />
+                        <x-input id="thumbnail" type="file" label="Thumbnail" required name="thumbnail"
+                            value="" placeholder="" class="" />
                         <x-input id="content" type="text" label="Content" required name="content"
                             value="" placeholder="" class="" />
                         <x-input id="author" type="text" label="Author" required name="author"
@@ -170,6 +183,7 @@
                 $('#default-modal form').trigger('reset');
                 let url = "{{ route('admin.blog.store') }}";
                 $('#default-modal form').attr('action', url);
+                $('#default-modal form #thumbnail').attr('required', true);
             }
 
             function btnEdit(id) {
@@ -180,11 +194,17 @@
                     type: "GET",
                     dataType: "JSON",
                     success: function(data) {
+                        $('#default-modal form #thumbnail').removeAttr('required');
+                        $('#default-modal form #thumbnail').next().remove();
                         $('#default-modal form').attr('action', url);
                         $('#default-modal form').trigger('reset');
-                        $('#default-modal form #name').val(data.name);
-                        $('#default-modal form #logo').after(
-                            `<a href="{{ asset('storage/blog/${data.thumbnail}') }}" target="_blank" class="text-blue-500">Lihat Logo</a>`
+                        $('#default-modal form #title').val(data.title);
+                        $('#default-modal form #blog_category_id').val(data.blog_category_id);
+                        $('#default-modal form #content').val(data.content);
+                        $('#default-modal form #author').val(data.author);
+                        $('#default-modal form #published_date').val(data.published_date);
+                        $('#default-modal form #thumbnail').after(
+                            `<a href="{{ asset('storage/blog/thumbnail/${data.thumbnail}') }}" target="_blank" class="text-blue-500">See Thumbnail</a>`
                         );
                     },
                     error: function() {

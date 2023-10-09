@@ -14,7 +14,7 @@ class BlogController extends Controller
     private $blogCategory;
 
     public function __construct(BlogInterface $blog, BlogCategoryInterface $blogCategory) {
-        $this->blog = $blog;
+        $this->blog         = $blog;
         $this->blogCategory = $blogCategory;
     }
 
@@ -28,14 +28,14 @@ class BlogController extends Controller
 
     public function store(Request $request){
         $request->validate([
-            'blog_category_id' => ['required', 'exists:blog_categories,id'],
+            'blog_category_id' => ['required', 'exists:blog_category,id'],
             'title'            => ['required'],
             'thumbnail'        => ['required', 'image', 'mimes:jpg,jpeg,png', 'max:2048'],
-            'author'      => ['required'],
+            'author'           => ['required'],
             'content'          => ['required'],
             'published_date'   => ['required'],
-            'view_count' => ['required'],
         ]);
+
 
         try {
             $this->blog->store($request->all());
@@ -46,20 +46,19 @@ class BlogController extends Controller
         }
     }
 
-    public function getById($id){
+    public function show($id){
         return response()->json($this->blog->getById($id));
     }
 
 
     public function update($id, Request $request){
         $request->validate([
-            'blog_category_id' => ['required', 'exists:blog_categories,id'],
+            'blog_category_id' => ['required', 'exists:blog_category,id'],
             'title'            => ['required'],
-            'thumbnail'        => ['required', 'image', 'mimes:jpg,jpeg,png', 'max:2048'],
-            'author'      => ['required'],
+            'thumbnail'        => ['image', 'mimes:jpg,jpeg,png', 'max:2048'],
+            'author'           => ['required'],
             'content'          => ['required'],
             'published_date'   => ['required'],
-            'view_count' => ['required'],
         ]);
 
         try {
