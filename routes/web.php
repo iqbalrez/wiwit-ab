@@ -74,11 +74,20 @@ Route::group(['prefix' => 'admin'], function () {
     //Blog
     Route::prefix('blog')->group(function () {
         Route::get('/', [BlogController::class, 'index'])->name('admin.blog');
+        Route::get('{id}', [BlogController::class, 'show'])->name('admin.blog.show');
+        Route::post('/', [BlogController::class, 'store'])->name('admin.blog.store');
+        Route::post('{id}/update', [BlogController::class, 'update'])->name('admin.blog.update');
+        Route::post('{id}/delete', [BlogController::class, 'destroy'])->name('admin.blog.destroy');
     });
 
     //Blog Category
     Route::prefix('blog-category')->group(function () {
-        Route::get('/', [BlogCategoryController::class, 'index'])->name('admin.blog-category');
+        Route::get('/', [BlogCategoryController::class, 'index'])->name('admin.blog-category.index');
+        Route::get('{id}', [BlogCategoryController::class, 'show'])->name('admin.blog-category.show');
+        Route::post('/', [BlogCategoryController::class, 'store'])->name('admin.blog-category.store');
+        Route::post('{id}/update', [BlogCategoryController::class, 'update'])->name('admin.blog-category.update');
+        Route::post('{id}/delete', [BlogCategoryController::class, 'destroy'])->name('admin.blog-category.destroy');
+
     });
 
     //Consultation Request

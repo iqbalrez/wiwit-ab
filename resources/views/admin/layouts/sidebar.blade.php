@@ -99,8 +99,8 @@
             <p class="px-3 py-3 text-xs 2xl:text-sm font-semibold text-gray-600 uppercase">Blog</p>
             <x-sidebar-menu name="Blog" icon="fas fa-blog" route="{{ route('admin.blog') }}"
                 active="{{ request()->routeIs('admin.blog') }}" />
-            <x-sidebar-menu name="Blog Category" icon="fas fa-sort" route="{{ route('admin.blog-category') }}"
-                active="{{ request()->routeIs('admin.blog-category') }}" />
+            <x-sidebar-menu name="Blog Category" icon="fas fa-sort" route="{{ route('admin.blog-category.index') }}"
+                active="{{ request()->routeIs('admin.blog-category.index') }}" />
 
             <x-sidebar-menu name="Consultation Request" icon="fas fa-comments"
                 route="{{ route('admin.consultation-request') }}"
