@@ -106,11 +106,11 @@ Route::group(['prefix' => 'admin'], function () {
 
     //Event
     Route::prefix('event')->group(function () {
-        Route::get('/', [EventController::class, 'index'])->name('admin.event');
-        Route::get('{id}', [EventController::class, 'show'])->name('admin.event-category.show');
-        Route::post('/', [EventController::class, 'store'])->name('admin.event-category.store');
-        Route::post('{id}/update', [EventController::class, 'update'])->name('admin.event-category.update');
-        Route::post('{id}/delete', [EventController::class, 'destroy'])->name('admin.event-category.destroy');
+        Route::get('/', [EventController::class, 'index'])->name('admin.event.index');
+        Route::get('{id}', [EventController::class, 'show'])->name('admin.event.show');
+        Route::post('/', [EventController::class, 'store'])->name('admin.event.store');
+        Route::post('{id}/update', [EventController::class, 'update'])->name('admin.event.update');
+        Route::post('{id}/delete', [EventController::class, 'destroy'])->name('admin.event.destroy');
     });
 
     //Event Category

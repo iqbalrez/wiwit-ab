@@ -116,8 +116,8 @@
                 active="{{ request()->routeIs('admin.contact') }}" />
 
             <p class="px-3 py-3 text-xs 2xl:text-sm font-semibold text-gray-600 uppercase">Event</p>
-            <x-sidebar-menu name="Event" icon="fas fa-calendar" route="{{ route('admin.event') }}"
-                active="{{ request()->routeIs('admin.event') }}" />
+            <x-sidebar-menu name="Event" icon="fas fa-calendar" route="{{ route('admin.event.index') }}"
+                active="{{ request()->routeIs('admin.event.index') }}" />
             <x-sidebar-menu name="Event Category" icon="fas fa-sort"
                 route="{{ route('admin.event-category.index') }}"
                 active="{{ request()->routeIs('admin.event-category.index') }}" />
