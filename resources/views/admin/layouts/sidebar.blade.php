@@ -103,11 +103,11 @@
                 active="{{ request()->routeIs('admin.blog-category.index') }}" />
 
             <x-sidebar-menu name="Consultation Request" icon="fas fa-comments"
-                route="{{ route('admin.consultation-request') }}"
-                active="{{ request()->routeIs('admin.consultation') }}" />
+                route="{{ route('admin.consultation-request.index') }}"
+                active="{{ request()->routeIs('admin.consultation-request.index') }}" />
             <x-sidebar-menu name="Consultation Category" icon="fas fa-sort"
-                route="{{ route('admin.consultation-request-category') }}"
-                active="{{ request()->routeIs('admin.consultation-category') }}" />
+                route="{{ route('admin.consultation-request-category.index') }}"
+                active="{{ request()->routeIs('admin.consultation-request-category.index') }}" />
 
             <p class="px-3 py-3 text-xs 2xl:text-sm font-semibold text-gray-600 uppercase">Contact</p>
 

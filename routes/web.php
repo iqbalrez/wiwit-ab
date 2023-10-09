@@ -91,12 +91,20 @@ Route::group(['prefix' => 'admin'], function () {
 
     //Consultation Request
     Route::prefix('consultation-request')->group(function () {
-        Route::get('/', [ConsultationRequestController::class, 'index'])->name('admin.consultation-request');
+        Route::get('/', [ConsultationRequestController::class, 'index'])->name('admin.consultation-request.index');
+        Route::get('{id}', [ConsultationRequestController::class, 'show'])->name('admin.consultation-request.show');
+        Route::post('/', [ConsultationRequestController::class, 'store'])->name('admin.consultation-request.store');
+        Route::post('{id}/update', [ConsultationRequestController::class, 'update'])->name('admin.consultation-request.update');
+        Route::post('{id}/delete', [ConsultationRequestController::class, 'destroy'])->name('admin.consultation-request.destroy');
     });
 
     //Consultation Request Category
     Route::prefix('consultation-request-category')->group(function () {
-        Route::get('/', [ConsultationRequestCategoryController::class, 'index'])->name('admin.consultation-request-category');
+        Route::get('/', [ConsultationRequestCategoryController::class, 'index'])->name('admin.consultation-request-category.index');
+        Route::get('{id}', [ConsultationRequestCategoryController::class, 'show'])->name('admin.consultation-request-category.show');
+        Route::post('/', [ConsultationRequestCategoryController::class, 'store'])->name('admin.consultation-request-category.store');
+        Route::post('{id}/update', [ConsultationRequestCategoryController::class, 'update'])->name('admin.consultation-request-category.update');
+        Route::post('{id}/delete', [ConsultationRequestCategoryController::class, 'destroy'])->name('admin.consultation-request-category.destroy');
     });
 
     //Contact Page Setting
