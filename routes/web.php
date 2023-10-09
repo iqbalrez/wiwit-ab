@@ -25,8 +25,7 @@ use App\Http\Controllers\Admin\SocialMediaController;
 use App\Http\Controllers\Admin\TestimonialController;
 use App\Http\Controllers\Admin\WorkController;
 use App\Http\Controllers\Admin\WorkCategoryController;
-
-
+use App\Models\Work;
 
 /*
 |--------------------------------------------------------------------------
@@ -108,11 +107,19 @@ Route::group(['prefix' => 'admin'], function () {
     //Event
     Route::prefix('event')->group(function () {
         Route::get('/', [EventController::class, 'index'])->name('admin.event');
+        Route::get('{id}', [EventController::class, 'show'])->name('admin.event-category.show');
+        Route::post('/', [EventController::class, 'store'])->name('admin.event-category.store');
+        Route::post('{id}/update', [EventController::class, 'update'])->name('admin.event-category.update');
+        Route::post('{id}/delete', [EventController::class, 'destroy'])->name('admin.event-category.destroy');
     });
 
     //Event Category
     Route::prefix('event-category')->group(function () {
-        Route::get('/', [EventCategoryController::class, 'index'])->name('admin.event-category');
+        Route::get('/', [EventCategoryController::class, 'index'])->name('admin.event-category.index');
+        Route::get('{id}', [EventCategoryController::class, 'show'])->name('admin.event-category.show');
+        Route::post('/', [EventCategoryController::class, 'store'])->name('admin.event-category.store');
+        Route::post('{id}/update', [EventCategoryController::class, 'update'])->name('admin.event-category.update');
+        Route::post('{id}/delete', [EventCategoryController::class, 'destroy'])->name('admin.event-category.destroy');
     });
 
     //Experience
@@ -122,12 +129,20 @@ Route::group(['prefix' => 'admin'], function () {
 
     //Material
     Route::prefix('material')->group(function () {
-        Route::get('/', [MaterialController::class, 'index'])->name('admin.material');
+        Route::get('/', [MaterialController::class, 'index'])->name('admin.material.index');
+        Route::get('{id}', [MaterialController::class, 'show'])->name('admin.material.show');
+        Route::post('/', [MaterialController::class, 'store'])->name('admin.material.store');
+        Route::post('{id}/update', [MaterialController::class, 'update'])->name('admin.material.update');
+        Route::post('{id}/delete', [MaterialController::class, 'destroy'])->name('admin.material.destroy');
     });
 
     //Material Category
     Route::prefix('material-category')->group(function () {
-        Route::get('/', [MaterialCategoryController::class, 'index'])->name('admin.material-category');
+        Route::get('/', [MaterialCategoryController::class, 'index'])->name('admin.material-category.index');
+        Route::get('{id}', [MaterialCategoryController::class, 'show'])->name('admin.material-category.show');
+        Route::post('/', [MaterialCategoryController::class, 'store'])->name('admin.material-category.store');
+        Route::post('{id}/update', [MaterialCategoryController::class, 'update'])->name('admin.material-category.update');
+        Route::post('{id}/delete', [MaterialCategoryController::class, 'destroy'])->name('admin.material-category.destroy');
     });
 
     //Message
@@ -168,12 +183,20 @@ Route::group(['prefix' => 'admin'], function () {
 
     //Work
     Route::prefix('work')->group(function () {
-        Route::get('/', [WorkController::class, 'index'])->name('admin.work');
+        Route::get('/', [WorkController::class, 'index'])->name('admin.work.index');
+        Route::get('{id}', [WorkController::class, 'show'])->name('admin.work.show');
+        Route::post('/', [WorkController::class, 'store'])->name('admin.work.store');
+        Route::post('{id}/update', [WorkController::class, 'update'])->name('admin.work.update');
+        Route::post('{id}/delete', [WorkController::class, 'destroy'])->name('admin.work.destroy');
     });
 
     //Work Category
     Route::prefix('work-category')->group(function () {
-        Route::get('/', [WorkCategoryController::class, 'index'])->name('admin.work-category');
+        Route::get('/', [WorkCategoryController::class, 'index'])->name('admin.work-category.index');
+        Route::get('{id}', [WorkCategoryController::class, 'show'])->name('admin.work-category.show');
+        Route::post('/', [WorkCategoryController::class, 'store'])->name('admin.work-category.store');
+        Route::post('{id}/update', [WorkCategoryController::class, 'update'])->name('admin.work-category.update');
+        Route::post('{id}/delete', [WorkCategoryController::class, 'destroy'])->name('admin.work-category.destroy');
     });
 });
 

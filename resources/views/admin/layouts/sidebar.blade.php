@@ -91,10 +91,10 @@
             <p class="px-3 py-3 text-xs 2xl:text-sm font-semibold text-gray-600 uppercase">Pengaturan Portofolio</p>
             <x-sidebar-menu name="Experience" icon="fas fa-briefcase" route="{{ route('admin.experience') }}"
                 active="{{ request()->routeIs('admin.experience') }}" />
-            <x-sidebar-menu name="Work" icon="fas fa-briefcase" route="{{ route('admin.work') }}"
-                active="{{ request()->routeIs('admin.work') }}" />
-            <x-sidebar-menu name="Work Category" icon="fas fa-sort" route="{{ route('admin.work-category') }}"
-                active="{{ request()->routeIs('admin.work-category') }}" />
+            <x-sidebar-menu name="Work" icon="fas fa-briefcase" route="{{ route('admin.work.index') }}"
+                active="{{ request()->routeIs('admin.work.index') }}" />
+            <x-sidebar-menu name="Work Category" icon="fas fa-sort" route="{{ route('admin.work-category.index') }}"
+                active="{{ request()->routeIs('admin.work-category.index') }}" />
 
             <p class="px-3 py-3 text-xs 2xl:text-sm font-semibold text-gray-600 uppercase">Blog</p>
             <x-sidebar-menu name="Blog" icon="fas fa-blog" route="{{ route('admin.blog') }}"
@@ -118,16 +118,17 @@
             <p class="px-3 py-3 text-xs 2xl:text-sm font-semibold text-gray-600 uppercase">Event</p>
             <x-sidebar-menu name="Event" icon="fas fa-calendar" route="{{ route('admin.event') }}"
                 active="{{ request()->routeIs('admin.event') }}" />
-            <x-sidebar-menu name="Event Category" icon="fas fa-sort" route="{{ route('admin.event-category') }}"
-                active="{{ request()->routeIs('admin.event-category') }}" />
+            <x-sidebar-menu name="Event Category" icon="fas fa-sort"
+                route="{{ route('admin.event-category.index') }}"
+                active="{{ request()->routeIs('admin.event-category.index') }}" />
 
 
             <p class="px-3 py-3 text-xs 2xl:text-sm font-semibold text-gray-600 uppercase">Material</p>
-            <x-sidebar-menu name="Material" icon="fas fa-book" route="{{ route('admin.material') }}"
-                active="{{ request()->routeIs('admin.material') }}" />
+            <x-sidebar-menu name="Material" icon="fas fa-book" route="{{ route('admin.material.index') }}"
+                active="{{ request()->routeIs('admin.material.index') }}" />
             <x-sidebar-menu name="Material Category" icon="fas fa-sort"
-                route="{{ route('admin.material-category') }}"
-                active="{{ request()->routeIs('admin.material-category') }}" />
+                route="{{ route('admin.material-category.index') }}"
+                active="{{ request()->routeIs('admin.material-category.index') }}" />
             <!-- Logout -->
             <li>
                 <form action="{{ route('logout') }}" method="POST">
