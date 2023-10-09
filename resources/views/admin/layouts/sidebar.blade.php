@@ -123,11 +123,11 @@
 
 
             <p class="px-3 py-3 text-xs 2xl:text-sm font-semibold text-gray-600 uppercase">Material</p>
-            <x-sidebar-menu name="Material" icon="fas fa-book" route="{{ route('admin.material') }}"
-                active="{{ request()->routeIs('admin.material') }}" />
+            <x-sidebar-menu name="Material" icon="fas fa-book" route="{{ route('admin.material.index') }}"
+                active="{{ request()->routeIs('admin.material.index') }}" />
             <x-sidebar-menu name="Material Category" icon="fas fa-sort"
-                route="{{ route('admin.material-category') }}"
-                active="{{ request()->routeIs('admin.material-category') }}" />
+                route="{{ route('admin.material-category.index') }}"
+                active="{{ request()->routeIs('admin.material-category.index') }}" />
             <!-- Logout -->
             <li>
                 <form action="{{ route('logout') }}" method="POST">
