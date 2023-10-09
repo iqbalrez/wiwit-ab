@@ -109,6 +109,10 @@ Route::group(['prefix' => 'admin'], function () {
     //Contact Page Setting
     Route::prefix('contact-page-setting')->group(function () {
         Route::get('/', [ContactPageSettingController::class, 'index'])->name('admin.contact-page-setting.index');
+        Route::get('{id}', [ContactPageSettingController::class, 'show'])->name('admin.contact-page-setting.show');
+        Route::post('/', [ContactPageSettingController::class, 'store'])->name('admin.contact-page-setting.store');
+        Route::post('{id}/update', [ContactPageSettingController::class, 'update'])->name('admin.contact-page-setting.update');
+        Route::post('{id}/delete', [ContactPageSettingController::class, 'destroy'])->name('admin.contact-page-setting.destroy');
     });
 
     //Event

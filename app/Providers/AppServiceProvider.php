@@ -22,9 +22,8 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(\App\Interfaces\EventInterface::class, \App\Repositories\EventRepository::class);
         $this->app->bind(\App\Interfaces\ConsultationRequestCategoryInterface::class, \App\Repositories\ConsultationRequestCategoryRepository::class);
         $this->app->bind(\App\Interfaces\ConsultationRequestInterface::class, \App\Repositories\ConsultationRequestRepository::class);
-
-
         $this->app->bind(\App\Interfaces\ExperienceInterface::class, \App\Repositories\ExperienceRepository::class);
+        $this->app->bind(\App\Interfaces\ContactPageSettingInterface::class, \App\Repositories\ContactPageSettingRepository::class);
     }
 
     /**
