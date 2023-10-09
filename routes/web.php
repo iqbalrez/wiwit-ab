@@ -112,12 +112,20 @@ Route::group(['prefix' => 'admin'], function () {
 
     //Material
     Route::prefix('material')->group(function () {
-        Route::get('/', [MaterialController::class, 'index'])->name('admin.material');
+        Route::get('/', [MaterialController::class, 'index'])->name('admin.material.index');
+        Route::get('{id}', [MaterialController::class, 'show'])->name('admin.material.show');
+        Route::post('/', [MaterialController::class, 'store'])->name('admin.material.store');
+        Route::post('{id}/update', [MaterialController::class, 'update'])->name('admin.material.update');
+        Route::post('{id}/delete', [MaterialController::class, 'destroy'])->name('admin.material.destroy');
     });
 
     //Material Category
     Route::prefix('material-category')->group(function () {
-        Route::get('/', [MaterialCategoryController::class, 'index'])->name('admin.material-category');
+        Route::get('/', [MaterialCategoryController::class, 'index'])->name('admin.material-category.index');
+        Route::get('{id}', [MaterialCategoryController::class, 'show'])->name('admin.material-category.show');
+        Route::post('/', [MaterialCategoryController::class, 'store'])->name('admin.material-category.store');
+        Route::post('{id}/update', [MaterialCategoryController::class, 'update'])->name('admin.material-category.update');
+        Route::post('{id}/delete', [MaterialCategoryController::class, 'destroy'])->name('admin.material-category.destroy');
     });
 
     //Message
