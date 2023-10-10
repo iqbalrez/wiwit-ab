@@ -2,11 +2,19 @@
     <div class="relative overflow-x-auto rounded-lg custom-box-shadow">
         <div class="md:flex items-center space-y-3 md:space-y-0 justify-between p-4 bg-white ">
             <div>
-                <button data-modal-target="default-modal" data-modal-toggle="default-modal" onclick="btnAdd()"
-                    class="block text-white bg-dark hover:bg-dark focus:ring-4 focus:outline-none focus:ring-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-                    type="button">
-                    Add Consultation Request
-                </button>
+                @if ($consultationRequestCategories->count() > 0)
+                    <button data-modal-target="default-modal" data-modal-toggle="default-modal" onclick="btnAdd()"
+                        class="block text-white bg-dark hover:bg-dark focus:ring-4 focus:outline-none focus:ring-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                        type="button">
+                        Add Consultation Request
+                    </button>
+                @else
+                    <a href="{{ route('admin.consultation-request-category.index') }}"
+                        class="block text-white bg-dark hover:bg-dark focus:ring-4 focus:outline-none focus:ring-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                        type="button">
+                        Add Consultation Request Category First
+                    </a>
+                @endif
             </div>
             <div class="relative">
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -109,8 +117,9 @@
                     <!-- Modal body -->
                     <div class="p-6 space-y-6">
                         <x-input id="name" type="text" label="Name" required name="name" value=""
-                            placeholder="" class="" />  
-                        <x-select id="consultation_request_category_id" name="consultation_request_category_id" label="Kategori blog" required>
+                            placeholder="" class="" />
+                        <x-select id="consultation_request_category_id" name="consultation_request_category_id"
+                            label="Kategori blog" required>
                             @foreach ($consultationRequestCategories as $data)
                                 <option value="{{ $data->id }}">{{ $data->name }}</option>
                             @endforeach

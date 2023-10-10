@@ -2,11 +2,19 @@
     <div class="relative overflow-x-auto rounded-lg custom-box-shadow">
         <div class="md:flex items-center space-y-3 md:space-y-0 justify-between p-4 bg-white ">
             <div>
-                <button data-modal-target="default-modal" data-modal-toggle="default-modal" onclick="btnAdd()"
-                    class="block text-white bg-dark hover:bg-dark focus:ring-4 focus:outline-none focus:ring-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-                    type="button">
-                    Add Blog
-                </button>
+                @if ($blogCategories->count() > 0)
+                    <button data-modal-target="default-modal" data-modal-toggle="default-modal" onclick="btnAdd()"
+                        class="block text-white bg-dark hover:bg-dark focus:ring-4 focus:outline-none focus:ring-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                        type="button">
+                        Add Blog
+                    </button>
+                @else
+                    <a href="{{ route('admin.blog-category.index') }}"
+                        class="block text-white bg-dark hover:bg-dark focus:ring-4 focus:outline-none focus:ring-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                        type="button">
+                        Add Blog Category First
+                    </a>
+                @endif
             </div>
             <div class="relative">
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -32,7 +40,7 @@
                     <th scope="col" class="px-6 py-3">
                         Thumbnail
                     </th>
-                    
+
                     <th scope="col" class="px-6 py-3">
                         Author
                     </th>
@@ -56,7 +64,7 @@
                         <td class="px-6 py-4">
                             <img src="{{ asset('storage/blogs/thumbnail/' . $data->thumbnail) }}" alt=""
                                 class="w-20 h-20 object-center object-cover rounded-md">
-                        </td>          
+                        </td>
                         <td class="px-6 py-4">
                             {{ $data->author }}
                         </td>

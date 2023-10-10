@@ -39,81 +39,31 @@
                     <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%">
                     </div>
                     <div>
-                        <div class="mb-8 flex justify-between items-center w-full right-timeline">
-                            {{-- Left Timeline --}}
-                            <div class="order-1 w-5/12 px-6 py-4 item">
-                                <h3 class="mb-3 font-semibold text-dark text-xl">Self Employed, PT Pertamina</h3>
-                                <p class="text-sm mt-3 font-normal leading-snug tracking-wide text-[#757575]">Sept 2012
-                                    -
-                                    Jul 2015</p>
-                            </div>
-                            <div
-                                class="z-20 flex items-center order-1 bg-white border-2 w-10 h-10 rounded-full relative">
+                        @foreach ($experiences as $data)
+                            <div class="mb-8 flex justify-between items-center w-full right-timeline">
+                                {{-- Left Timeline --}}
+                                <div class="order-1 w-5/12 px-6 py-4 item">
+                                    <h3 class="mb-3 font-semibold text-dark text-xl">{{ $data->position }},{{ $data->company }}</h3>
+                                    <p class="text-sm mt-3 font-normal leading-snug tracking-wide text-[#757575]">
+                                        {{ date('d F Y', strtotime($data->start_date)) }}
+                                        -
+                                        {{ date('d F Y', strtotime($data->end_date)) }}</p>
+                                </div>
                                 <div
-                                    class=" bg-dark w-5 h-5  rounded-full flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    class="z-20 flex items-center order-1 bg-white border-2 w-10 h-10 rounded-full relative">
+                                    <div
+                                        class=" bg-dark w-5 h-5  rounded-full flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                                    </div>
+                                </div>
+                                <!-- right timeline -->
+                                <div class="order-1 w-5/12 px-6 py-4">
+                                    <h3 class="mb-3 font-semibold text-dark text-xl">{{ $data->job_type }}</h3>
+                                    <p class="text-sm mt-3 font-normal leading-snug tracking-wide text-[#757575]">Lorem
+                                        {{ $data->description }}</p>
                                 </div>
                             </div>
-                            <!-- right timeline -->
-                            <div class="order-1 w-5/12 px-6 py-4">
-                                <h3 class="mb-3 font-semibold text-dark text-xl">Certified Export n Marketing</h3>
-                                <p class="text-sm mt-3 font-normal leading-snug tracking-wide text-[#757575]">Lorem
-                                    Ipsum is
-                                    simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                                    galley of type and scrambled it to make a type specimen book.</p>
-                            </div>
-                        </div>
+                        @endforeach
 
-
-                        <div class="mb-8 flex justify-between items-center w-full right-timeline">
-                            {{-- Left Timeline --}}
-                            <div class="order-1 w-5/12 px-6 py-4">
-                                <h3 class="mb-3 font-semibold text-dark text-xl">Self Employed, PT Pertamina</h3>
-                                <p class="text-sm mt-3  font-normal leading-snug tracking-wide text-[#757575]">Sept 2012
-                                    -
-                                    Jul 2015</p>
-                            </div>
-                            <div
-                                class="z-20 flex items-center order-1 bg-white border-2 w-10 h-10 rounded-full relative">
-                                <div
-                                    class=" bg-dark w-5 h-5  rounded-full flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                                </div>
-                            </div>
-                            <!-- right timeline -->
-                            <div class="order-1 w-5/12 px-6 py-4">
-                                <h3 class="mb-3 font-semibold text-dark text-xl">Licenced Professional Coach</h3>
-                                <p class="text-sm mt-3  font-normal leading-snug tracking-wide text-[#757575]">Lorem
-                                    Ipsum is
-                                    simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                                    galley of type and scrambled it to make a type specimen book.</p>
-                            </div>
-                        </div>
-
-                        <div class="mb-8 flex justify-between items-center w-full right-timeline">
-                            {{-- Left Timeline --}}
-                            <div class="order-1 w-5/12 px-6 py-4">
-                                <h3 class="mb-3 font-semibold text-dark text-xl">Self Employed, PT Pertamina</h3>
-                                <p class="text-sm mt-3 font-normal leading-snug tracking-wide text-[#757575]">Sept 2012
-                                    -
-                                    Jul 2015</p>
-                            </div>
-                            <div
-                                class="z-20 flex items-center order-1 bg-white border-2 w-10 h-10 rounded-full relative">
-                                <div
-                                    class=" bg-dark w-5 h-5  rounded-full flex items-center justify-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                                </div>
-                            </div>
-                            <!-- right timeline -->
-                            <div class="order-1 w-5/12 px-6 py-4">
-                                <h3 class="mb-3 font-semibold text-dark text-xl">Risk Management Coach</h3>
-                                <p class="text-sm mt-3 font-normal leading-snug tracking-wide text-[#757575]">Lorem
-                                    Ipsum is
-                                    simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                                    industry's standard dummy text ever since the 1500s, when an unknown printer took a
-                                    galley of type and scrambled it to make a type specimen book.</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -146,134 +96,58 @@
                     <div class="justify-center w-full max-auto">
                         <div x-data="{ tab: 'tab1' }">
                             <div class="flex justify-between">
-                                <a @click.prevent="tab = 'tab1'" href="#"
-                                    class="font-normal text-sm bg-[#67BD65] text-[#757575] rounded-3xl w-80 text-center py-3 px-4 "
-                                    :class="{ 'bg-[#67BD65] text-white': tab === 'tab1' }">
-                                    Research & Project
-                                </a>
-
-                                <a @click.prevent="tab = 'tab2'" href="#"
-                                    class="font-normal text-sm bg-[#67BD65] text-[#757575] w-80 text-center rounded-3xl  py-3 px-4"
-                                    :class="{ 'bg-[#67BD65] text-white': tab === 'tab2' }">
-                                    In House Training
-                                </a>
-
-                                <a @click.prevent="tab = 'tab3'" href="#"
-                                    class="font-normal text-sm bg-[#67BD65] text-[#757575] w-80 text-center rounded-3xl  py-3 px-4"
-                                    :class="{ 'bg-[#67BD65] text-white': tab === 'tab3' }">
-                                    Public Course
-                                </a>
+                                @foreach ($workCategories as $index => $data)
+                                    <a @click.prevent="tab = 'tab{{ $index + 1 }}'" href="#"
+                                        class="font-normal text-sm bg-[#67BD65] text-[#757575] rounded-3xl w-80 text-center py-3 px-4 "
+                                        :class="{ 'bg-[#67BD65] text-white': tab === 'tab{{ $index + 1 }}' }">
+                                        {{ $data->name }}
+                                    </a>
+                                @endforeach
 
                             </div>
 
 
                             <div class="py-4 pt-4 mt-14 mx-auto content">
                                 <!-- show tab1 only -->
-                                <div x-show="tab==='tab1'" class="text-gray-500">
-                                    <main>
-                                        <div class="col-span-3">
-                                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-                                                id="course-list">
-                                                @for ($i = 0; $i < 6; $i++)
-                                                    <div class="w-64 rounded-xl mx-auto mb-8 border h-fit">
-                                                        <a href="#">
-                                                            <img class="rounded-t-xl h-44 object-center rounded-xl object-cover w-full"
-                                                                src="" alt="" />
-                                                        </a>
-                                                        <div class="p-5">
-                                                            <div class="flex items-center justify-between mb-3">
-                                                                <div class="flex items-center gap-x-2">
-                                                                    <p
-                                                                        class="text-sm text-black 2xl:text-sm font-semibold">
-                                                                        Release Buku “Cendekia Remaja” </p>
+                                @foreach ($workCategories as $index => $category)
+                                    <div x-show="tab === 'tab{{ $index + 1 }}'" class="text-gray-500">
+                                        <main>
+                                            <div class="col-span-3">
+                                                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
+                                                    id="course-list">
+                                                    @foreach ($category->works as $data)
+                                                        <div class="w-64 rounded-xl mx-auto mb-8 border h-fit">
+                                                            <a href="#">
+                                                                <img class="rounded-t-xl h-44 object-center rounded-xl object-cover w-full"
+                                                                    src="{{ asset('storage/works/' . $data->photo) }}"
+                                                                    alt="" />
+                                                            </a>
+                                                            <div class="p-5">
+                                                                <div class="flex items-center justify-between mb-3">
+                                                                    <div class="flex items-center gap-x-2">
+                                                                        <p
+                                                                            class="text-sm text-black 2xl:text-sm font-semibold">
+                                                                            Release Buku“{{ $data->title }}” </p>
+                                                                    </div>
+
                                                                 </div>
+                                                                <a href="#">
+                                                                    <h5
+                                                                        class="mb-2 text-xs 2xl:text-sm font-normal text-[#757575]">
+                                                                        {{ $data->date }} </h5>
+                                                                </a>
+
 
                                                             </div>
-                                                            <a href="#">
-                                                                <h5
-                                                                    class="mb-2 text-xs 2xl:text-sm font-normal text-[#757575]">
-                                                                    07 Desember 2023 </h5>
-                                                            </a>
-
-
                                                         </div>
-                                                    </div>
-                                                @endfor
+                                                    @endforeach
 
+                                                </div>
                                             </div>
-                                        </div>
-                                    </main>
-                                </div>
-                                <div x-show="tab==='tab2'" class="text-gray-500" style="display:none">
-                                    <main>
-                                        <div class="col-span-3">
-                                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-                                                id="course-list">
-                                                @for ($i = 0; $i < 5; $i++)
-                                                    <div class="w-64 rounded-xl mx-auto mb-8 border h-fit">
-                                                        <a href="#">
-                                                            <img class="rounded-t-xl h-44 object-center rounded-xl object-cover w-full"
-                                                                src="" alt="" />
-                                                        </a>
-                                                        <div class="p-5">
-                                                            <div class="flex items-center justify-between mb-3">
-                                                                <div class="flex items-center gap-x-2">
-                                                                    <p
-                                                                        class="text-sm text-black 2xl:text-sm font-semibold">
-                                                                        Release Buku “Cendekia Remaja” </p>
-                                                                </div>
+                                        </main>
+                                    </div>
+                                @endforeach
 
-                                                            </div>
-                                                            <a href="#">
-                                                                <h5
-                                                                    class="mb-2 text-xs 2xl:text-sm font-normal text-[#757575]">
-                                                                    07 Desember 2023 </h5>
-                                                            </a>
-
-
-                                                        </div>
-                                                    </div>
-                                                @endfor
-
-                                            </div>
-                                        </div>
-                                    </main>
-                                </div>
-                                <div x-show="tab==='tab3'" class="text-gray-500" style="display:none">
-                                    <main>
-                                        <div class="col-span-3">
-                                            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4"
-                                                id="course-list">
-                                                @for ($i = 0; $i < 4; $i++)
-                                                    <div class="w-64 rounded-xl mx-auto mb-8 border h-fit">
-                                                        <a href="#">
-                                                            <img class="rounded-t-xl h-44 object-center rounded-xl object-cover w-full"
-                                                                src="" alt="" />
-                                                        </a>
-                                                        <div class="p-5">
-                                                            <div class="flex items-center justify-between mb-3">
-                                                                <div class="flex items-center gap-x-2">
-                                                                    <p
-                                                                        class="text-sm text-black 2xl:text-sm font-semibold">
-                                                                        Release Buku “Cendekia Remaja” </p>
-                                                                </div>
-
-                                                            </div>
-                                                            <a href="#">
-                                                                <h5
-                                                                    class="mb-2 text-xs 2xl:text-sm font-normal text-[#757575]">
-                                                                    07 Desember 2023 </h5>
-                                                            </a>
-
-
-                                                        </div>
-                                                    </div>
-                                                @endfor
-
-                                            </div>
-                                        </div>
-                                    </main>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -366,8 +240,8 @@
                         <div>
                             <a href="#"
                                 class="bg-[#285065] text-white w-full rounded-3xl text-xs 2xl:text-sm flex items-center justify-center mt-2 px-6 md:px-9 py-3.5 text-center">
-                                <ion-icon class="w-3 h-3 md:w-4 md:h-4 mr-1 md hydrated" name="call"
-                                    role="img" aria-label="logo linkedin"></ion-icon>6287834671064
+                                <ion-icon class="w-3 h-3 md:w-4 md:h-4 mr-1 md hydrated" name="call" role="img"
+                                    aria-label="logo linkedin"></ion-icon>6287834671064
                             </a>
                         </div>
                     </div>
