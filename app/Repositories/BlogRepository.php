@@ -30,7 +30,7 @@ class BlogRepository implements BlogInterface
     {
         return $this->blog->with(['blogCategory'])->where('slug', $slug)->first();
     }
-    
+
     public function store($data)
     {
         $fileNameThumbnail = uniqid() . '.' . $data['thumbnail']->extension();
@@ -117,5 +117,10 @@ class BlogRepository implements BlogInterface
         Storage::delete('public/blogs/thumbnail/' . $blog->thumbnail);
 
         $blog->delete();
+    }
+
+    public function increment($slug)
+    {
+        return $this->blog->where('slug', $slug)->increment('view_count');
     }
 }

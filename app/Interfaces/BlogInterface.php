@@ -10,4 +10,6 @@ interface BlogInterface
     public function update($id, $data);
     public function destroy($id);
     public function getBySlug($slug);
+
+    public function increment($slug);
 }

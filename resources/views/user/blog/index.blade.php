@@ -26,7 +26,7 @@
     <section>
         <div class="relative items-center w-full px-5 pt-20 py-20 mx-auto md:px-12 lg:px-14 xl:px-0 max-w-6xl">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div>
+                <div onclick="window.location.href='{{ route('blog.detail', $blogs->first()->slug) }}'">
                     <img src="{{ $blogs->first()->thumbnail
                         ? asset('storage//blogs/thumbnail/' . $blogs->first()->thumbnail)
                         : asset('assets/default.png') }}"
@@ -39,7 +39,10 @@
                                 {{ $blogs->first()->blogCategory->name ?? 'Uncategorized' }}
                             </span>
                         </div>
-                        <p class="text-xs 2xl:text-sm text-dark"> • {{ $blogs->first()->created_at->format('d F Y') }}
+                        <p class="text-xs 2xl:text-sm text-dark"> • {{ $blogs->first()->created_at->format('d F Y') }} •
+                        <div class="flex items-center gap-2 text-xs 2xl:text-sm text-gray-400"><ion-icon
+                                name="eye-outline"></ion-icon>{{ $blogs->first()->view_count }}
+                        </div>
                         </p>
                     </div>
                     <p class="line-clamp-3 font-semibold text-xl tracking-tight leading-7 text-dark mb-3">
@@ -72,12 +75,15 @@
                                         </span>
                                     </div>
                                     <p class="text-xs 2xl:text-sm text-dark">
-                                        • {{ $data->created_at->format('d F Y') }}
+                                        • {{ $data->created_at->format('d F Y') }} •
+                                    <div class="flex items-center gap-2 text-xs 2xl:text-sm text-gray-400">
+                                        <ion-icon name="eye-outline"></ion-icon> {{ $data->view_count }}
+                                    </div>
                                     </p>
                                 </div>
                                 <div>
                                     <p
-                                        class="line-clamp-2 font-semibold text-md hover:line-clamp-none tracking-tight leading-7 text-dark mb-6">
+                                        class="line-clamp-2 font-semibold text-md hover:line-clamp-none tracking-tight leading-7 text-dark mb-2">
                                         {{ $data->title }}
                                     </p>
                                     <p class="line-clamp-2 text-gray-500 text-xs 2xl:text-sm leading-6 font-normal">
@@ -98,7 +104,8 @@
         <div class="relative items-center w-full px-5 pt-20 py-20 mx-auto md:px-12 lg:px-14 xl:px-24 max-w-full">
             <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                 @foreach ($blogs->skip(4) as $data)
-                    <div class="inline-flex gap-3 items-start">
+                    <div class="inline-flex gap-3 items-start"
+                        onclick="window.location.href='{{ route('blog.detail', $data->slug) }}'">
                         <div class="flex-shrink-0">
                             <img src="{{ $data->thumbnail
                                 ? asset('storage//blogs/thumbnail/' . $blogs->first()->thumbnail)
@@ -126,6 +133,9 @@
                                 <p class="line-clamp-2 text-gray-500 text-xs 2xl:text-sm leading-6 font-normal">
                                     {!! $data->content !!}
                                 </p>
+                                <div class="flex items-center gap-2 text-xs 2xl:text-sm text-gray-400 mt-3">
+                                    <ion-icon name="eye-outline"></ion-icon> {{ $data->view_count }}
+                                </div>
                             </div>
                         </div>
                     </div>
