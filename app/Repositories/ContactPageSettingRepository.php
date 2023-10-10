@@ -14,9 +14,9 @@ class ContactPageSettingRepository implements ContactPageSettingInterface
         $this->contactPageSetting = $contactPageSetting;
     }
 
-    public function getAll()
+    public function get()
     {
-        return $this->contactPageSetting->all();
+        return $this->contactPageSetting->first();
     }
 
     public function getById($id)

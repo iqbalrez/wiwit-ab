@@ -13,6 +13,8 @@ class ContactPageSetting extends Model
     protected $fillable = [
         'address',
         'working_hours',
+        'personal_email',
+        'office_email'
     ];
 
 }

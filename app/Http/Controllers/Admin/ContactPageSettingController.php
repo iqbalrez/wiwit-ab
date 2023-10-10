@@ -18,7 +18,7 @@ class ContactPageSettingController extends Controller
     public function index()
     {
         return view('admin.contact_page_setting.index', [
-            'contactPageSettings' => $this->contactPageSetting->getAll()
+            'contactPageSetting' => $this->contactPageSetting->get()
         ]);
     }
 
@@ -30,8 +30,10 @@ class ContactPageSettingController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'address'       => 'required',
-            'working_hours' => 'required',
+            'address'        => 'required',
+            'working_hours'  => 'required',
+            'personal_email' => 'required',
+            'office_email'   => 'required'
         ]);
 
         try {
@@ -45,8 +47,10 @@ class ContactPageSettingController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'address'       => 'required',
-            'working_hours' => 'required',
+            'address'        => 'required',
+            'working_hours'  => 'required',
+            'personal_email' => 'required',
+            'office_email'   => 'required'
         ]);
 
         try {

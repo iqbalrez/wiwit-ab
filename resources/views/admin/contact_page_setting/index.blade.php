@@ -2,11 +2,13 @@
     <div class="relative overflow-x-auto rounded-lg custom-box-shadow">
         <div class="md:flex items-center space-y-3 md:space-y-0 justify-between p-4 bg-white ">
             <div>
+                @if(!isset($contactPageSetting))
                 <button data-modal-target="default-modal" data-modal-toggle="default-modal" onclick="btnAdd()"
                     class="block text-white bg-dark hover:bg-dark focus:ring-4 focus:outline-none focus:ring-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                     type="button">
                     Change setting
                 </button>
+                @endif
             </div>
             <div class="relative">
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
@@ -30,29 +32,39 @@
                         Working Hours
                     </th>
                     <th scope="col" class="px-6 py-3">
+                        Personal Email
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Office Email
+                    </th>
+                    <th scope="col" class="px-6 py-3">
                         Action
                     </th>
                 </tr>
             </thead>
             <tbody>
-                @foreach ($contactPageSettings as $data)
                     <tr class="bg-white border-b">
                         <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                            {{ $data->address }}
+                            {{ $contactPageSetting->address }}
                         </th>
                         <td class="px-6 py-4">
-                            {{ $data->working_hours }}
+                            {{ $contactPageSetting->working_hours }}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ $contactPageSetting->personal_email }}
+                        </td>
+                        <td class="px-6 py-4">
+                            {{ $contactPageSetting->office_email }}
                         </td>
                         <td class="px-6 py-4 space-x-3">
                             <ion-icon name="create" class="w-6 h-6 text-orange-600 cursor-pointer"
                                 data-modal-target="default-modal" data-modal-toggle="default-modal"
-                                onclick="btnEdit('{{ $data->id }}')"></ion-icon>
-                            <ion-icon name="trash-bin" class="w-6 h-6 text-red-600 cursor-pointer"
+                                onclick="btnEdit('{{ $contactPageSetting->id }}')"></ion-icon>
+                                <ion-icon name="trash-bin" class="w-6 h-6 text-red-600 cursor-pointer"
                                 data-modal-target="popup-modal" data-modal-toggle="popup-modal"
-                                onclick="$('#popup-modal form').attr('action', '{{ route('admin.message.destroy', $data->id) }}')"></ion-icon>
+                                onclick="$('#popup-modal form').attr('action', '{{ route('admin.contact-page-setting.destroy', $contactPageSetting->id) }}')"></ion-icon>
                         </td>
                     </tr>
-                @endforeach
             </tbody>
         </table>
     </div>
@@ -87,6 +99,10 @@
                         <x-input id="address" type="text" label="Address" required name="address" value=""
                             placeholder="" class="" />
                         <x-input id="working_hours" type="text" label="Working Hours" required name="working_hours"
+                            value="" placeholder="" class="" />
+                        <x-input id="personal_email" type="text" label="Personal email" required name="personal_email"
+                            value="" placeholder="" class="" />
+                        <x-input id="office_email" type="text" label="Office email" required name="office_email"
                             value="" placeholder="" class="" />
                     </div>
                     <!-- Modal footer -->
@@ -160,6 +176,8 @@
                         $('#default-modal form').trigger('reset');
                         $('#default-modal form #address').val(data.address);
                         $('#default-modal form #working_hours').val(data.working_hours);
+                        $('#default-modal form #personal_email').val(data.personal_email);
+                        $('#default-modal form #office_email').val(data.office_email);
                     },
                     error: function() {
                         Swal.fire(

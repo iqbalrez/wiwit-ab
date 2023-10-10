@@ -38,7 +38,7 @@
                                 <h3 class="mb-2 text-md font-medium leading-6 text-dark ">Our
                                     Address
                                 </h3>
-                                <p class="text-gray-600 ">Pogung Dalangan, Sinduadi, Kec. Mlati, Kabupaten Sleman, DIY
+                                <p class="text-gray-600 ">{{ $contact->address }}
                                 </p>
                             </div>
                         </li>
@@ -49,8 +49,8 @@
                             <div class="ml-4 mb-4">
                                 <h3 class="mb-2 text-md font-medium leading-6 text-dark ">Contact
                                 </h3>
-                                <p class="text-gray-600">itmcnazma@gmail.com</p>
-                                <p class="text-gray-600">wiwitab@gmail.com</p>
+                                <p class="text-gray-600">{{$contact->personal_email}}</p>
+                                <p class="text-gray-600">{{$contact->office_email}}</p>
                             </div>
                         </li>
                         <li class="flex">
@@ -60,8 +60,7 @@
                             <div class="ml-4 mb-4">
                                 <h3 class="mb-2 text-md font-medium leading-6 text-dark ">Working
                                     hours</h3>
-                                <p class="text-gray-600">Monday - Saturday: 8am - 6pm</p>
-                                <p class="text-gray-600">Sunday: 11am - 4pm</p>
+                                <p class="text-gray-600">{{ $contact->working_hours }}</p>
                                 </p>
                             </div>
                         </li>
