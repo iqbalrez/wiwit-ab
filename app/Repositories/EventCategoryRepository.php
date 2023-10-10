@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Interfaces\EventCategoryInterface;
 use App\Models\EventCategory;
+use Illuminate\Support\Facades\Storage;
 
 class EventCategoryRepository implements EventCategoryInterface
 {
@@ -16,7 +17,7 @@ class EventCategoryRepository implements EventCategoryInterface
 
     public function getAll()
     {
-        return $this->eventCategory->all();
+        return $this->eventCategory->with('events')->get();
     }
 
     public function getById($id)
@@ -36,6 +37,14 @@ class EventCategoryRepository implements EventCategoryInterface
 
     public function destroy($id)
     {
-        return $this->eventCategory->find($id)->delete();
+        $eventCategory = $this->eventCategory->find($id);
+        if (isset($eventCategory->events)) {
+            foreach ($eventCategory->events as $event) {
+                // delete thumbnail and event
+                Storage::delete('public/event/' . $event->thumbnail);
+                $event->delete();
+            }
+        }
+        return $eventCategory->delete();
     }
 }
