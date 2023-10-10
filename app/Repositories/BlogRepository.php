@@ -18,7 +18,7 @@ class BlogRepository implements BlogInterface
 
     public function getAll()
     {
-        return $this->blog->all();
+        return $this->blog->with('blogCategory')->orderBy('created_at', 'desc')->get();
     }
 
     public function getById($id)
@@ -70,7 +70,7 @@ class BlogRepository implements BlogInterface
     {
         $blog = $this->blog->find($id);
 
-        if(isset($data['thumbnail'])){
+        if (isset($data['thumbnail'])) {
             // delete old file
             Storage::delete('public/blogs/thumbnail/' . $blog->thumbnail);
 
@@ -107,14 +107,13 @@ class BlogRepository implements BlogInterface
             DB::rollBack();
         }
         DB::commit();
-        
     }
 
     public function destroy($id)
     {
         $blog = $this->getById($id);
 
-          // delete old file
+        // delete old file
         Storage::delete('public/blogs/thumbnail/' . $blog->thumbnail);
 
         $blog->delete();
