@@ -9,12 +9,12 @@
                                 Events
                             </p>
                             <p class="text-2xl font-semibold tracking-tight text-dark sm:text-5xl">
-                                Elevate your skills and network <br>Join me at upcoming events<span
+                                Participate in and organize events in <br> an effort to grow oneself<span
                                     class="text-primary">.</span>
                             </p>
                             <p
                                 class="mx-auto lg:mx-0 mt-3 text-sm md:text-xl tracking-tight leading-8 text-gray-600 font-light">
-                                Participate in and organize events in an effort to grow oneself and the environment to
+                                The environment to
                                 be more productive and active
                             </p>
                         </div>
