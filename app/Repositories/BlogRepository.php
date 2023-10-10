@@ -28,9 +28,9 @@ class BlogRepository implements BlogInterface
 
     public function getBySlug($slug)
     {
-        return $this->blog->where('slug', $slug)->first();
+        return $this->blog->with(['blogCategory'])->where('slug', $slug)->first();
     }
-
+    
     public function store($data)
     {
         $fileNameThumbnail = uniqid() . '.' . $data['thumbnail']->extension();

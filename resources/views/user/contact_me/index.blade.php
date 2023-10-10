@@ -49,8 +49,8 @@
                             <div class="ml-4 mb-4">
                                 <h3 class="mb-2 text-md font-medium leading-6 text-dark ">Contact
                                 </h3>
-                                <p class="text-gray-600">{{$contact->personal_email}}</p>
-                                <p class="text-gray-600">{{$contact->office_email}}</p>
+                                <p class="text-gray-600">{{ $contact->personal_email }}</p>
+                                <p class="text-gray-600">{{ $contact->office_email }}</p>
                             </div>
                         </li>
                         <li class="flex">
@@ -67,28 +67,30 @@
                     </ul>
                 </div>
                 <div class="card h-fit max-w-6xl p-5 md:p-12 bg-dark rounded-2xl ces" id="form">
+
                     <h2 class="mb-4 text-2xl font-semibold text-white">
                         Send me a message
                     </h2>
-                    <form id="contactForm">
+                    <form action="{{ route('user.message.store') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <div class="mb-6">
                             <div class="mx-0 mb-1 sm:mb-4 space-y-6">
                                 <div>
                                     <label for="name" class="block mb-2 text-sm text-white">Name *</label>
-                                    <input type="text" id="name"
+                                    <input type="text" id="name" name="name"
                                         class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
                                         placeholder="Jhon" required>
                                 </div>
                                 <div>
                                     <label for="email" class="block mb-2 text-sm text-white">Email address *</label>
-                                    <input type="text" id="email"
+                                    <input type="text" id="email" name="email"
                                         class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
                                         placeholder="example@company.com" required>
                                 </div>
                             </div>
                             <div class="mb-6">
                                 <label for="message" class="block mb-2 text-sm text-white ">How we can help?</label>
-                                <textarea id="message" rows="8"
+                                <textarea id="message" rows="8" name="message"
                                     class="block p-2.5 w-full bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none "
                                     placeholder="I need help with this problem"></textarea>
                             </div>
@@ -103,4 +105,23 @@
             </div>
         </div>
     </section>
+    @push('js-internal')
+        <script>
+            @if (Session::has('success'))
+                Swal.fire(
+                    'Success!',
+                    '{{ Session::get('success') }}',
+                    'success'
+                )
+            @endif
+
+            @if (Session::has('error'))
+                Swal.fire(
+                    'Error!',
+                    '{{ Session::get('error') }}',
+                    'error'
+                )
+            @endif
+        </script>
+    @endpush    
 </x-guest-layout>

@@ -53,6 +53,9 @@ Route::get('portofolio', [UserPortofolioController::class, 'index'])->name('port
 
 // Contact Us
 Route::get('contact-me', [UserContactMeController::class, 'index'])->name('contact-me.index');
+Route::post('contact-me/', [UserContactMeController::class, 'store'])->name('user.message.store');
+
+
 
 Route::get('/admin', function () {
     return view('admin');
