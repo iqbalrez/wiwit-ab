@@ -32,9 +32,7 @@
                     <th scope="col" class="px-6 py-3">
                         Thumbnail
                     </th>
-                    <th scope="col" class="px-6 py-3">
-                        Content
-                    </th>
+                    
                     <th scope="col" class="px-6 py-3">
                         Author
                     </th>
@@ -58,10 +56,7 @@
                         <td class="px-6 py-4">
                             <img src="{{ asset('storage/blogs/thumbnail/' . $data->thumbnail) }}" alt=""
                                 class="w-20 h-20 object-center object-cover rounded-md">
-                        </td>
-                        <td class="px-6 py-4">
-                            {{ $data->content }}
-                        </td>
+                        </td>          
                         <td class="px-6 py-4">
                             {{ $data->author }}
                         </td>
@@ -118,8 +113,8 @@
                         </x-select>
                         <x-input id="thumbnail" type="file" label="Thumbnail" required name="thumbnail"
                             value="" placeholder="" class="" />
-                        <x-input id="content" type="text" label="Content" required name="content"
-                            value="" placeholder="" class="" />
+                        <x-textarea id="content" name="content" label="Konten" required></x-textarea>
+
                         <x-input id="author" type="text" label="Author" required name="author"
                             value="" placeholder="" class="" />
                         <x-input id="published_date" type="date" label="Published Date" required
@@ -178,7 +173,19 @@
     </div>
 
     @push('js-internal')
+        <script src="https://cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
         <script>
+            CKEDITOR.replace('content');
+        </script>
+
+        <script>
+            function resetClassicEditor() {
+                $(".ck-blurred p").html("<p></p>");
+
+                // Reset the editor content
+                CKEDITOR.instances['content'].setData('');
+            }
+
             function btnAdd() {
                 $('#default-modal form').trigger('reset');
                 let url = "{{ route('admin.blog.store') }}";

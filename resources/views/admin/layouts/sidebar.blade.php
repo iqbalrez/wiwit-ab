@@ -13,13 +13,13 @@
                         </path>
                     </svg>
                 </button>
-                <a href="https://flowbite.com" class="flex ml-2 md:mr-24">
+                <a href="{{ route('admin.dashboard') }}" class="flex ml-2 md:mr-24">
                     {{-- <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 mr-3" alt="FlowBite Logo" /> --}}
                     <span
                         class="self-center text-xs 2xl:text-sm font-semibold text-gray-600 sm:text-lg whitespace-nowrap">Admin
                         Panel</span>
                 </a>
-            </div>
+        </div>
             <div class="flex
                         items-center">
                 <div class="flex items-center ml-3">
@@ -52,11 +52,6 @@
                                 <a href="#"
                                     class="block px-4 py-2 text-sm 2xl:text-sm text-gray-700 hover:bg-gray-100  -600 "
                                     role="menuitem">Settings</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 text-sm 2xl:text-sm text-gray-700 hover:bg-gray-100  -600 "
-                                    role="menuitem">Earnings</a>
                             </li>
                             <li>
                                 <a href="#"
