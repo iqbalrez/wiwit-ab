@@ -14,7 +14,8 @@
                             </p>
                             <p
                                 class="mx-auto lg:mx-0 mt-3 text-sm md:text-xl tracking-tight leading-8 text-gray-600 font-light">
-                                Discover the best event for your improve journey
+                                Participate in and organize events in an effort to grow oneself and the environment to
+                                be more productive and active
                             </p>
                         </div>
                     </div>
