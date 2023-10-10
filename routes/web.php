@@ -40,7 +40,7 @@ use App\Http\Controllers\Admin\WorkCategoryController;
 Route::get('/', [HomeController::class, 'index']);
 // Blog
 Route::get('blog', [UserBlogController::class, 'index'])->name('blog.index');
-Route::get('blog/{id}', [UserBlogController::class, 'detail'])->name('blog.detail');
+Route::get('blog/{slug}', [UserBlogController::class, 'detail'])->name('blog.detail');
 
 // Events
 Route::get('events', [UserEventsController::class, 'index'])->name('events.index');
@@ -88,7 +88,6 @@ Route::group(['prefix' => 'admin'], function () {
         Route::post('/', [BlogCategoryController::class, 'store'])->name('admin.blog-category.store');
         Route::post('{id}/update', [BlogCategoryController::class, 'update'])->name('admin.blog-category.update');
         Route::post('{id}/delete', [BlogCategoryController::class, 'destroy'])->name('admin.blog-category.destroy');
-
     });
 
     //Consultation Request

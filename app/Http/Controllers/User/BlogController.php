@@ -14,15 +14,16 @@ class BlogController extends Controller
     {
         $this->blog         = $blog;
     }
-    public function index(){
+    public function index()
+    {
         return view('user.blog.index');
     }
 
     public function detail($slug)
     {
         return view('user.blog.detail', [
-            'blog'          => $this->blog->getBySlug($slug),
-            'blogs'         => $this->blog->getAll(),
+            'blog'           => $this->blog->getBySlug($slug),
+            'blogCategories' => $this->blogCategory->getAll()
         ]);
     }
 }
