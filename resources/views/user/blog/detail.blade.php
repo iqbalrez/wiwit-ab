@@ -6,16 +6,16 @@
                     <div class="text-center lg:text-center">
                         <div>
                             <p class="2xl:text-sm  text-primary font-semibold">
-                                Technology
+                                {{ $blogs->blogCategory->title }}
                             </p>
                             <p class="mb-8 text-2xl font-bold tracking-tight text-dark sm:text-xl">
-                                Tertarik Menjadi Blogger? Begini Tips<br>Menulis Blog untuk Pemula
+                                {{ $blogs->title }}
                             </p>
                             <p class="text-sm font-semibold text-dark">
-                                 Wiwit AB
+                                {{ $blogs->author }}
                             </p>
                             <p class="text-sm font-normal text-gray-500">
-                                    12 August 2023
+                                {{ date('d-F-Y', strtotime($data->published_date)) }}
                             </p>
                         </div>
                     </div>
@@ -26,36 +26,13 @@
 
     <section>
         <div class="max-w-4xl w-full px-8 mx-auto transform -translate-y-20 sm:-translate-y-14">
-            <img class="rounded-lg" src="https://global-uploads.webflow.com/5f6cc9cd16d59d990c8fca33/6253621fbc21de5a2a444790_diverse-stock-photography.jpg" alt="">
+            <img class="rounded-lg" src="{{ asset('storage/blogs/thumbnail/' . $blogs->thumbnail) }}" alt="">
         </div>
 
         <div class="flex items-center justify-center px-8 w-full mt-0  mx-auto md:px-12 lg:px-14 xl:px-0 max-w-4xl">
             <div>
                 <P class="overflow-x-auto font-normal text-left text-sm 2xl:text-xl text-black leading-8">
-                    The American Academy of Achievement members describe how they applied these six principles to their own lives
-                    — passion, vision, preparation, courage, perseverance and integrity — to set them on to their individual paths to
-                    success. Learn how these core principles helped our extraordinary leaders shape their achievements and their
-                    lives. Discover how to apply these key elements as a roadmap to reach your own destinations
-                    . 
-                    We strive to capture the spirit of accomplishment and an appreciation for the character of eminent achievers.
-                    Listening to their life stories, you can develop an awareness of the attributes these leaders share: The will to go
-                    forward despite doubts, setbacks and ridicule. The ability to recover from failures and keep from becoming
-                    discouraged. Courage, love and commitment to their work. The pursuit of excellence rather than a simple desire
-                    for glory. By dedicating themselves to goals that aroused their passion, they often pushed the boundaries of
-                    knowledge in their chosen endeavors. With these qualities firmly in hand, you may discover that you are already in
-                    the middle of your own personal success story.
-                    The American Academy of Achievement members describe how they applied these six principles to their own lives
-                    — passion, vision, preparation, courage, perseverance and integrity — to set them on to their individual paths to
-                    success. Learn how these core principles helped our extraordinary leaders shape their achievements and their
-                    lives. Discover how to apply these key elements as a roadmap to reach your own destinations
-                    . 
-                    We strive to capture the spirit of accomplishment and an appreciation for the character of eminent achievers.
-                    Listening to their life stories, you can develop an awareness of the attributes these leaders share: The will to go
-                    forward despite doubts, setbacks and ridicule. The ability to recover from failures and keep from becoming
-                    discouraged. Courage, love and commitment to their work. The pursuit of excellence rather than a simple desire
-                    for glory. By dedicating themselves to goals that aroused their passion, they often pushed the boundaries of
-                    knowledge in their chosen endeavors. With these qualities firmly in hand, you may discover that you are already in
-                    the middle of your own personal success story.
+                  {{ $blogs->content }}
                 </P>
                 <div class="flex items-center justify-center mt-14">
                     <a href="{{ route('blog.index') }}"

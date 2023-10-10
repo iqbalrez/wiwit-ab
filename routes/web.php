@@ -40,7 +40,7 @@ use App\Http\Controllers\Admin\WorkCategoryController;
 Route::get('/', [HomeController::class, 'index']);
 // Blog
 Route::get('blog', [UserBlogController::class, 'index'])->name('blog.index');
-Route::get('blog/{id}', [UserBlogController::class, 'show'])->name('blog.show');
+Route::get('blog/{id}', [UserBlogController::class, 'detail'])->name('blog.detail');
 
 // Events
 Route::get('events', [UserEventsController::class, 'index'])->name('events.index');
