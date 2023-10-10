@@ -22,7 +22,7 @@
                             <div class="mt-10">
                                 <button
                                     class="inline-flex items-center justify-center text-sm px-8 py-3.5 mt-4 md:mt-0 rounded-full text-white bg-[#67BD65] hover:bg-dark focus:outline-none focus:text-white">
-                                    normal Consultation
+                                    Normal Consultation
                                 </button>
                             </div>
                         </div>
@@ -146,82 +146,36 @@
                 we’ve got what you need<span class="text-primary">.</span>
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-24">
-                <div class="rounded-xl border-[1.5px] bg-white border-[#EDEDED] p-6 custom-box-shadow">
-                    <p class="font-semibold text-dark">Entrepreneurship</p>
-                    <img src="{{ asset('assets/profile1.jpg') }}"
-                        class="bg-gray-300 rounded-full mx-auto mt-12 w-60 h-60 object-center object-cover"
-                        alt="">
-                    <div class="text-xs 2xl:text-sm px-4">
-                        <p class="mt-8 text-gray-500 leading-7">
-                            “Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa Aliquam in hendrerit
-                            urna.
-                            Pellentesque sit amet sapien”
-                        </p>
-                        <p class="text-dark mt-7">
-                            <span class="font-semibold">Moh Ibnnu,</span> <span class="text-gray-500">Sukamaju
-                                Dev</span>
-                        </p>
+                @foreach ($testimonials as $data)
+                    <div class="rounded-xl border-[1.5px] bg-white border-[#EDEDED] p-6 custom-box-shadow">
+                        <p class="font-semibold text-dark">{{ $data->job }}</p>
+                        <img src="{{ asset('assets/profile1.jpg') }}"
+                            class="bg-gray-300 rounded-full mx-auto mt-12 w-60 h-60 object-center object-cover"
+                            alt="">
+                        <div class="text-xs 2xl:text-sm px-4">
+                            <p class="mt-8 text-gray-500 leading-7">
+                                “{{ $data->testimonial }}”
+                            </p>
+                            <p class="text-dark mt-7">
+                                <span class="font-semibold">{{ $data->name }},</span> <span
+                                    class="text-gray-500">{{ $data->position }}</span>
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="rounded-xl border-[1.5px] bg-white border-[#EDEDED] p-6 custom-box-shadow">
-                    <p class="font-semibold text-dark">Entrepreneurship</p>
-                    <img src="{{ asset('assets/profile2.jpg') }}"
-                        class="bg-gray-300 rounded-full mx-auto mt-12 w-60 h-60 object-center object-cover"
-                        alt="">
-                    <div class="text-xs 2xl:text-sm px-4">
-                        <p class="mt-8 text-gray-500 leading-7">
-                            “Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa Aliquam in hendrerit
-                            urna.
-                            Pellentesque sit amet sapien”
-                        </p>
-                        <p class="text-dark mt-7">
-                            <span class="font-semibold">Moh Ibnnu,</span> <span class="text-gray-500">Sukamaju
-                                Dev</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="rounded-xl border-[1.5px] bg-white border-[#EDEDED] p-6 custom-box-shadow">
-                    <p class="font-semibold text-dark">Entrepreneurship</p>
-                    <img src="{{ asset('assets/profile3.jpg') }}"
-                        class="bg-gray-300 rounded-full mx-auto mt-12 w-60 h-60 object-center object-cover"
-                        alt="">
-                    <div class="text-xs 2xl:text-sm px-4">
-                        <p class="mt-8 text-gray-500 leading-7">
-                            “Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa Aliquam in hendrerit
-                            urna.
-                            Pellentesque sit amet sapien”
-                        </p>
-                        <p class="text-dark mt-7">
-                            <span class="font-semibold">Moh Ibnnu,</span> <span class="text-gray-500">Sukamaju
-                                Dev</span>
-                        </p>
-                    </div>
-                </div>
+                @endforeach
+
+
             </div>
 
             {{-- Partner --}}
             <div class="mx-auto mt-24">
                 <div class="grid grid-cols-2 gap-0.5 md:grid-cols-5">
-                    <div class="flex justify-center col-span-1 px-8">
-                        <img class="h-24 w-full object-contain" src="{{ asset('assets/partner/Logo.png') }}"
-                            alt="logo">
-                    </div>
-                    <div class="flex justify-center col-span-1 px-8">
-                        <img class="h-24 w-full object-contain" src="{{ asset('assets/partner/Logo-1.png') }}"
-                            alt="logo">
-                    </div>
-                    <div class="flex justify-center col-span-1 px-8">
-                        <img class="h-24 w-full object-contain" src="{{ asset('assets/partner/Logo-2.png') }}"
-                            alt="logo">
-                    </div>
-                    <div class="flex justify-center col-span-1 px-8">
-                        <img class="h-24 w-full object-contain" src="{{ asset('assets/partner/Logo-3.png') }}"
-                            alt="logo">
-                    </div>
-                    <div class="flex justify-center col-span-1 px-8">
-                        <img class="h-24 w-full object-contain" src="{{ asset('assets/partner/Logo-4.png') }}"
-                            alt="logo">
-                    </div>
+                    @foreach ($partners as $data)
+                        <div class="flex justify-center col-span-1 px-8">
+                            <img class="h-24 w-full object-contain" src="{{ asset('storage/partner/' . $data->logo) }}"
+                                alt="logo">
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </div>
@@ -243,7 +197,7 @@
                             <p class="text-white text-lg font-semibold">Office</p>
                         </div>
                         <p class="text-white leading-7 max-w-sm mt-4 text-xs 2xl:text-sm">
-                            Pogung Dalangan, Sinduadi, Kec. Mlati, Kabupaten Sleman, DIY
+                            {{ $contacts->address }}
                         </p>
                     </div>
                     <div class="mt-12">
@@ -252,8 +206,8 @@
                             <p class="text-white text-lg font-semibold">Contact</p>
                         </div>
                         <div class="text-white leading-7 max-w-sm mt-4 text-xs 2xl:text-sm">
-                            <p>itmcnazma@gmail.com</p>
-                            <p>wiwitab@gmail.com</p>
+                            <p>{{ $contacts->personal_email }}</p>
+                            <p>{{ $contacts->office_email }}</p>
                         </div>
                     </div>
                     <div class="mt-12">
@@ -262,58 +216,58 @@
                             <p class="text-white text-lg font-semibold">Open Hours</p>
                         </div>
                         <div class="text-white leading-7 max-w-sm mt-4 text-xs 2xl:text-sm">
-                            <p>Monday - Saturday: 8am - 6pm</p>
-                            <p>Sunday: 11am - 4pm</p>
+                            {{ $contacts->working_hours }}
                         </div>
                     </div>
                 </div>
                 <div class="p-8 bg-white shadow-lg shadow-black rounded-3xl h-fit">
-                    <form>
+                    <form action="{{ route('user.consultation-request.store') }}" method="POST"
+                        enctype="multipart/form-data">
+                        @csrf 
                         <div class="grid gap-6 mb-6 md:grid-cols-2">
                             <div>
                                 <label for="name" class="block mb-2 text-sm text-dark">Name *</label>
-                                <input type="text" id="name"
+                                <input type="text" id="name" name="name"
                                     class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
                                     placeholder="Jhon" required>
                             </div>
                             <div>
                                 <label for="phone" class="block mb-2 text-sm text-dark">Phone *</label>
-                                <input type="text" id="phone"
+                                <input type="text" id="phone_number" name="phone_number"
                                     class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
                                     placeholder="62 xxx xxx" required>
                             </div>
                             <div>
                                 <label for="email" class="block mb-2 text-sm text-dark">Email *</label>
-                                <input type="text" id="email"
+                                <input type="text" id="email" name="email"
                                     class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
                                     placeholder="email@company.com" required>
                             </div>
                             <div class="">
                                 <label for="countries" class="block mb-2 text-sm font-medium text-dark">Service
                                     interest in *</label>
-                                <select id="countries"
+                                <select id="consultation_request_category_id" name="consultation_request_category_id"
                                     class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none min-w-full py-3">
-                                    <option selected>Choose a country</option>
-                                    <option value="US">United States</option>
-                                    <option value="CA">Canada</option>
-                                    <option value="FR">France</option>
-                                    <option value="DE">Germany</option>
+                                    @foreach ($consultationRequestCategories as $data)
+                                        <option selected>Choose Service </option>
+                                        <option value="{{ $data->id }}">{{ $data->name }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
                         <div class="mb-6">
                             <label for="subject" class="block mb-2 text-sm text-dark">Subject *</label>
-                            <input type="text" id="subject"
+                            <input type="text" id="subject" name="subject"
                                 class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
                                 placeholder="Personal text planning" required>
                         </div>
                         <div class="mb-6">
                             <label for="message" class="block mb-2 text-sm text-dark ">How we can help?</label>
-                            <textarea id="message" rows="8"
+                            <textarea id="message" rows="8" name="message"
                                 class="block p-2.5 w-full bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none "
                                 placeholder="I need help with this problem"></textarea>
                         </div>
-                        <button
+                        <button type="submit"
                             class="inline-flex w-full items-center justify-center text-md px-8 py-3.5 rounded-full text-white bg-[#67BD65] hover:bg-dark focus:outline-none focus:text-white font-normal">
                             Request a Quote
                         </button>
@@ -322,6 +276,23 @@
             </div>
         </div>
     </section>
+    @push('js-internal')
+        <script>
+            @if (Session::has('success'))
+                Swal.fire(
+                    'Success!',
+                    '{{ Session::get('success') }}',
+                    'success'
+                )
+            @endif
 
-
+            @if (Session::has('error'))
+                Swal.fire(
+                    'Error!',
+                    '{{ Session::get('error') }}',
+                    'error'
+                )
+            @endif
+        </script>
+    @endpush
 </x-guest-layout>

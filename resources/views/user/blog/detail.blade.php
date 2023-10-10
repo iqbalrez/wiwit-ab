@@ -11,7 +11,7 @@
                                     {{ $blog->blogCategory->title }}
                                 </p>
                                 <p class="mb-8 text-2xl font-semibold tracking-tight text-dark sm:text-xl">
-                                    {{ $blog->title }}
+                                {{ $blog->title }}
                                 </p>
                                 <p class="text-sm font-semibold text-dark">
                                     {{ $blog->author }}

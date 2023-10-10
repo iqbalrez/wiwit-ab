@@ -37,7 +37,9 @@ use App\Http\Controllers\Admin\WorkCategoryController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::post('/', [HomeController::class, 'store'])->name('user.consultation-request.store');
+
 // Blog
 Route::get('blog', [UserBlogController::class, 'index'])->name('blog.index');
 Route::get('blog/{slug}', [UserBlogController::class, 'detail'])->name('blog.detail');
