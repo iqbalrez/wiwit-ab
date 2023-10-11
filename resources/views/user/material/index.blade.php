@@ -32,7 +32,7 @@
             <div class="block md:grid md:grid-cols-6 md:gap-8 mt-16">
                 <div class="block mb-8 md:col-span-2 lg:col-span-1">
                     <div class="mb-6 ">
-                        <label for="year" class="block mb-2 text-sm font-medium text-dark">Year *</label>
+                        <label for="year" class="block mb-2 text-sm font-medium text-dark">Year</label>
                         <select id="year"
                             class="bg-gray-50 border-none text-dark text-sm rounded-lg focus:outline-none min-w-full py-3">
                             <option value="any" selected>Any year</option>
@@ -43,22 +43,20 @@
                     </div>
 
                     <div class="mb-6">
-                        <label for="category" class="block mb-2 text-sm font-medium text-dark">Category *</label>
-                        <div>
-                            <select id="category"
-                                class="bg-gray-50 border-none text-dark text-sm rounded-lg focus:outline-none w-fit py-3">
-                                <option value="" selected>All</option>
-                                @foreach ($materialCategories as $data)
-                                    <option value="{{ $data->name }}">{{ $data->name }}</option>
-                                @endforeach
-                            </select>
-                        </div>
+                        <label for="category" class="block mb-2 text-sm font-medium text-dark">Category</label>
+                        <select id="category"
+                            class="bg-gray-50 border-none text-dark text-sm rounded-lg focus:outline-none min-w-full py-3">
+                            <option value="" selected>All</option>
+                            @foreach ($materialCategories as $data)
+                                <option value="{{ $data->name }}">{{ $data->name }}</option>
+                            @endforeach
+                        </select>
                     </div>
 
                     <div class="mb-6">
-                        <label for="download" class="block mb-2 text-sm font-medium text-dark">Download *</label>
+                        <label for="download" class="block mb-2 text-sm font-medium text-dark">Download</label>
                         <select id="download"
-                            class="bg-gray-50 border-none text-dark text-sm rounded-lg focus:outline-none min-w-full py-3">
+                            class="bg-gray-50 border-none text-dark text-sm rounded-lg focus:outline-none w-full py-3">
                             <option value="4" selected>> 100</option>
                             <option value="3">50 - 100</option>
                             <option value="2">10 - 50</option>
