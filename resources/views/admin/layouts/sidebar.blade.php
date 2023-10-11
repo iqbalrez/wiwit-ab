@@ -19,7 +19,7 @@
                         class="self-center text-xs 2xl:text-sm font-semibold text-gray-600 sm:text-lg whitespace-nowrap">Admin
                         Panel</span>
                 </a>
-        </div>
+            </div>
             <div class="flex
                         items-center">
                 <div class="flex items-center ml-3">
@@ -28,35 +28,27 @@
                             class="flex text-sm 2xl:text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 -600"
                             aria-expanded="false" data-dropdown-toggle="dropdown-user">
                             <span class="sr-only">Open user menu</span>
-                            <img class="w-8 h-8 rounded-full"
-                                src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="user photo">
+                            <div class="w-8 h-8 rounded-full bg-gray-50"></div>
                         </button>
                     </div>
                     <div class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow  "
                         id="dropdown-user">
                         <div class="px-4 py-3" role="none">
                             <p class="text-sm 2xl:text-sm text-gray-900  role="none">
-                                Neil Sims
+                                {{ auth()->user()->name }}
                             </p>
                             <p class="text-sm 2xl:text-sm font-medium text-gray-900 truncate " role="none">
-                                neil.sims@flowbite.com
+                                {{ auth()->user()->email }}
                             </p>
                         </div>
                         <ul class="py-1" role="none">
                             <li>
-                                <a href="#"
-                                    class="block px-4 py-2 text-sm 2xl:text-sm text-gray-700 hover:bg-gray-100  -600 "
-                                    role="menuitem">Dashboard</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 text-sm 2xl:text-sm text-gray-700 hover:bg-gray-100  -600 "
-                                    role="menuitem">Settings</a>
-                            </li>
-                            <li>
-                                <a href="#"
-                                    class="block px-4 py-2 text-sm 2xl:text-sm text-gray-700 hover:bg-gray-100  -600 "
-                                    role="menuitem">Sign out</a>
+                                <form action="{{ route('logout') }}" method="post">
+                                    @csrf
+                                    <button type="submit"
+                                        class="block w-full text-start px-4 py-2 text-sm 2xl:text-sm text-gray-700 hover:bg-gray-100 -600"
+                                        role="menuitem">Sign out</button>
+                                </form>
                             </li>
                         </ul>
                     </div>
@@ -126,13 +118,13 @@
                 active="{{ request()->routeIs('admin.material-category.index') }}" />
             <!-- Logout -->
             <li>
-                <form action="{{ route('logout') }}" method="POST">
+                <form action="{{ route('logout') }}" method="POST" class="cursor-pointer">
                     @csrf
                     <a class="flex items-center py-3 pl-6 nav-item hover:text-orange-400 rounded-md"
                         onclick="event.preventDefault(); this.closest('form').submit();">
                         <i
-                            class="fas fa-xsgn-out-alt text-gray-600 w-4 h-4 transition duration-75  group-hover:text-orange-400 "></i>
-                        <span classxsml-3 text-gray-600">
+                            class="fas fa-sign-out-alt text-gray-600 w-4 h-4 transition duration-75  group-hover:text-orange-400 "></i>
+                        <span class="ml-3 text-gray-600">
                             Keluar
                         </span>
                     </a>
