@@ -52,7 +52,8 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#" class="text-sm font-normal text-[#133D4F] mt-5 hover:text-green-700">
+                                <a href="{{ route('portofolio.index') }}"
+                                    class="text-sm font-normal text-[#133D4F] mt-5 hover:text-green-700">
                                     Careers
                                 </a>
                             </li>
@@ -68,14 +69,18 @@
                             <p class="mt-4 text-sm font-normal text-[#133D4F] lg:ml-auto">
                                 Pogung Dalangan, Sinduadi, Kec. Mlati, Kabupaten Sleman, DIY
                             </p>
-                            <div
+                            <a href="https://wa.me/{{ \App\Models\ContactPageSetting::first()->contact_number }}"
+                                target="_blank"
                                 class="w-full mt-9 py-2 flex justify-center items-center bg-[#FAFBFD] font-normal rounded-md text-sm border-solid border-2  h-12 text-[#133D4F] border-[#F2F2F2]">
-                                <ion-icon class="w-4 h-4 mr-3" name="call"></ion-icon> 06287834671064
-                            </div>
-                            <div
+                                <ion-icon class="w-4 h-4 mr-3" name="call"></ion-icon>
+                                {{ \App\Models\ContactPageSetting::first()->contact_number ?? '-' }}
+                            </a>
+                            <a href="mailto:{{ \App\Models\ContactPageSetting::first()->personal_email }}"
+                                target="_blank"
                                 class="w-full mt-5  py-2 items-center flex justify-center bg-[#FAFBFD] font-normal rounded-md border-solid  border-2 text-sm h-12 text-[#133D4F] border-[#F2F2F2]">
-                                <ion-icon class="w-4 h-4 mr-3" name="mail"></ion-icon>wiwitab@gmail.com
-                            </div>
+                                <ion-icon class="w-4 h-4 mr-3"
+                                    name="mail"></ion-icon>{{ \App\Models\ContactPageSetting::first()->personal_email ?? '-' }}
+                            </a>
                         </div>
                     </div>
                 </div>
