@@ -18,7 +18,7 @@ class MaterialRepository implements MaterialInterface
 
     public function getAll()
     {
-        return $this->material->all();
+        return $this->material->with('materialCategory')->orderBy('created_at', 'desc')->get();
     }
 
     public function getById($id)

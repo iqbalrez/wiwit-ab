@@ -49,6 +49,7 @@ Route::get('events', [UserEventsController::class, 'index'])->name('events.index
 
 // Material
 Route::get('material', [UserMaterialController::class, 'index'])->name('material.index');
+Route::get('material/{id}', [UserMaterialController::class, 'download'])->name('material.download');
 
 // Portofolio
 Route::get('portofolio', [UserPortofolioController::class, 'index'])->name('portofolio.index');
