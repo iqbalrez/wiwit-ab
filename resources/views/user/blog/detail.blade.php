@@ -11,7 +11,7 @@
                                     {{ $blog->blogCategory->title }}
                                 </p>
                                 <p class="mb-8 text-2xl font-semibold tracking-tight text-dark sm:text-xl">
-                                {{ $blog->title }}
+                                    {{ $blog->title }}
                                 </p>
                                 <p class="text-sm font-semibold text-dark">
                                     {{ $blog->author }}
@@ -29,7 +29,7 @@
 
         <section class="max-w-4xl mx-auto">
             <div class="px-8 mx-auto transform -translate-y-20 sm:-translate-y-14">
-                <img class="rounded-cl w-full ces mx-auto md:max-h-[500px] object-cover object-center"
+                <img class="rounded-xl w-full ces mx-auto md:max-h-[500px] object-cover object-center"
                     src="{{ $blog->thumbnail ? asset('storage/blogs/thumbnail/' . $blog->thumbnail) : asset('assets/default.png') }}"
                     alt="">
             </div>

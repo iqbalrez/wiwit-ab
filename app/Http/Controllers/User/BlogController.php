@@ -28,7 +28,7 @@ class BlogController extends Controller
 
     public function detail($slug)
     {
-        $this->blog->increment($slug);
+        $this->blog->increment($slug); // increment the view_count
 
         return view('user.blog.detail', [
             'blog'           => $this->blog->getBySlug($slug),

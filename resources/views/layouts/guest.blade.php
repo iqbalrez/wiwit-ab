@@ -21,6 +21,8 @@
 <body class="font-sans text-gray-900 antialiased">
     @include('user.layouts.navbar')
     {{ $slot }}
+
+    @include('components.consultation')
     @include('user.layouts.footer')
 
     {{-- Flowbite --}}
