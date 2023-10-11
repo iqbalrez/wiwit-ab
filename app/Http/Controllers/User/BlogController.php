@@ -22,7 +22,7 @@ class BlogController extends Controller
     public function index()
     {
         return view('user.blog.index', [
-            'blogs' => $this->blog->getAll()
+            'blogs' => $this->blog->getAll(),
         ]);
     }
 

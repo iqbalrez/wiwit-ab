@@ -1,4 +1,4 @@
-<footer class="bg-white" aria-labelledby="footer-heading">
+<footer class="bg-white" aria-labelledby="footer-heading" id="footer">
     <h2 id="footer-heading" class="sr-only">Footer</h2>
     <div class="px-5 py-12 mx-auto max-w-7xl lg:py-16 md:px-12 lg:px-0">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
@@ -68,12 +68,14 @@
                             <p class="mt-4 text-sm font-normal text-[#133D4F] lg:ml-auto">
                                 Pogung Dalangan, Sinduadi, Kec. Mlati, Kabupaten Sleman, DIY
                             </p>
-                            <div class="w-full mt-9 py-2 flex justify-center items-center bg-[#FAFBFD] font-normal rounded-md text-sm border-solid border-2  h-12 text-[#133D4F] border-[#F2F2F2]">
+                            <div
+                                class="w-full mt-9 py-2 flex justify-center items-center bg-[#FAFBFD] font-normal rounded-md text-sm border-solid border-2  h-12 text-[#133D4F] border-[#F2F2F2]">
                                 <ion-icon class="w-4 h-4 mr-3" name="call"></ion-icon> 06287834671064
                             </div>
-                            <div class="w-full mt-5  py-2 items-center flex justify-center bg-[#FAFBFD] font-normal rounded-md border-solid  border-2 text-sm h-12 text-[#133D4F] border-[#F2F2F2]">
+                            <div
+                                class="w-full mt-5  py-2 items-center flex justify-center bg-[#FAFBFD] font-normal rounded-md border-solid  border-2 text-sm h-12 text-[#133D4F] border-[#F2F2F2]">
                                 <ion-icon class="w-4 h-4 mr-3" name="mail"></ion-icon>wiwitab@gmail.com
-                          </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -86,7 +88,7 @@
                 <a href="#" class="w-6 h-6 px-2 transition text-[#435660] hover:text-green-700">
                     <span class="sr-only">Facebook</span>
                     <ion-icon class="w-5 h-5 md hydrated" name="logo-facebook" role="img"
-                        aria-label="logo facebook"></ion-icon>  
+                        aria-label="logo facebook"></ion-icon>
                 </a>
                 <a href="#"class="w-6 h-6 px-2 transition text-[#435660] hover:text-green-700">
                     <span class="sr-only">Youtube</span>
@@ -104,7 +106,8 @@
                         aria-label="logo linkedin"></ion-icon>
                 </a>
             </span>
-            <a href="#" class="text-[#133D4F] font-normal inline-flex text-sm text-right hover:text-green-700">Back To Top</a>
+            <a href="#"
+                class="text-[#133D4F] font-normal inline-flex text-sm text-right hover:text-green-700">Back To Top</a>
         </div>
     </div>
 </footer>

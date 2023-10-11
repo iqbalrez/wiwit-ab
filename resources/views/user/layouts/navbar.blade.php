@@ -20,43 +20,49 @@
                 class="items-center flex-grow hidden md:pb-0 md:block md:justify-between">
                 <div class="flex-col items-center flex-grow hidden md:pb-0 md:flex md:justify-between md:flex-row">
                     <div class="hidden md:flex">
-                        <a class="py-2 text-sm md:mr-4 text-[#435660] hover:text-[#67BD65]" href="#">
+                        <a href="#footer" class="py-2 text-sm md:mr-4 text-[#435660] hover:text-[#67BD65]"
+                            href="#">
                             OFFICES
                         </a>
-                        <a class="py-2 text-sm text-[#435660] hover:text-[#67BD65]" href="#">
+                        <a href="{{ route('portofolio.index') }}"
+                            class="py-2 text-sm text-[#435660] hover:text-[#67BD65]" href="#">
                             CAREERS
                         </a>
                     </div>
 
                     <div class="hidden md:inline-flex items-center gap-2 list-none lg:ml-auto">
-                        <a class="flex items-center px-2 py-2 text-sm text-[#435660] lg:px-0 md:px-3 hover:text-[#67BD65]"
-                            href="#">
-                            <ion-icon name="call" class="w-4 h-4 mr-2"></ion-icon> 081392113276
+                        <a target="_blank"
+                            class="flex items-center px-2 py-2 text-sm text-[#435660] lg:px-0 md:px-3 hover:text-[#67BD65]"
+                            href="https://wa.me/{{ \App\Models\ContactPageSetting::first()->contact_number }}">
+                            <ion-icon name="call" class="w-4 h-4 mr-2"></ion-icon>
+                            {{ \App\Models\ContactPageSetting::first()->contact_number ?? '-' }}
                         </a>
 
-                        <a class="flex items-center px-2 py-2 text-sm text-[#435660] lg:px-6 md:px-3 hover:text-[#67BD65]"
-                            href="#">
+
+                        <a target="_blank"
+                            class="flex items-center px-2 py-2 text-sm text-[#435660] lg:px-6 md:px-3 hover:text-[#67BD65]"
+                            href="mailto:{{ \App\Models\ContactPageSetting::first()->personal_email }}">
                             <ion-icon name="mail" class="w-4 h-4 mr-2"></ion-icon> Email Me
                         </a>
                     </div>
 
                     <div class="items-center gap-1 lg:ml-auto hidden md:inline-flex">
-                        <a class="flex items-center text-[#435660] hover:text-[#67BD65]"
+                        <a target="_blank" class="flex items-center text-[#435660] hover:text-[#67BD65]"
                             href="https://www.facebook.com/wiwitab007">
                             <ion-icon name="logo-facebook" class="w-4 h-4 mr-2"></ion-icon>
                         </a>
 
-                        <a class="flex items-center text-[#435660] hover:text-[#67BD65]"
+                        <a target="_blank" class="flex items-center text-[#435660] hover:text-[#67BD65]"
                             href="https://www.youtube.com/c/WiwitABChannel">
                             <ion-icon name="logo-youtube" class="w-4 h-4 mr-2"></ion-icon>
                         </a>
 
-                        <a class="flex items-center text-[#435660] hover:text-[#67BD65]"
+                        <a target="_blank" class="flex items-center text-[#435660] hover:text-[#67BD65]"
                             href="https://instagram.com/wiwit_ab">
                             <ion-icon name="logo-instagram" class="w-4 h-4 mr-2"></ion-icon>
                         </a>
 
-                        <a class="flex items-center text-[#435660] hover:text-[#67BD65]"
+                        <a target="_blank" class="flex items-center text-[#435660] hover:text-[#67BD65]"
                             href="https://www.linkedin.com/in/wiwit-ab-413324175">
                             <ion-icon name="logo-linkedin" class="w-4 h-4 mr-2"></ion-icon>
                         </a>
@@ -91,10 +97,10 @@
                         Contact Me
                     </a>
                     <div>
-                        <a href="#footer-heading">
+                        <a href="#personal-consultation">
                             <button
                                 class="inline-flex items-center justify-center text-sm px-8 py-3.5 mt-4 md:mt-0 rounded-full text-white bg-[#67BD65] hover:bg-dark focus:outline-none focus:text-white">
-                                Free Consultation
+                                Get Consultation
                             </button>
                         </a>
                     </div>

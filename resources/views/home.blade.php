@@ -22,7 +22,7 @@
                             <div class="mt-10">
                                 <button
                                     class="inline-flex items-center justify-center text-sm px-8 py-3.5 mt-4 md:mt-0 rounded-full text-white bg-[#67BD65] hover:bg-dark focus:outline-none focus:text-white">
-                                    Normal Consultation
+                                    Get Consultation
                                 </button>
                             </div>
                         </div>
@@ -149,7 +149,7 @@
                 @foreach ($testimonials as $data)
                     <div class="rounded-xl border-[1.5px] bg-white border-[#EDEDED] p-6 custom-box-shadow">
                         <p class="font-semibold text-dark">{{ $data->job }}</p>
-                        <img src="{{ asset('assets/profile1.jpg') }}"
+                        <img src="{{ $data->avatar ? asset('storage/testimonial/' . $data->avatar) : asset('assets/default.png') }}"
                             class="bg-gray-300 rounded-full mx-auto mt-12 w-60 h-60 object-center object-cover"
                             alt="">
                         <div class="text-xs 2xl:text-sm px-4">
@@ -222,8 +222,8 @@
                 </div>
                 <div class="p-8 bg-white shadow-lg shadow-black rounded-3xl h-fit">
                     <form action="{{ route('user.consultation-request.store') }}" method="POST"
-                        enctype="multipart/form-data">
-                        @csrf 
+                        id="personal-consultation" enctype="multipart/form-data">
+                        @csrf
                         <div class="grid gap-6 mb-6 md:grid-cols-2">
                             <div>
                                 <label for="name" class="block mb-2 text-sm text-dark">Name *</label>

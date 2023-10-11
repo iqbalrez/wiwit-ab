@@ -18,7 +18,11 @@ class BlogRepository implements BlogInterface
 
     public function getAll()
     {
-        return $this->blog->with('blogCategory')->orderBy('created_at', 'desc')->get();
+        return $this->blog
+            ->with('blogCategory')
+            ->orderBy('view_count', 'desc')
+            ->orderBy('published_date', 'desc')
+            ->get();
     }
 
     public function getById($id)

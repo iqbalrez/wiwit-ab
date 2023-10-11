@@ -14,7 +14,7 @@ class ContactPageSetting extends Model
         'address',
         'working_hours',
         'personal_email',
-        'office_email'
+        'office_email',
+        'contact_number'
     ];
-
 }

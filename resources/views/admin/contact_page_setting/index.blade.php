@@ -2,12 +2,12 @@
     <div class="relative overflow-x-auto rounded-lg custom-box-shadow">
         <div class="md:flex items-center space-y-3 md:space-y-0 justify-between p-4 bg-white ">
             <div>
-                @if(!isset($contactPageSetting))
-                <button data-modal-target="default-modal" data-modal-toggle="default-modal" onclick="btnAdd()"
-                    class="block text-white bg-dark hover:bg-dark focus:ring-4 focus:outline-none focus:ring-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-                    type="button">
-                    Change setting
-                </button>
+                @if (!isset($contactPageSetting))
+                    <button data-modal-target="default-modal" data-modal-toggle="default-modal" onclick="btnAdd()"
+                        class="block text-white bg-dark hover:bg-dark focus:ring-4 focus:outline-none focus:ring-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center"
+                        type="button">
+                        Change setting
+                    </button>
                 @endif
             </div>
             <div class="relative">
@@ -38,33 +38,39 @@
                         Office Email
                     </th>
                     <th scope="col" class="px-6 py-3">
+                        Contact Number
+                    </th>
+                    <th scope="col" class="px-6 py-3">
                         Action
                     </th>
                 </tr>
             </thead>
             <tbody>
-                    <tr class="bg-white border-b">
-                        <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
-                            {{ $contactPageSetting->address }}
-                        </th>
-                        <td class="px-6 py-4">
-                            {{ $contactPageSetting->working_hours }}
-                        </td>
-                        <td class="px-6 py-4">
-                            {{ $contactPageSetting->personal_email }}
-                        </td>
-                        <td class="px-6 py-4">
-                            {{ $contactPageSetting->office_email }}
-                        </td>
-                        <td class="px-6 py-4 space-x-3">
-                            <ion-icon name="create" class="w-6 h-6 text-orange-600 cursor-pointer"
-                                data-modal-target="default-modal" data-modal-toggle="default-modal"
-                                onclick="btnEdit('{{ $contactPageSetting->id }}')"></ion-icon>
-                                <ion-icon name="trash-bin" class="w-6 h-6 text-red-600 cursor-pointer"
-                                data-modal-target="popup-modal" data-modal-toggle="popup-modal"
-                                onclick="$('#popup-modal form').attr('action', '{{ route('admin.contact-page-setting.destroy', $contactPageSetting->id) }}')"></ion-icon>
-                        </td>
-                    </tr>
+                <tr class="bg-white border-b">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">
+                        {{ $contactPageSetting->address }}
+                    </th>
+                    <td class="px-6 py-4">
+                        {{ $contactPageSetting->working_hours }}
+                    </td>
+                    <td class="px-6 py-4">
+                        {{ $contactPageSetting->personal_email }}
+                    </td>
+                    <td class="px-6 py-4">
+                        {{ $contactPageSetting->office_email }}
+                    </td>
+                    <td class="px-6 py-4">
+                        {{ $contactPageSetting->contact_number }}
+                    </td>
+                    <td class="px-6 py-4 space-x-3 w-full">
+                        <ion-icon name="create" class="w-6 h-6 text-orange-600 cursor-pointer"
+                            data-modal-target="default-modal" data-modal-toggle="default-modal"
+                            onclick="btnEdit('{{ $contactPageSetting->id }}')"></ion-icon>
+                        <ion-icon name="trash-bin" class="w-6 h-6 text-red-600 cursor-pointer"
+                            data-modal-target="popup-modal" data-modal-toggle="popup-modal"
+                            onclick="$('#popup-modal form').attr('action', '{{ route('admin.contact-page-setting.destroy', $contactPageSetting->id) }}')"></ion-icon>
+                    </td>
+                </tr>
             </tbody>
         </table>
     </div>
@@ -100,10 +106,12 @@
                             placeholder="" class="" />
                         <x-input id="working_hours" type="text" label="Working Hours" required name="working_hours"
                             value="" placeholder="" class="" />
-                        <x-input id="personal_email" type="text" label="Personal email" required name="personal_email"
-                            value="" placeholder="" class="" />
+                        <x-input id="personal_email" type="text" label="Personal email" required
+                            name="personal_email" value="" placeholder="" class="" />
                         <x-input id="office_email" type="text" label="Office email" required name="office_email"
                             value="" placeholder="" class="" />
+                        <x-input id="contact_number" type="text" label="Contact number" required
+                            name="contact_number" value="" placeholder="" class="" />
                     </div>
                     <!-- Modal footer -->
                     <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b">
@@ -178,6 +186,7 @@
                         $('#default-modal form #working_hours').val(data.working_hours);
                         $('#default-modal form #personal_email').val(data.personal_email);
                         $('#default-modal form #office_email').val(data.office_email);
+                        $('#default-modal form #contact_number').val(data.contact_number);
                     },
                     error: function() {
                         Swal.fire(
