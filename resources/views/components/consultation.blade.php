@@ -53,6 +53,7 @@
                             <input type="text" id="phone_number" name="phone_number"
                                 class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
                                 placeholder="62 xxx xxx" required>
+                            <small class="text-xs text-gray-600">contoh: 6281515144981
                         </div>
                         <div>
                             <label for="email" class="block mb-2 text-sm text-dark">Email *</label>
