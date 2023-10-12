@@ -5,6 +5,7 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 use App\Models\Blog;
+use App\Models\Material;
 use App\Models\Testimonial;
 use Illuminate\Database\Seeder;
 
@@ -22,6 +23,7 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
         // Blog::factory(30)->create();
-        Testimonial::factory(10)->create();
+        // Testimonial::factory(10)->create();
+        Material::factory(100)->create();
     }
 }

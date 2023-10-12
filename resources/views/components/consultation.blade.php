@@ -43,27 +43,30 @@
                     @csrf
                     <div class="grid gap-6 mb-6 md:grid-cols-2">
                         <div>
-                            <label for="name" class="block mb-2 text-sm text-dark">Name *</label>
+                            <label for="name" class="block mb-2 text-sm text-dark">Name <span
+                                    class="text-danger">*</span></label>
                             <input type="text" id="name" name="name"
                                 class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
                                 placeholder="Jhon" required>
                         </div>
                         <div>
-                            <label for="phone" class="block mb-2 text-sm text-dark">Phone *</label>
+                            <label for="phone" class="block mb-2 text-sm text-dark">Phone <span
+                                    class="text-danger">*</span></label>
                             <input type="text" id="phone_number" name="phone_number"
                                 class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
                                 placeholder="62 xxx xxx" required>
-                            <small class="text-xs text-gray-600">contoh: 6281515144981
+                            <small class="text-xs text-gray-600">contoh: 6281515144981</small>
                         </div>
                         <div>
-                            <label for="email" class="block mb-2 text-sm text-dark">Email *</label>
+                            <label for="email" class="block mb-2 text-sm text-dark">Email <span
+                                    class="text-danger">*</span></label>
                             <input type="text" id="email" name="email"
                                 class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
                                 placeholder="email@company.com" required>
                         </div>
                         <div class="">
-                            <label for="countries" class="block mb-2 text-sm font-medium text-dark">Service
-                                interest in *</label>
+                            <label for="countries" class="block mb-2 text-sm text-dark">Service
+                                interest in <span class="text-danger">*</span></label>
                             <select id="consultation_request_category_id" name="consultation_request_category_id"
                                 class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none min-w-full py-3">
                                 @foreach (\App\Models\ConsultationRequestCategory::all() as $data)
@@ -74,13 +77,15 @@
                         </div>
                     </div>
                     <div class="mb-6">
-                        <label for="subject" class="block mb-2 text-sm text-dark">Subject *</label>
+                        <label for="subject" class="block mb-2 text-sm text-dark">Subject <span
+                                class="text-danger">*</span></label>
                         <input type="text" id="subject" name="subject"
                             class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
                             placeholder="Personal text planning" required>
                     </div>
                     <div class="mb-6">
-                        <label for="message" class="block mb-2 text-sm text-dark ">How we can help?</label>
+                        <label for="message" class="block mb-2 text-sm text-dark ">How we can help? <span
+                                class="text-danger">*</span></label>
                         <textarea id="message" rows="8" name="message"
                             class="block p-2.5 w-full bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none "
                             placeholder="I need help with this problem"></textarea>

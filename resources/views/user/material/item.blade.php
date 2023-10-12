@@ -1,5 +1,5 @@
 @foreach ($materials as $data)
-    <a href="{{ asset('storage/materials/' . $data->file) }}" target="_blank">
+    <a href="{{ route('material.download', $data->id) }}" target="_blank">
         <div class="bg-white shadow-sm p-4 rounded-xl" onclick="download('{{ $data->id }}')">
             <div class="flex gap-3 items-center">
                 <div>

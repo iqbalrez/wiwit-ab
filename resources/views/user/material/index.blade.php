@@ -77,13 +77,13 @@
                 <div class="col-span-4 lg:col-span-5">
                     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="material-list">
                         @foreach ($materials as $data)
-                            <a href="{{ asset('storage/materials/' . $data->file) }}" target="_blank">
-                                <div class="bg-white shadow-sm p-4 rounded-xl"
+                            <a href="{{ route('material.download', $data->id) }}">
+                                <div class="bg-white shadow-sm p-4 rounded-xl border border-gray-100"
                                     onclick="download('{{ $data->id }}')">
-                                    <div class="flex gap-3 items-center">
+                                    <div class="flex gap-3 items-start">
                                         <div>
                                             <img src={{ $data->thumbnail ? asset('storage/materials/' . $data->thumbnail) : asset('assets/default.png') }}
-                                                class="w-28 h-32 hidden md:block object-center object-cover rounded-lg bg-gray-50 mr-4"
+                                                class="w-28 h-28 hidden border border-gray-100 md:block object-center object-cover rounded-lg bg-gray-50 mr-4"
                                                 alt="">
                                         </div>
                                         <div>
@@ -112,7 +112,6 @@
 
     @push('js-internal')
         <script>
-           
             //run filter
             $('#run-filter').click(function() {
                 var year = $('#year').val();

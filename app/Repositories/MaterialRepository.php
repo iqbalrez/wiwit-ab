@@ -35,7 +35,7 @@ class MaterialRepository implements MaterialInterface
         $data['file']->storeAs('public/materials', $filenameFile);
 
         DB::beginTransaction();
-        
+
         try {
             $material = $this->material->create(array_merge($data, [
                 'thumbnail'      => $filenameThumbnail,
@@ -98,7 +98,7 @@ class MaterialRepository implements MaterialInterface
     public function filter()
     {
         $downloadRange = request()->filled('download') ? explode(',', request()->download) : null;
-    
+
         $materials = $this->material
             ->query()
             ->when(request()->filled('year'), function ($query) {
@@ -111,9 +111,7 @@ class MaterialRepository implements MaterialInterface
                 $query->whereBetween('download_count', [$downloadRange[0], $downloadRange[1]]);
             })
             ->get();
-    
+
         return $materials;
     }
-    
-    
 }
