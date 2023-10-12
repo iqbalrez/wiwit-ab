@@ -94,4 +94,22 @@ class MaterialRepository implements MaterialInterface
 
         $material->delete();
     }
+
+    public function filter()
+    {
+        $materials = $this->material
+        ->query()
+        ->when(request()->filled('year'), function ($query) {
+            $query->where('published_date', 'like', '%'.request()->year);
+        })
+        ->when(request()->filled('category'), function ($query) {
+            $query->where('material_category_id', request()->category);
+        })
+        ->when(request()->filled('download_count'), function ($query) {
+            $query->where('download_count', '>=', request()->download_count);
+        })
+        ->get();
+
+        return $materials;
+    }
 }

@@ -6,6 +6,8 @@ use App\Http\Controllers\Controller;
 use App\Interfaces\MaterialInterface;
 use App\Interfaces\MaterialCategoryInterface;
 use App\Models\Material;
+use Illuminate\Http\Request;
+
 
 class MaterialController extends Controller
 {
@@ -21,12 +23,21 @@ class MaterialController extends Controller
     public function index(){
         return view('user.material.index', [
             'materials' => $this->material->getAll(),
-            'materialCategories' =>$this->materialCategory->getAll()
+            'materialCategories' => $this->materialCategory->getAll()
         ]);
     }
 
     public function download($id) {
         Material::find($id)->increment('download_count');
         return true;
+    }
+
+    public function filter()
+    {
+        $materials = $this->material->filter();
+    
+        return view('user.material.item', [
+            'materials' => $materials
+        ])->render();
     }
 }

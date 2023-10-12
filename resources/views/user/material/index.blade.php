@@ -33,44 +33,48 @@
                 <div class="block mb-8 md:col-span-2 lg:col-span-1">
                     <div class="mb-6 ">
                         <label for="year" class="block mb-2 text-sm font-medium text-dark">Year</label>
-                        <select id="year"
+                        <select name="year" id="year"
                             class="bg-gray-50 border-none text-dark text-sm rounded-lg focus:outline-none min-w-full py-3">
-                            <option value="any" selected>Any year</option>
+                            <option id="" name="" value="" selected>Any year</option>
                             @for ($i = 2023; $i >= 2016; $i--)
-                                <option value="{{ $i }}">{{ $i }}</option>
+                                <option id="{{ $i }}" name="{{ $i }}" value="{{ $i }}">
+                                    {{ $i }}</option>
                             @endfor
                         </select>
                     </div>
 
                     <div class="mb-6">
                         <label for="category" class="block mb-2 text-sm font-medium text-dark">Category</label>
-                        <select id="category"
+                        <select name="category" id="category"
                             class="bg-gray-50 border-none text-dark text-sm rounded-lg focus:outline-none min-w-full py-3">
                             <option value="" selected>All</option>
                             @foreach ($materialCategories as $data)
-                                <option value="{{ $data->name }}">{{ $data->name }}</option>
+                                <option id="{{ $data->id }}" name="{{ $data->id }}" value="{{ $data->id }}">
+                                    {{ $data->name }}</option>
                             @endforeach
                         </select>
                     </div>
 
                     <div class="mb-6">
                         <label for="download" class="block mb-2 text-sm font-medium text-dark">Download</label>
-                        <select id="download"
+                        <select name="download" id="download"
                             class="bg-gray-50 border-none text-dark text-sm rounded-lg focus:outline-none w-full py-3">
-                            <option value="4" selected>> 100</option>
-                            <option value="3">50 - 100</option>
-                            <option value="2">10 - 50</option>
-                            <option value="1">0 - 10</option>
+                            <option value="" selected>Any</option>
+                            <option id="100" name ="100" value="100">> 100</option>
+                            <option id="50" name ="50" value="50">50 - 100</option>
+                            <option id="10" name ="10" value="10">10 - 50</option>
+                            <option id="0" name ="0" value="0">0 - 10</option>
                         </select>
                     </div>
 
-                    <button id=""
+                    <button id="run-filter" name="run-filter"
                         class="inline-flex w-full items-center justify-center text-sm px-8 py-3.5 rounded-full text-white bg-dark hover:bg-[#435660] font-medium">
                         Run filter
                     </button>
                 </div>
+
                 <div class="col-span-4 lg:col-span-5">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8" id="material-list">
                         @foreach ($materials as $data)
                             <a href="{{ asset('storage/materials/' . $data->file) }}" target="_blank">
                                 <div class="bg-white shadow-sm p-4 rounded-xl"
@@ -124,6 +128,28 @@
                     }
                 })
             }
+
+            $(document).ready(function() {
+                $("#run-filter").on('click', function() {
+                    var category = $("#category").val();
+                    var year = $("#year").val();
+                    var download = $("#download").val();
+
+                    $.ajax({
+                        url: '{{ route('material.filter') }}',
+                        type: 'GET',
+                        allowCredentials: true,
+                        data: {
+                            'category': category,
+                            'year': year,
+                            'download': download
+                        },
+                        success: function(data) {
+                            console.log(data)
+                        }
+                    })
+                })
+            })
         </script>
     @endpush
 
