@@ -7,7 +7,7 @@
 
             <div class="">
                 <p class="flex items-center text-xl font-bold">
-                    9
+                    {{ $events->count()}}
                 </p>
                 <p class="flex items-center text-xs 2xl:text-sm">
                     Experience
@@ -22,7 +22,7 @@
 
             <div class="">
                 <p class="flex items-center text-xl font-bold">
-                    19
+                    {{ $works->count() }}
                 </p>
                 <p class="flex items-center text-xs 2xl:text-sm">
                     Works
@@ -37,7 +37,7 @@
 
             <div class="">
                 <p class="flex items-center text-xl font-bold text-dark">
-                    12
+                    {{ $events->count() }}
                 </p>
                 <p class="flex items-center text-xs 2xl:text-sm text-dark">
                     Events
@@ -52,7 +52,7 @@
 
             <div class="">
                 <p class="flex items-center text-2xl text-dark">
-                    10
+                    {{ $blogs->count() }}
                 </p>
                 <p class="flex items-center text-xs 2xl:text-sm text-dark">
                     Blogs
@@ -67,7 +67,7 @@
 
             <div class="">
                 <p class="flex items-center text-2xl text-dark">
-                    10
+                    {{ $materials->count() }}
                 </p>
                 <p class="flex items-center text-xs 2xl:text-sm text-dark">
                     Materials
@@ -82,7 +82,7 @@
 
             <div class="">
                 <p class="flex items-center text-2xl text-dark">
-                    120
+                    {{ $testimonials->count() }}
                 </p>
                 <p class="flex items-center text-xs 2xl:text-sm text-dark">
                     Testimonials
