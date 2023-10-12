@@ -27,10 +27,17 @@ class MaterialController extends Controller
         ]);
     }
 
-    public function download($id) {
-        Material::find($id)->increment('download_count');
-        return true;
-    }
+    // public function download($id) {
+    //     $material = Material::find($id);
+    
+    //     if ($material) {
+    //         $material->increment('download_count');
+    //         return true;
+    //     } else {
+    //         return response()->json(['error' => 'Material not found'], 404);
+    //     }
+    // }
+    
 
     public function filter()
     {
@@ -39,5 +46,7 @@ class MaterialController extends Controller
         return view('user.material.item', [
             'materials' => $materials
         ])->render();
+        
     }
+    
 }

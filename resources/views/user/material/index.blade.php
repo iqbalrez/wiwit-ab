@@ -60,10 +60,11 @@
                         <select name="download" id="download"
                             class="bg-gray-50 border-none text-dark text-sm rounded-lg focus:outline-none w-full py-3">
                             <option value="" selected>Any</option>
-                            <option id="100" name ="100" value="100">> 100</option>
-                            <option id="50" name ="50" value="50">50 - 100</option>
-                            <option id="10" name ="10" value="10">10 - 50</option>
-                            <option id="0" name ="0" value="0">0 - 10</option>
+                            <option id="100" name ="100" value="101,9999999">> 100
+                            </option>
+                            <option id="50" name ="50" value="51,100">51- 100</option>
+                            <option id="10" name ="10" value="11,50">11 - 50</option>
+                            <option id="0" name ="0" value="0,10">0 - 10</option>
                         </select>
                     </div>
 
@@ -111,45 +112,27 @@
 
     @push('js-internal')
         <script>
-            function download(id) {
+           
+            //run filter
+            $('#run-filter').click(function() {
+                var year = $('#year').val();
+                var category = $('#category').val();
+                var download = $('#download').val();
+                console.log(download);
+
                 $.ajax({
-                    url: '{{ route('material.download', ':id') }}'.replace(':id', id),
-                    type: 'GET',
-                    dataType: 'json',
-                    success: function(response) {
-                        Swal.fire({
-                            icon: 'success',
-                            text: 'Material has successfully downloaded!'
-                        });
-
-                        setTimeout(function() {
-                            window.location.reload();
-                        }, 1000); // 1000 milliseconds (1 second) delay
+                    url: "{{ route('material.filter') }}",
+                    type: "GET",
+                    data: {
+                        year: year,
+                        category: category,
+                        download: download,
+                    },
+                    success: function(data) {
+                        $('#material-list').html(data);
                     }
-                })
-            }
-
-            $(document).ready(function() {
-                $("#run-filter").on('click', function() {
-                    var category = $("#category").val();
-                    var year = $("#year").val();
-                    var download = $("#download").val();
-
-                    $.ajax({
-                        url: '{{ route('material.filter') }}',
-                        type: 'GET',
-                        allowCredentials: true,
-                        data: {
-                            'category': category,
-                            'year': year,
-                            'download': download
-                        },
-                        success: function(data) {
-                            console.log(data)
-                        }
-                    })
-                })
-            })
+                });
+            });
         </script>
     @endpush
 

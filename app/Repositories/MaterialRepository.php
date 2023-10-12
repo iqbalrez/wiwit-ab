@@ -97,19 +97,23 @@ class MaterialRepository implements MaterialInterface
 
     public function filter()
     {
+        $downloadRange = request()->filled('download') ? explode(',', request()->download) : null;
+    
         $materials = $this->material
-        ->query()
-        ->when(request()->filled('year'), function ($query) {
-            $query->where('published_date', 'like', '%'.request()->year);
-        })
-        ->when(request()->filled('category'), function ($query) {
-            $query->where('material_category_id', request()->category);
-        })
-        ->when(request()->filled('download_count'), function ($query) {
-            $query->where('download_count', '>=', request()->download_count);
-        })
-        ->get();
-
+            ->query()
+            ->when(request()->filled('year'), function ($query) {
+                $query->where('published_date', 'like', '%' . request()->year . '%');
+            })
+            ->when(request()->filled('category'), function ($query) {
+                $query->where('material_category_id', request()->category);
+            })
+            ->when($downloadRange, function ($query) use ($downloadRange) {
+                $query->whereBetween('download_count', [$downloadRange[0], $downloadRange[1]]);
+            })
+            ->get();
+    
         return $materials;
     }
+    
+    
 }
