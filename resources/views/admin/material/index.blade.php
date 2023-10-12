@@ -67,12 +67,20 @@
                             {{ $data->title }}
                         </td>
                         <td class="px-6 py-4">
-                            <a href="{{ asset('storage/materials/' . $data->thumbnail) }}" target="_blank"
-                                class="text-blue-500">See thumbnail</a>
+                            @if (isset($data->thumbnail))
+                                <a href="{{ asset('storage/materials/' . $data->thumbnail) }}" target="_blank"
+                                    class="text-blue-500">See thumbnail</a>
+                            @else
+                                -
+                            @endif
                         </td>
                         <td class="px-6 py-4">
-                            <a href="{{ asset('storage/materials/' . $data->file) }}" target="_blank"
-                                class="text-blue-500">See file</a>
+                            @if (isset($data->file))
+                                <a href="{{ asset('storage/materials/' . $data->file) }}" target="_blank"
+                                    class="text-blue-500">See file</a>
+                            @else
+                                -
+                            @endif
                         </td>
                         <td class="px-6 py-4">
                             {{ $data->author }}
@@ -81,7 +89,7 @@
                             {{ $data->download_count }}
                         </td>
                         <td class="px-6 py-4">
-                            {{ \Carbon\Carbon::parse($data->published_date)->locale('id')->isoFormat('LL') }}
+                            {{ date('d F Y', strtotime($data->published_date)) }}
                         </td>
                         <td class="px-6 py-4 space-x-3">
                             <ion-icon name="create" class="w-6 h-6 text-orange-600 cursor-pointer"
@@ -222,12 +230,16 @@
                         $('#default-modal form #title').val(data.title);
                         $('#default-modal form #author').val(data.author);
                         $('#default-modal form #published_date').val(data.published_date);
-                        $('#default-modal form #thumbnail').after(
-                            `<a href="{{ asset('storage/materials/${data.thumbnail}') }}" target="_blank" class="text-blue-500">See thumbnail</a>`
-                        );
-                        $('#default-modal form #file').after(
-                            `<a href="{{ asset('storage/materials/${data.file}') }}" target="_blank" class="text-blue-500">See file</a>`
-                        );
+                        if (data.thumbnail != null) {
+                            $('#default-modal form #thumbnail').after(
+                                `<a href="{{ asset('storage/materials/${data.thumbnail}') }}" target="_blank" class="text-blue-500">See thumbnail</a>`
+                            );
+                        }
+                        if (data.file != null) {
+                            $('#default-modal form #file').after(
+                                `<a href="{{ asset('storage/materials/${data.file}') }}" target="_blank" class="text-blue-500">See file</a>`
+                            );
+                        }
                     },
                     error: function() {
                         Swal.fire(
