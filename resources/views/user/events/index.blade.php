@@ -54,7 +54,8 @@
                                 <div class="w-full">
                                     <a href="#">
                                         <img class="rounded-t-lg w-full h-48 bg-gray-50 object-cover object-center"
-                                            src="" alt="" />
+                                            src="{{ $event->thumbnail ? asset('storage/event/' . $event->thumbnail) : asset('assets/default.png') }}"
+                                            alt="" />
                                     </a>
                                 </div>
                                 <div class="p-4 w-full">
