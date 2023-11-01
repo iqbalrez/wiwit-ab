@@ -11,10 +11,10 @@
                                 Material
                             </p>
                             <p class="text-2xl font-semibold tracking-tight text-dark sm:text-5xl">
-                                Empower Yourself <br>for Success!<span class="text-primary">.</span>
+                                Empower yourself <br>for success<span class="text-primary">.</span>
                             </p>
                             <p class="mx-auto lg:mx-0 mt-3 text-xl tracking-tight leading-8 text-gray-600 font-light">
-                                Unlock Your Success Potential with Our Transformative Business Courses
+                                Unlock your success potential with oOur transformative business courses
                             </p>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
                                 <div class="bg-white shadow-sm p-4 rounded-xl border border-gray-100"
                                     onclick="download('{{ $data->id }}')">
                                     <div class="flex gap-3 items-start">
-                                        <div class="w-28 h-28">
+                                        <div class="w-28 h-28 aspect-square">
                                             <img src={{ $data->thumbnail ? asset('storage/materials/' . $data->thumbnail) : asset('assets/default.png') }}
                                                 class="hidden border border-gray-100 md:block object-center object-cover rounded-lg bg-gray-50 mr-4"
                                                 alt="">

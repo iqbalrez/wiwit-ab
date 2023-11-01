@@ -10,12 +10,12 @@
                                 Portfolio
                             </p>
                             <p class="text-2xl font-semibold tracking-tight text-dark sm:text-5xl">
-                                Transforming Your Business into
-                                a Breakthrough At Once<span class="text-primary">.</span>
+                                Transforming your business into
+                                a breakthrough at once<span class="text-primary">.</span>
                             </p>
                             <p
                                 class="mx-auto lg:mx-0 mt-3 text-xl tracking-tight leading-8 text-[#435660] font-light max-w-xs">
-                                Unleash your true potential with a reliable business
+                                Unleash your true potential with a reliable business coach
                             </p>
                         </div>
                     </div>

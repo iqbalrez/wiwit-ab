@@ -10,10 +10,10 @@
                                 Blog
                             </p>
                             <p class="text-2xl font-semibold tracking-tight text-dark sm:text-5xl">
-                                Explore my insightful <br>perspectives in every blogs<span class="text-primary">.</span>
+                                Develop <br>your potential<span class="text-primary">.</span>
                             </p>
                             <p class="mx-auto lg:mx-0 mt-3 text-xl tracking-tight leading-8 text-gray-600 font-light">
-                                Discover risk management insights in my blog
+                                Discover expert tips and strategies here
                             </p>
                         </div>
                     </div>

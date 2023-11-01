@@ -9,12 +9,12 @@
                                 Events
                             </p>
                             <p class="text-2xl font-semibold tracking-tight text-dark sm:text-5xl">
-                                Choose the Best Training <br> to Boost Your Capacity!<span class="text-primary">.</span>
+                                Choose the best training <br> to boost your capacity<span class="text-primary">.</span>
                             </p>
                             <p
                                 class="mx-auto lg:mx-0 mt-3 text-sm md:text-xl tracking-tight leading-8 text-gray-600 font-light">
                                 Our training is designed to upgrade your hard skills and other related soft skills to
-                                elevate your profession.
+                                elevate your profession
                             </p>
                         </div>
                     </div>
