@@ -87,22 +87,24 @@
             </div>
         </div>
     </div>
-    <div class="py-12 mx-auto border-t text-center max-w-7xl  sm:px-6 md:md:items-center md:justify-between lg:px-20">
-        <div class="mb-8 space-x-6 flex justify-center md:order-last md:mb-0">
+    <div class="py-12 mx-auto border-t text-center max-w-7xl  sm:px-6  lg:px-20">
+        <div class="flex justify-center md:order-last md:mb-0">
             @php
                 $socialMedias = \App\Models\SocialMedia::all();
             @endphp
             @foreach ($socialMedias as $data)
-                <span class="gap-3 mx-auto">
-                    <a href="{{ $data->url }}" target="_blank" class="w-6 h-6 px-2 transition text-[#435660] hover:text-green-700">
+                <span class="">
+                    <a href="{{ $data->url }}" target="_blank"
+                        class="w-6 h-6 px-2 transition text-[#435660] hover:text-green-700">
                         <span class="sr-only">{{ $data->name }}</span>
                         <ion-icon class="w-5 h-5 md hydrated" name="{{ $data->icon }}" role="img"
                             aria-label="logo {{ $data->name }}"></ion-icon>
                     </a>
                 </span>
             @endforeach
-            <a href=""
-                class="text-[#133D4F] font-normal inline-flex text-sm text-right hover:text-green-700">Back To Top</a>
+            
         </div>
+        <a href=""
+                class="text-[#133D4F] font-normal flex justify-end text-sm text-right hover:text-green-700">Back To Top</a>
     </div>
 </footer>
