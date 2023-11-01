@@ -2,6 +2,9 @@
     <h2 id="footer-heading" class="sr-only">Footer</h2>
     <div class="px-5 py-12 mx-auto max-w-6xl lg:py-16 md:px-12 lg:px-0">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+            @php
+                $socialMedias = \App\Models\SocialMedia::all();
+            @endphp
             <p class="mt-2 text-sm font-normal text-[#757575]">Lorem, ipsum dolor sit amet consectetur adipisicing
                 elit. Numquam asperiores enim atque voluptas dolorum unde exercitationem neque nostrum consequuntur
                 .</p>
@@ -102,9 +105,9 @@
                     </a>
                 </span>
             @endforeach
-            
+
         </div>
         <a href=""
-                class="text-[#133D4F] font-normal flex justify-end text-sm text-right hover:text-green-700">Back To Top</a>
+            class="text-[#133D4F] font-normal flex justify-end text-sm text-right hover:text-green-700">Back To Top</a>
     </div>
 </footer>
