@@ -93,7 +93,7 @@
                                             </div>
                                             <p
                                                 class="line-clamp-1 font-semibold text-sm xl:text-md tracking-tight leading-7 text-dark">
-                                                {{ $data->title }}
+                                                {{ Str::limit($data->title, 50) }}
                                             </p>
                                             <p class="text-sm 2xl:text-sm font-normal text-gray-500 mb-3">
                                                 {{ $data->author }}
