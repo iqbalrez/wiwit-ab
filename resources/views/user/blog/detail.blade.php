@@ -17,7 +17,7 @@
                                     {{ $blog->author }}
                                 </p>
                                 <p class="text-sm font-normal text-gray-500">
-                                    {{ date('d M Y', strtotime($blog->published_at)) }}
+                                    {{ date('d M Y', strtotime($blog->published_date)) }}
                                 </p>
                             </div>
                         </div>
