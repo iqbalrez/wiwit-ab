@@ -47,25 +47,19 @@
                     </div>
 
                     <div class="items-center gap-1 lg:ml-auto hidden md:inline-flex">
-                        <a target="_blank" class="flex items-center text-[#435660] hover:text-[#67BD65]"
-                            href="https://www.facebook.com/wiwitab007">
-                            <ion-icon name="logo-facebook" class="w-4 h-4 mr-2"></ion-icon>
-                        </a>
-
-                        <a target="_blank" class="flex items-center text-[#435660] hover:text-[#67BD65]"
-                            href="https://www.youtube.com/c/WiwitABChannel">
-                            <ion-icon name="logo-youtube" class="w-4 h-4 mr-2"></ion-icon>
-                        </a>
-
-                        <a target="_blank" class="flex items-center text-[#435660] hover:text-[#67BD65]"
-                            href="https://instagram.com/wiwit_ab">
-                            <ion-icon name="logo-instagram" class="w-4 h-4 mr-2"></ion-icon>
-                        </a>
-
-                        <a target="_blank" class="flex items-center text-[#435660] hover:text-[#67BD65]"
-                            href="https://www.linkedin.com/in/wiwit-ab-413324175">
-                            <ion-icon name="logo-linkedin" class="w-4 h-4 mr-2"></ion-icon>
-                        </a>
+                        @php
+                            $socialMedias = \App\Models\SocialMedia::all();
+                        @endphp
+                        @foreach ($socialMedias as $data)
+                            <span class="gap-3 mx-auto">
+                                <a href="{{ $data->url }}" target="_blank"
+                                    class="flex items-center text-[#435660] hover:text-[#67BD65]">
+                                    <span class="sr-only">{{ $data->name }}</span>
+                                    <ion-icon class="w-4 h-4 mr-2" name="{{ $data->icon }}" role="img"
+                                        aria-label="logo {{ $data->name }}"></ion-icon>
+                                </a>
+                            </span>
+                        @endforeach
                     </div>
                 </div>
 

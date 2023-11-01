@@ -37,7 +37,7 @@ class HomeController extends Controller
             'consultationRequestCategories' => $this->consultationRequestCategory->getAll(),
             'testimonials'                  => $this->testimonial->getAll()->take(3),
             'partners'                      => $this->partner->getAll(),
-            'contacts'                      => $this->contact->get()
+            'contacts'                      => $this->contact->get(),
         ]);
     }
 
