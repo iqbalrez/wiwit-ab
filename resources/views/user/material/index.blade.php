@@ -82,9 +82,11 @@
                                     onclick="download('{{ $data->id }}')">
                                     <div class="flex gap-3 items-start">
                                         <div class="w-28 h-36">
-                                            <img src={{ $data->thumbnail ? asset('storage/materials/' . $data->thumbnail) : asset('assets/default.png') }}
-                                                class="hidden border border-gray-100 md:block w-full h-full object-center object-cover rounded-lg bg-gray-50 mr-4"
-                                                alt="" width="100" height="100">
+                                            <div class="image-container w-full h-full relative overflow-hidden">
+                                                <img src="{{ $data->thumbnail ? asset('storage/materials/' . $data->thumbnail) : asset('assets/default.png') }}"
+                                                    class="absolute inset-0 w-full h-full object-cover rounded-lg bg-gray-50"
+                                                    alt="">
+                                            </div>
                                         </div>
                                         <div>
                                             <div
@@ -103,12 +105,12 @@
                                             </p>
                                         </div>
                                     </div>
-
                                 </div>
                             </a>
                         @endforeach
                     </div>
                 </div>
+
 
             </div>
         </div>
