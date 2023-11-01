@@ -81,9 +81,9 @@
                                 <div class="bg-white shadow-sm p-4 rounded-xl border border-gray-100"
                                     onclick="download('{{ $data->id }}')">
                                     <div class="flex gap-3 items-start">
-                                        <div class="flex-shrink">
-                                            <img src={{ $data->thumbnail ? asset('storage/materials/' . $data->thumbnail) : asset('assets/default.png') }}
-                                                class="hidden border border-gray-100 w-28 h-28 md:block object-center object-cover rounded-lg bg-gray-50 mr-4"
+                                        <div class="">
+                                            <img src="{{ $data->thumbnail ? asset('storage/materials/' . $data->thumbnail) : asset('assets/default.png') }}"
+                                                class="hidden border border-gray-100 w-full h-28 md:block object-center object-cover rounded-lg bg-gray-50 mr-4"
                                                 alt="">
                                         </div>
                                         <div>
@@ -96,11 +96,14 @@
                                                 {{ $data->title }}
                                             </p>
                                             <p class="text-sm 2xl:text-sm font-normal text-gray-500 mb-3">
-                                                {{ $data->author }}</p>
+                                                {{ $data->author }}
+                                            </p>
                                             <p class="text-sm 2xl:text-sm font-normal text-gray-500">
-                                                {{ $data->download_count }} downloads</p>
+                                                {{ $data->download_count }} downloads
+                                            </p>
                                         </div>
                                     </div>
+
                                 </div>
                             </a>
                         @endforeach
