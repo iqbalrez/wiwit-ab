@@ -81,18 +81,18 @@
                                 <div class="bg-white shadow-sm p-4 rounded-xl border border-gray-100"
                                     onclick="download('{{ $data->id }}')">
                                     <div class="flex gap-3 items-start">
-                                        {{-- <div class="w-28 h-36">
+                                        <div class="w-28 h-36">
                                             <img src={{ $data->thumbnail ? asset('storage/materials/' . $data->thumbnail) : asset('assets/default.png') }}
                                                 class="hidden border border-gray-100 md:block w-full h-full object-center object-cover rounded-lg bg-gray-50 mr-4"
                                                 alt="" width="100" height="100">
-                                        </div> --}}
+                                        </div>
                                         <div>
                                             <div
                                                 class="flex items-center rounded-lg justify-center py-2 text-sm px-6 text-white bg-primary mb-3 w-fit">
                                                 <span>{{ $data->materialCategory->name }}</span>
                                             </div>
                                             <p
-                                                class="line-clamp-2 font-semibold text-lg xl:text-lg tracking-tight leading-7 text-dark">
+                                                class="line-clamp-2 font-semibold text-sm xl:text-md tracking-tight leading-7 text-dark">
                                                 {{ $data->title }}
                                             </p>
                                             <p class="text-sm 2xl:text-sm font-normal text-gray-500 mb-3">
