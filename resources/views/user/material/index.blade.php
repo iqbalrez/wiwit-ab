@@ -83,7 +83,7 @@
                                     <div class="flex gap-3 items-start">
                                         <div class="w-28 h-28">
                                             <img src="{{ $data->thumbnail ? asset('storage/materials/' . $data->thumbnail) : asset('assets/default.png') }}"
-                                                class="hidden border border-gray-100 w-full h-full md:block object-center object-cover rounded-lg bg-gray-50 mr-4"
+                                                class="hidden border border-gray-100 w-full h-full md:block object-center object-contain rounded-lg bg-gray-50 mr-4"
                                                 alt="">
                                         </div>
                                         <div>
@@ -109,6 +109,7 @@
                         @endforeach
                     </div>
                 </div>
+
 
             </div>
         </div>
