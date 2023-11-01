@@ -132,7 +132,7 @@
                                     {{ $data->title }}
                                 </p>
                                 <p class="line-clamp-2 text-gray-500 text-xs 2xl:text-sm leading-6 font-normal">
-                                    {!! $data->content !!}
+                                    {!! Str::limit($data->content, 100) !!}
                                 </p>
                                 <div class="flex items-center gap-2 text-xs 2xl:text-sm text-gray-400 mt-3">
                                     <ion-icon name="eye-outline"></ion-icon> {{ $data->view_count }}
