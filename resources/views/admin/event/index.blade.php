@@ -1,5 +1,5 @@
 <x-app-layout>
-    <div class="relative overflow-x-auto rounded-lg custom-box-shadow">
+    <div class="relative overflow-x-auto rounded-lg custom-box-shadow  overflow-y-auto">
         <div class="md:flex items-center space-y-3 md:space-y-0 justify-between p-4 bg-white ">
             <div>
                 @if ($eventCategories->count() > 0)
@@ -28,7 +28,7 @@
                     class="block p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg w-80 bg-gray-50 focus:ring-blue-500 focus:border-blue-500 focus:outline-none">
             </div>
         </div>
-        <table class="w-full text-sm text-left text-gray-500 overflow-y-auto">
+        <table class="w-full text-sm text-left text-gray-500">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50">
                 <tr>
                     <th scope="col" class="px-6 py-3">
