@@ -83,7 +83,7 @@
                                     <div class="flex gap-3 items-start">
                                         <div class="w-28 h-28 relative">
                                             <img src="{{ $data->thumbnail ? asset('storage/materials/' . $data->thumbnail) : asset('assets/default.png') }}"
-                                                class="hidden border border-gray-100 w-full h-full md:block object-center object-cover rounded-lg bg-gray-50 mr-4 absolute"
+                                                class="hidden border border-gray-100 w-full h-full md:block object-center object-cover rounded-lg bg-gray-50 mr-4 absolute top-0 bottom-0"
                                                 alt="">
                                         </div>
                                         <div>
