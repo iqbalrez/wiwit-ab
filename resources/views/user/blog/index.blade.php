@@ -50,7 +50,7 @@
                         {{ $blogs->take(1)->first()->title }}
                     </p>
                     <p class="line-clamp-2 text-gray-500 text-xs 2xl:text-sm leading-6 font-normal">
-                        {!! $blogs->take(1)->first()->content !!}
+                        {!! Str::limit($blogs->take(1)->first()->content, 100) !!}
                     </p>
                 </div>
                 <div class="space-y-6">
@@ -88,7 +88,7 @@
                                         {{ $data->title }}
                                     </p>
                                     <p class="line-clamp-2 text-gray-500 text-xs 2xl:text-sm leading-6 font-normal">
-                                        {!! $data->content !!}
+                                        {!! Str::limit($data->content, 100) !!}
                                     </p>
                                 </div>
                             </div>
