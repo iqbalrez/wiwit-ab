@@ -7,7 +7,7 @@
 
             <div class="">
                 <p class="flex items-center text-xl font-bold">
-                    {{ $events->count()}}
+                    {{ $experiences->count() }}
                 </p>
                 <p class="flex items-center text-xs 2xl:text-sm">
                     Experience
