@@ -18,7 +18,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="font-sans antialiased text-xs 2xl:text-sm overflow-hidden bg-gray-100">
+<body class="font-sans antialiased text-xs 2xl:text-sm bg-gray-100">
     <div class="min-h-screen bg-gray-100">
         @include('admin.layouts.sidebar')
 
