@@ -10,12 +10,12 @@
                                 Portfolio
                             </p>
                             <p class="text-2xl font-semibold tracking-tight text-dark sm:text-5xl">
-                                A showcase of my
-                                expertise<span class="text-primary">.</span>
+                                Transforming Your Business into
+                                a Breakthrough At Once<span class="text-primary">.</span>
                             </p>
                             <p
                                 class="mx-auto lg:mx-0 mt-3 text-xl tracking-tight leading-8 text-[#435660] font-light max-w-xs">
-                                Accomplishments in the world of management.
+                                Unleash your true potential with a reliable business
                             </p>
                         </div>
                     </div>
@@ -43,7 +43,8 @@
                             <div class="mb-8 flex justify-between items-center w-full right-timeline">
                                 {{-- Left Timeline --}}
                                 <div class="order-1 w-5/12 px-6 py-4 item">
-                                    <h3 class="mb-3 font-semibold text-dark text-xl">{{ $data->position }},{{ $data->company }}</h3>
+                                    <h3 class="mb-3 font-semibold text-dark text-xl">
+                                        {{ $data->position }},{{ $data->company }}</h3>
                                     <p class="text-sm mt-3 font-normal leading-snug tracking-wide text-[#757575]">
                                         {{ date('d F Y', strtotime($data->start_date)) }}
                                         -
