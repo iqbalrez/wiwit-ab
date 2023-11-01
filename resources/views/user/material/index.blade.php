@@ -92,7 +92,7 @@
                                                 <span>{{ $data->materialCategory->name }}</span>
                                             </div>
                                             <p
-                                                class="line-clamp-2 font-semibold text-sm xl:text-md tracking-tight leading-7 text-dark">
+                                                class="line-clamp-1 font-semibold text-sm xl:text-md tracking-tight leading-7 text-dark">
                                                 {{ $data->title }}
                                             </p>
                                             <p class="text-sm 2xl:text-sm font-normal text-gray-500 mb-3">
