@@ -61,9 +61,7 @@
                         <div class="inline-flex gap-3 items-start"
                             onclick="window.location.href='{{ route('blog.detail', $data->slug) }}'">
                             <div class="flex-shrink-0">
-                                <img src="{{ $data->thumbnail
-                                    ? asset('storage//blogs/thumbnail/' . $blogs->take(1)->first()->thumbnail)
-                                    : asset('assets/default.png') }}"
+                                <img src="{{ $data->thumbnail ? asset('storage//blogs/thumbnail/' . $data->thumbnail) : asset('assets/default.png') }}"
                                     class="w-28 h-28 object-cover border border-gray-100 rounded-lg bg-gray-50 mr-4"
                                     alt="Blog Thumbnail">
                             </div>
@@ -108,9 +106,7 @@
                     <div class="inline-flex gap-3 items-start"
                         onclick="window.location.href='{{ route('blog.detail', $data->slug) }}'">
                         <div class="flex-shrink-0">
-                            <img src="{{ $data->thumbnail
-                                ? asset('storage//blogs/thumbnail/' . $blogs->take(1)->first()->thumbnail)
-                                : asset('assets/default.png') }}"
+                            <img src="{{ $data->thumbnail ? asset('storage//blogs/thumbnail/' . $data->thumbnail) : asset('assets/default.png') }}"
                                 class="w-28 h-28 object-cover border border-gray-100 rounded-lg bg-gray-50 mr-4"
                                 alt="Blog Thumbnail">
                         </div>
