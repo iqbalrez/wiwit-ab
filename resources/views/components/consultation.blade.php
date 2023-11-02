@@ -4,7 +4,7 @@
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
                 <p class="text-white text-5xl font-semibold tracking-tight">
-                    Get a personal
+                    Request a personal
                     consultation<span class="text-primary">.</span>
                 </p>
 
@@ -47,7 +47,7 @@
                                     class="text-danger">*</span></label>
                             <input type="text" id="name" name="name"
                                 class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
-                                placeholder="Jhon" required>
+                                placeholder="John" required>
                         </div>
                         <div>
                             <label for="phone" class="block mb-2 text-sm text-dark">Phone <span
@@ -92,7 +92,7 @@
                     </div>
                     <button type="submit"
                         class="inline-flex w-full items-center justify-center text-md px-8 py-3.5 rounded-full text-white bg-[#67BD65] hover:bg-dark focus:outline-none focus:text-white font-normal">
-                        Request a Quote
+                        Request
                     </button>
                 </form>
             </div>

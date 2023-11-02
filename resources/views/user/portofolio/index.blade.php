@@ -44,11 +44,11 @@
                                 {{-- Left Timeline --}}
                                 <div class="order-1 w-5/12 px-6 py-4 item">
                                     <h3 class="mb-3 font-semibold text-dark text-xl">
-                                        {{ $data->position }},{{ $data->company }}</h3>
+                                        {{ $data->company }}, {{ $data->job_type }}</h3>
                                     <p class="text-sm mt-3 font-normal leading-snug tracking-wide text-[#757575]">
-                                        {{ date('d F Y', strtotime($data->start_date)) }}
+                                        {{ date('F Y', strtotime($data->start_date)) }}
                                         -
-                                        {{ date('d F Y', strtotime($data->end_date)) }}</p>
+                                        {{ date('F Y', strtotime($data->end_date)) }}</p>
                                 </div>
                                 <div
                                     class="z-20 flex items-center order-1 bg-white border-2 w-10 h-10 rounded-full relative">
@@ -58,8 +58,8 @@
                                 </div>
                                 <!-- right timeline -->
                                 <div class="order-1 w-5/12 px-6 py-4">
-                                    <h3 class="mb-3 font-semibold text-dark text-xl">{{ $data->job_type }}</h3>
-                                    <p class="text-sm mt-3 font-normal leading-snug tracking-wide text-[#757575]">Lorem
+                                    <h3 class="mb-3 font-semibold text-dark text-xl">{{ $data->position }}</h3>
+                                    <p class="text-sm mt-3 font-normal leading-snug tracking-wide text-[#757575]">
                                         {{ $data->description }}</p>
                                 </div>
                             </div>
@@ -173,24 +173,24 @@
                 <div class="grid grid-cols-2 mt-20 p-4 text-center">
                     <div>
                         <div>
-                            <p class="font-semibold text-xl text-dark">12+ </p>
+                            <p class="font-semibold text-xl text-dark">22+ </p>
                             <p class="mt-5 text-[#757575] text-normal text-sm">Years Of Experience</p>
                         </div>
 
 
                         <div class="mt-12">
-                            <p class="font-semibold text-xl text-dark">500+</p>
+                            <p class="font-semibold text-xl text-dark">100+</p>
                             <p class="mt-5 text-[#757575] text-normal text-sm">Client</p>
                         </div>
                     </div>
                     <div>
                         <div>
-                            <p class="font-semibold text-xl text-dark">1,200</p>
+                            <p class="font-semibold text-xl text-dark">1,000+</p>
                             <p class="mt-5 text-[#757575] text-normal text-sm">Connections</p>
                         </div>
 
                         <div class="mt-12">
-                            <p class="font-semibold text-xl text-dark">300</p>
+                            <p class="font-semibold text-xl text-dark">1,000x +</p>
                             <p class="mt-5 text-[#757575] text-normal text-sm">Company Relation</p>
 
                         </div>

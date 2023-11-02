@@ -12,18 +12,20 @@
                                     Hi, I’m Wiwit 👋
                                 </p>
                                 <p class="text-2xl font-semibold tracking-tight text-dark sm:text-5xl">
-                                    Risk Management Pro<span class="text-primary">.</span>
+                                    Risk Management Coach<span class="text-primary">.</span>
                                 </p>
                                 <p
                                     class="mx-auto lg:mx-0 mt-3 text-xl tracking-tight leading-8 text-gray-600 font-light max-w-xs">
-                                    Ready to boost your organization's safety. Let's connect!
+                                    Ready to teach you strategies for broader business expansion. <br> Are you ready?
                                 </p>
                             </div>
                             <div class="mt-10">
-                                <button
-                                    class="inline-flex items-center justify-center text-sm px-8 py-3.5 mt-4 md:mt-0 rounded-full text-white bg-[#67BD65] hover:bg-dark focus:outline-none focus:text-white">
-                                    Get Consultation
-                                </button>
+                                <a href={{ route('contact-me.index') }}>
+                                    <button
+                                        class="inline-flex items-center justify-center text-sm px-8 py-3.5 mt-4 md:mt-0 rounded-full text-white bg-[#67BD65] hover:bg-dark focus:outline-none focus:text-white">
+                                        More Info
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -43,34 +45,47 @@
                 Solution for every
                 business need<span class="text-primary">.</span>
             </p>
-            <div class="grid w-full grid-cols-1 mx-auto lg:grid-cols-3 mt-24 gap-8">
-                <div class="max-w-md p-6 mx-auto border border-gray-100 rounded-xl">
+            <div class="grid w-full grid-cols-1 mx-auto lg:grid-cols-4 mt-24 gap-4">
+                <div class="max-w-lg p-6 mx-auto border border-gray-100 rounded-xl">
                     <ion-icon name="book" class="w-7 h-7 text-primary"></ion-icon>
                     <p class="mt-5 text-lg font-medium leading-6 text-dark">
-                        Accounting
+                        Public Course
                     </p>
-                    <p class="mt-3 text-sm 2xl:text-md text-gray-500">
-                        Accounting is the systematic process of recording, analyzing interpreting financial growth
-                    </p>
-                </div>
-                <div class="max-w-md p-6 mx-auto border border-gray-100 rounded-xl">
-                    <ion-icon name="folder" class="w-7 h-7 text-primary"></ion-icon>
-
-                    <p class="mt-5 text-lg font-medium leading-6 text-dark">
-                        Tax Management
-                    </p>
-                    <p class="mt-3 text-sm 2xl:text-md text-gray-500">
-                        It involves techniques and tools to efficiently handle large volumes of text data, such
+                    <p class="mt-3 text-sm 2xl:text-md text-gray-500 line-clamp-3 hover:line-clamp-none">
+                        Pentahelix public course that focuses on solutions to address pentahelix issues
                     </p>
                 </div>
-                <div class="max-w-md p-6 mx-auto border border-gray-100 rounded-xl">
-                    <ion-icon name="trending-up" class="w-7 h-7 text-primary"></ion-icon>
+                <div class="max-w-lg p-6 mx-auto border border-gray-100 rounded-xl">
+                    <ion-icon name="home" class="w-7 h-7 text-primary"></ion-icon>
 
                     <p class="mt-5 text-lg font-medium leading-6 text-dark">
-                        Financial Planning
+                        In House Training
                     </p>
-                    <p class="mt-3 text-sm 2xl:text-md text-gray-500">
-                        involves budgeting, saving, investing, and risk management to ensure individuals
+                    <p class="mt-3 text-sm 2xl:text-md text-gray-500 line-clamp-3 hover:line-clamp-none">
+                        Adjustment of Budget Design (RAB) & Work Reference Framework (KAK) in accordance with pentahelix
+                        needs alongside the target of the established goal
+                    </p>
+                </div>
+                <div class="max-w-lg p-6 mx-auto border border-gray-100 rounded-xl">
+                    <ion-icon name="bar-chart" class="w-7 h-7 text-primary"></ion-icon>
+
+                    <p class="mt-5 text-lg font-medium leading-6 text-dark">
+                        Research & Project
+                    </p>
+                    <p class="mt-3 text-sm 2xl:text-md text-gray-500 line-clamp-3 hover:line-clamp-none">
+                        Research and projects for academics, government, nonprofit organizations, and communities
+                    </p>
+                </div>
+                <div class="max-w-lg p-6 mx-auto border border-gray-100 rounded-xl">
+                    <ion-icon name="easel" class="w-7 h-7 text-primary"></ion-icon>
+
+                    <p class="mt-5 text-lg font-medium leading-6 text-dark">
+                        Coaching & Training Executive
+                    </p>
+                    <p class="mt-3 text-sm 2xl:text-md text-gray-500 line-clamp-3 hover:line-clamp-none">
+                        Navigating leaders in managing organizational complexity, including handling multi-stakeholders
+                        both within and outside the organization, and developing leadership in the aspects of
+                        communication and interpersonal relationships
                     </p>
                 </div>
             </div>
@@ -89,7 +104,7 @@
             <div class="mt-7">
                 <a href="#personal-consultation"
                     class="inline-flex items-center justify-center text-sm px-8 py-3.5 mt-4 md:mt-0 rounded-full text-white bg-[#67BD65] hover:bg-dark focus:outline-none focus:text-white font-normal">
-                    How we can help?
+                    How I can help?
                 </a>
             </div>
         </div>

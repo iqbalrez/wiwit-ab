@@ -4,10 +4,10 @@
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
             @php
                 $socialMedias = \App\Models\SocialMedia::all();
+                $contactPageSetting = \App\Models\ContactPageSetting::first();
             @endphp
-            <p class="mt-2 text-sm font-normal text-[#757575]">Lorem, ipsum dolor sit amet consectetur adipisicing
-                elit. Numquam asperiores enim atque voluptas dolorum unde exercitationem neque nostrum consequuntur
-                .</p>
+            <p class="mt-2 text-sm font-normal text-[#757575]">Working Hours <br>
+                {{ $contactPageSetting->working_hours }}</p>
             <div class="grid grid-cols-2 gap-8 mt-12 xl:mt-0 xl:col-span-2">
                 <div class="md:grid md:grid-cols-2 md:gap-8">
                     <div>
@@ -70,7 +70,7 @@
                                 Business Info
                             </h3>
                             <p class="mt-4 text-sm font-normal text-[#133D4F] lg:ml-auto">
-                                Pogung Dalangan, Sinduadi, Kec. Mlati, Kabupaten Sleman, DIY
+                                {{ $contactPageSetting->address }}
                             </p>
                             <a href="https://wa.me/{{ \App\Models\ContactPageSetting::first()->contact_number }}"
                                 target="_blank"
