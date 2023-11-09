@@ -90,8 +90,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="lg:ml-auto mt-4 lg:mt-32">
-                    <a href="#" class="font-normal text-sm text-[#67BD65] hover:text-dark">Explore More Works</a>
+                <div class="lg:ml-auto mt-4 lg:mt-32 text-primary hover:text-dark">
+                    <a href="#" class="font-normal text-sm ">Explore More Works</a>
                 </div>
             </div>
 

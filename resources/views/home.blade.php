@@ -129,23 +129,23 @@
                                 </p>
                             </div>
                             <p class="mt-5 text-sm 2xl:text-md leading-7 text-gray-500">
-                                Our mission is to empower you with the knowledge and tools you need
+                                My mission is to empower you with the knowledge and tools you need
                             </p>
                             <div class="mt-4 space-y-3">
                                 <div
                                     class="inline-flex items-center py-3.5 px-12 bg-[#FAFBFD] text-dark rounded-lg w-fit">
                                     <ion-icon name="checkmark-circle-outline" class="w-6 h-6 mr-2"></ion-icon>
-                                    <span class="font-medium">Financial assessment reports</span>
+                                    <span class="font-medium">Project Management</span>
                                 </div>
                                 <div
                                     class="inline-flex items-center py-3.5 px-12 bg-[#FAFBFD] text-dark rounded-lg w-fit">
                                     <ion-icon name="checkmark-circle-outline" class="w-6 h-6 mr-2"></ion-icon>
-                                    <span class="font-medium">Income tax planning and consulting</span>
+                                    <span class="font-medium">Entrepreneurship</span>
                                 </div>
                                 <div
                                     class="inline-flex items-center py-3.5 px-12 bg-[#FAFBFD] text-dark rounded-lg w-fit">
                                     <ion-icon name="checkmark-circle-outline" class="w-6 h-6 mr-2"></ion-icon>
-                                    <span class="font-medium">Payroll and sales taxes</span>
+                                    <span class="font-medium">Economy and Business</span>
                                 </div>
                             </div>
                         </div>
@@ -160,7 +160,7 @@
         <div class="relative items-center w-full px-5 py-24 mx-auto md:px-12 lg:px-16 max-w-7xl">
             <p class="text-2xl font-semibold tracking-tight text-dark sm:text-4xl max-w-md mx-auto text-center">
                 No matter who you are,
-                we’ve got what you need<span class="text-primary">.</span>
+                I’ve got what you need<span class="text-primary">.</span>
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-24">
                 @foreach ($testimonials as $data)
