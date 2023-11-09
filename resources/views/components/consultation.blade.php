@@ -48,14 +48,14 @@
                             <label for="name" class="block mb-2 text-sm text-dark">Name <span
                                     class="text-danger">*</span></label>
                             <input type="text" id="name" name="name"
-                                class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
-                                placeholder="John" required>
+                                class="bg-gray-50 border border-gray-50 text-gray-400 text-sm rounded-lg focus:outline-none block w-full py-3"
+                                placeholder="John Mayer" required>
                         </div>
                         <div>
                             <label for="phone" class="block mb-2 text-sm text-dark">Phone <span
                                     class="text-danger">*</span></label>
                             <input type="text" id="phone_number" name="phone_number"
-                                class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
+                                class="bg-gray-50 border border-gray-50 text-gray-400 text-sm rounded-lg focus:outline-none block w-full py-3"
                                 placeholder="62 xxx xxx" required>
                             <small class="text-xs text-gray-600">contoh: 6281515144981</small>
                         </div>
@@ -63,16 +63,16 @@
                             <label for="email" class="block mb-2 text-sm text-dark">Email <span
                                     class="text-danger">*</span></label>
                             <input type="text" id="email" name="email"
-                                class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
+                                class="bg-gray-50 border border-gray-50 text-gray-400 text-sm rounded-lg focus:outline-none block w-full py-3"
                                 placeholder="email@company.com" required>
                         </div>
                         <div class="">
                             <label for="countries" class="block mb-2 text-sm text-dark">Service
                                 interest in <span class="text-danger">*</span></label>
                             <select id="consultation_request_category_id" name="consultation_request_category_id"
-                                class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none min-w-full py-3">
+                                class="bg-gray-50 border border-gray-50 text-gray-400 text-sm rounded-lg focus:outline-none min-w-full py-3">
+                                <option selected>Choose Service </option>
                                 @foreach (\App\Models\ConsultationRequestCategory::all() as $data)
-                                    <option selected>Choose Service </option>
                                     <option value="{{ $data->id }}">{{ $data->name }}</option>
                                 @endforeach
                             </select>
@@ -82,14 +82,14 @@
                         <label for="subject" class="block mb-2 text-sm text-dark">Subject <span
                                 class="text-danger">*</span></label>
                         <input type="text" id="subject" name="subject"
-                            class="bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none block w-full py-3"
+                            class="bg-gray-50 border border-gray-50 text-gray-400 text-sm rounded-lg focus:outline-none block w-full py-3"
                             placeholder="Personal text planning" required>
                     </div>
                     <div class="mb-6">
                         <label for="message" class="block mb-2 text-sm text-dark ">How we can help? <span
                                 class="text-danger">*</span></label>
                         <textarea id="message" rows="8" name="message"
-                            class="block p-2.5 w-full bg-gray-50 border border-gray-50 text-dark text-sm rounded-lg focus:outline-none "
+                            class="block p-2.5 w-full bg-gray-50 border border-gray-50 text-gray-400 text-sm rounded-lg focus:outline-none "
                             placeholder="I need help with this problem"></textarea>
                     </div>
                     <button type="submit"
