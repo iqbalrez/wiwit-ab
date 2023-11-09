@@ -1,4 +1,6 @@
-<footer class="bg-white" aria-labelledby="footer-heading" id="footer">
+<footer
+    style="background-color:#E1ECF0; background-image: url('<?= asset('assets/SG-WIWIT-03.svg') ?>'); background-size: cover; background-position: top"
+    aria-labelledby="footer-heading" id="footer">
     <h2 id="footer-heading" class="sr-only">Footer</h2>
     <div class="px-5 py-12 mx-auto max-w-6xl lg:py-16 md:px-12 lg:px-0">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">

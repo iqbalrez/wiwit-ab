@@ -1,7 +1,9 @@
 {{-- Consultation --}}
 <section class="py-24 bg-[#E1ECF0]">
-    <div class="bg-[#0E3A51] rounded-3xl relative items-center w-full mx-auto p-16 max-w-6xl shadow-xl">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+    <div class="bg-[#0E3A51] rounded-3xl relative items-center w-full mx-auto p-16 max-w-6xl shadow-xl"
+        style="background-image: url('<?= asset('assets/SG-WIWIT-02.svg') ?>'); background-size: cover; background-position: center">
+        <div class="grid
+        grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
                 <p class="text-white text-5xl font-semibold tracking-tight">
                     Request a personal

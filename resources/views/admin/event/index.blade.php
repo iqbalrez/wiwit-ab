@@ -1,4 +1,5 @@
 <x-app-layout>
+    @section('title', 'Event')
     <div class="relative overflow-x-auto rounded-lg custom-box-shadow  overflow-y-auto">
         <div class="md:flex items-center space-y-3 md:space-y-0 justify-between p-4 bg-white ">
             <div>

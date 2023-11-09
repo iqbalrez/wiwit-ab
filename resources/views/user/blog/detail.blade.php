@@ -1,4 +1,5 @@
 <x-guest-layout>
+    @section('title', $blog->title)
     <section>
         <section class="relative flex items-center w-full bg-[#E1ECF0]">
             <div

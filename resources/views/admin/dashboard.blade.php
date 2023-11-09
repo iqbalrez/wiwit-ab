@@ -1,4 +1,5 @@
 <x-app-layout>
+    @section('title', 'Work Category')
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="shadow-md border-2 bg-white rounded-2xl flex p-4">
             <div class="flex items-center justify-center mr-4">

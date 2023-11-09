@@ -1,10 +1,12 @@
 <x-guest-layout>
+    @section('title', 'Home')
 
     {{-- Hero --}}
-    <section class="relative flex items-center w-full bg-[#E1ECF0]">
-        <div class="relative items-center w-full px-5 pt-20 pb-20 md:pb-0 mx-auto md:px-12 lg:px-14 xl:px-0 max-w-7xl">
+    <section class="relative flex items-center w-full"
+        style="background-color:#E1ECF0; background-image: url('<?= asset('assets/SG-WIWIT-01.svg') ?>'); background-size: cover; background-position: right top">
+        <div class="relative items-center w-full px-5 pt-20 pb-20 md:pb-0 mx-auto md:px-12 lg:px-14 xl:px-0 max-w-6xl">
             <div class="relative flex-col items-start m-auto align-middle">
-                <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-6">
+                <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-4">
                     <div class="relative items-center gap-12 m-auto lg:inline-flex sm:order-first">
                         <div class="max-w-xl text-center lg:text-left">
                             <div>

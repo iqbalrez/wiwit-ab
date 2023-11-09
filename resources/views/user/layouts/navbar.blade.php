@@ -1,4 +1,5 @@
-<div class="bg-[#E1ECF0]">
+<div
+    style="background-color:#E1ECF0; background-image: url('<?= asset('assets/SG-WIWIT-01.svg') ?>'); background-size: cover; background-position: right bottom">
     <div class="w-full mx-auto lg:max-w-6xl">
         <div x-data="{ open: false }"
             class="relative flex flex-col w-full p-4 md:items-center md:justify-between md:flex-row md:px-6 lg:px-14 xl:px-0">

@@ -1,6 +1,8 @@
 <x-guest-layout>
+    @section('title', 'Portfolio')
     {{-- Hero --}}
-    <section class="relative flex items-center w-full bg-[#E1ECF0]">
+    <section class="relative flex items-center w-full bg-[#E1ECF0]"
+        style="background-color:#E1ECF0; background-image: url('<?= asset('assets/SG-WIWIT-01.svg') ?>'); background-size: cover; background-position: right top">
         <div class="relative items-center w-full px-5 mt-14 mb-16 md:pb-0 mx-auto md:px-12 lg:px-14 xl:px-0 max-w-6xl">
             <div class="relative flex-col items-start m-auto align-middle">
                 <div class="relative items-center gap-12 m-auto lg:inline-flex sm:order-first">
@@ -26,7 +28,8 @@
 
     {{-- Work Experience --}}
     <section>
-        <div class="relative items-center w-full mt-16 px-5 py-8 mx-auto md:px-12 lg:px-14 xl:px-0 max-w-lg text-center">
+        <div
+            class="relative items-center w-full mt-16 px-5 py-8 mx-auto md:px-12 lg:px-14 xl:px-0 max-w-lg text-center">
             <p class="text-2xl 2xl:text-3xl font-semibold text-dark">
                 My Work Experience<span class="text-primary">.</span>
             </p>
