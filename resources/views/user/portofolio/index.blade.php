@@ -91,7 +91,7 @@
                     </div>
                 </div>
                 <div class="lg:ml-auto mt-4 lg:mt-32">
-                    <a href="#" class="font-normal text-sm text-dark">Explore More Works</a>
+                    <a href="#" class="font-normal text-sm text-[#67BD65] hover:text-dark">Explore More Works</a>
                 </div>
             </div>
 
@@ -224,7 +224,7 @@
     </section>
 
     {{-- Personal Consultion --}}
-    <section>
+    {{-- <section>
         <div class="bg-[#0E3A51] max-w-6xl w-full mx-auto mt-20 mb-44 md:mt-40 rounded-3xl flex flex-col items-center">
             <div class="grid grid-cols-1 md:grid-cols-2 py-8 md:py-16 px-6 md:px-14">
                 <div class="max-w-lg py-4 md:py-0 md:px-0">
@@ -235,7 +235,7 @@
                     </p>
                 </div>
 
-                {{-- <div class="py-2 flex md:flex-col justify-center md:items-end">
+                <div class="py-2 flex md:flex-col justify-center md:items-end">
                     <div class="w-52">
                         <div>
                             <a href="#"
@@ -251,10 +251,10 @@
                             </a>
                         </div>
                     </div>
-                </div> --}}
+                </div>
             </div>
         </div>
 
-    </section>
+    </section> --}}
 
 </x-guest-layout>
