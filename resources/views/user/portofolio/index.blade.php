@@ -169,9 +169,8 @@
                         class="text-primary">.</span></p>
                 <p class="font-normal text-center max-w-lg text-sm text-[#757575] mt-3 mx-auto">With over 22 years of
                     valuable experience, my portfolio website reflects a journey marked by continuous growth and
-                    expertise in my field. Having collaborated with over 100 clients, the diversity of projects has not
-                    only enriched my skills but also strengthened my professional network, boasting connections that
-                    exceed 1,000. These numbers aren't just statistics—they represent a wealth of relationships and a
+                    expertise in my field. xThese numbers aren't just statistics—they represent a wealth of
+                    relationships and a
                     testament to the depth of my company relations, each one contributing to a narrative of success and
                     shared accomplishments.</p>
                 <div class="grid grid-cols-2 mt-20 p-4 text-center">
@@ -207,8 +206,8 @@
                 <p class="font-semibold text-2xl mt-8 items-start tracking-normal text-dark">
                     Business Insights
                 </p>
-                <p class="mt-4 text-[#757575] text-normal text-sm max-w-xs">Explore a dynamic collection of thoughts and
-                    insights in my blog section. Engage with compelling narratives and discover a tapestry of
+                <p class="mt-4 text-[#757575] text-normal text-sm max-w-xs">Engage with compelling narratives and
+                    discover a tapestry of
                     perspectives that
                     inform, entertain, and spark meaningful conversations. Welcome to a corner of the digital realm
                     where ideas take flight. </p>
