@@ -167,12 +167,13 @@
             <div class="col-span-3">
                 <p class="font-bold text-3xl text-black text-center">On The Cutting Edge<span
                         class="text-primary">.</span></p>
-                <p class="font-normal text-center max-w-lg text-sm text-[#757575] mt-3 mx-auto">Lorem ipsum dolor sit
-                    amet
-                    consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
-                    fringilla Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi iure veniam minima
-                    recusandae qui quas, rem, nemo harum placeat aperiam esse unde nam aliquam, quod totam! Animi in
-                    provident harum.</p>
+                <p class="font-normal text-center max-w-lg text-sm text-[#757575] mt-3 mx-auto">With over 22 years of
+                    valuable experience, my portfolio website reflects a journey marked by continuous growth and
+                    expertise in my field. Having collaborated with over 100 clients, the diversity of projects has not
+                    only enriched my skills but also strengthened my professional network, boasting connections that
+                    exceed 1,000. These numbers aren't just statistics—they represent a wealth of relationships and a
+                    testament to the depth of my company relations, each one contributing to a narrative of success and
+                    shared accomplishments.</p>
                 <div class="grid grid-cols-2 mt-20 p-4 text-center">
                     <div>
                         <div>
@@ -193,7 +194,7 @@
                         </div>
 
                         <div class="mt-12">
-                            <p class="font-semibold text-xl text-dark">1,000x +</p>
+                            <p class="font-semibold text-xl text-dark">1,000+</p>
                             <p class="mt-5 text-[#757575] text-normal text-sm">Company Relation</p>
 
                         </div>
@@ -202,14 +203,15 @@
             </div>
             <div
                 class="flex flex-col justify-center items-center lg:items-start lg:flex-none lg:justify-end lg:item mt-12 lg:mt-0">
-                <img src="{{ asset('assets/humaaans standing 3.png') }}" class="w-64 h-64 object-contain"
-                    alt="">
+                <img src="{{ asset('assets/business insight.svg') }}" class="w-64 h-64 object-contain" alt="">
                 <p class="font-semibold text-2xl mt-8 items-start tracking-normal text-dark">
                     Business Insights
                 </p>
-                <p class="mt-4 text-[#757575] text-normal text-sm max-w-xs">Lorem ipsum dolor sit amet consectetur
-                    adipiscing
-                    elit Ut et massa mi. Aliquam in hendrerit </p>
+                <p class="mt-4 text-[#757575] text-normal text-sm max-w-xs">Explore a dynamic collection of thoughts and
+                    insights in my blog section. Engage with compelling narratives and discover a tapestry of
+                    perspectives that
+                    inform, entertain, and spark meaningful conversations. Welcome to a corner of the digital realm
+                    where ideas take flight. </p>
 
                 <div>
                     <a href="#"
@@ -233,7 +235,7 @@
                     </p>
                 </div>
 
-                <div class="py-2 flex md:flex-col justify-center md:items-end">
+                {{-- <div class="py-2 flex md:flex-col justify-center md:items-end">
                     <div class="w-52">
                         <div>
                             <a href="#"
@@ -249,7 +251,7 @@
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
 
