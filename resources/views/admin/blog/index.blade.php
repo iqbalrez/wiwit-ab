@@ -220,8 +220,9 @@
                         $('#default-modal form #author').val(data.author);
                         $('#default-modal form #published_date').val(data.published_date);
                         $('#default-modal form #thumbnail').after(
-                            `<a href="{{ asset('storage/blog/thumbnail/${data.thumbnail}') }}" target="_blank" class="text-blue-500">See Thumbnail</a>`
+                            `<a href="{{ asset('storage/blogs/thumbnail/${data.thumbnail}') }}" target="_blank" class="text-blue-500">See Thumbnail</a>`
                         );
+                        CKEDITOR.instances['content'].setData(data.content);
                     },
                     error: function() {
                         Swal.fire(
