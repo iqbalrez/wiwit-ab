@@ -29,7 +29,7 @@
         </section>
 
         <section class="max-w-4xl mx-auto">
-            <div class="px-8 mx-auto transform -translate-y-20 sm:-translate-y-14">
+            <div class="px-8 mx-auto transform -translate-y-10 sm:-translate-y-14">
                 <img id="main-image" class="rounded-xl w-full ces mx-auto md:max-h-[500px] object-cover object-center"
                     src="{{ $blog->thumbnail ? asset('storage/blogs/thumbnail/' . $blog->thumbnail) : asset('assets/default.png') }}"
                     alt="">
