@@ -185,8 +185,8 @@
             {{-- Partners --}}
             <section class="py-12">
                 <div class="">
-                    <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:py-8 lg:px-8" data-aos="fade-up">
-                        <div class="mt-6 grid gap-5 md:grid-flow-col lg:mt-8 swiper-container">
+                    <div class="px-4 mx-auto max-w-6xl sm:px-6 lg:py-8 lg:px-8" data-aos="fade-up">
+                        <div class="mt-6 grid gap-5 md:grid-flow-row lg:mt-8 swiper-container">
                             <div class="swiper-wrapper">
                                 @foreach ($partners as $partner)
                                     <div class="swiper-slide flex justify-center col-span-1">
