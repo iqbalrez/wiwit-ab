@@ -184,7 +184,7 @@
             </div>
 
             {{-- Partners --}}
-            <div class="">
+            <div class="max-w-6xl">
                 <div class="px-4 mx-auto max-w-full sm:px-6 lg:py-8 lg:px-8" data-aos="fade-up">
                     <div
                         class="mt-6 grid gap-5 md:grid-flow-col lg:mt-8 swiper-container swiper-initialized swiper-horizontal">
