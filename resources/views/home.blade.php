@@ -1,7 +1,7 @@
 <x-guest-layout>
     @section('title', 'Home')
     @push('css-internal')
-        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     @endpush
     {{-- Hero --}}
     <section class="relative flex items-center w-full"
@@ -187,11 +187,11 @@
     </section>
 
     {{-- Partners --}}
-    <section class="py-12">
+    <section class="py-12 max-w-screen overflow-x-clip">
         <div class="">
-            <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:py-8 lg:px-8" data-aos="fade-up">
-                <div class="mt-6 grid gap-5 md:grid-flow-col lg:mt-8 swiper-container">
-                    <div class="swiper-wrapper">
+            <div class="px-4 x w-screen sm:px-6 lg:py-8 lg:px-8">
+                <div class="mt-6 gap-5 lg:mt-8 swiper-container">
+                    <div class="grid mx-auto grid-flow-col swiper-wrapper">
                         @foreach ($partners as $partner)
                             <div class="swiper-slide flex justify-center col-span-1">
                                 <img class="blur-mode w-full h-20 object-contain"
@@ -206,6 +206,39 @@
     </section>
 
     @push('js-internal')
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+        <script>
+            window.onload = function() {
+                let swiper = new Swiper(".swiper-container", {
+                    direction: "horizontal",
+                    spaceBetween: 2,
+                    loop: true,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true,
+                    },
+                    breakpoints: {
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        768: {
+                            slidesPerView: 4,
+                            spaceBetween: 40,
+                        },
+                        1024: {
+                            slidesPerView: 5,
+                            spaceBetween: 50,
+                        },
+                    },
+                });
+            }
+        </script>
         <script>
             @if (Session::has('success'))
                 Swal.fire(
@@ -222,50 +255,6 @@
                     'error'
                 )
             @endif
-        </script>
-
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-        <script>
-            let swiper = new Swiper(".swiper-container", {
-                slidesPerView: "auto",
-                spaceBetween: 2,
-                loop: true,
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-                breakpoints: {
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    768: {
-                        slidesPerView: 4,
-                        spaceBetween: 40,
-                    },
-                    1024: {
-                        slidesPerView: 5,
-                        spaceBetween: 50,
-                    },
-                },
-            });
-        </script>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                var mySwiper = new Swiper('.carousel-container', {
-                    direction: 'horizontal',
-                    loop: true,
-                    autoplay: {
-                        delay: 5000, // Adjust this value to set the delay time in milliseconds
-                    },
-                });
-            });
         </script>
     @endpush
 </x-guest-layout>
