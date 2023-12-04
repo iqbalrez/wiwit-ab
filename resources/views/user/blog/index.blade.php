@@ -51,7 +51,7 @@
                     <p class="line-clamp-3 font-semibold text-xl tracking-tight leading-7 text-dark mb-3">
                         {{ $blogs->take(1)->first()->title }}
                     </p>
-                    <p class="line-clamp-2 text-gray-500 text-xs 2xl:text-sm leading-6 font-normal">
+                    <p class="line-clamp-2 text-gray-500 text-xs 2xl:text-sm leading-6 font-light">
                         {!! Str::limit($blogs->take(1)->first()->content, 100) !!}
                     </p>
                 </div>
@@ -87,7 +87,7 @@
                                         class="line-clamp-2 font-semibold text-md hover:line-clamp-none tracking-tight leading-7 text-dark mb-2">
                                         {{ $data->title }}
                                     </p>
-                                    <p class="line-clamp-2 text-gray-500 text-xs 2xl:text-sm leading-6 font-normal">
+                                    <p class="line-clamp-2 text-gray-500 text-xs 2xl:text-sm leading-6 font-light">
                                         {!! Str::limit($data->content, 100) !!}
                                     </p>
                                 </div>
@@ -102,7 +102,7 @@
 
     {{-- Latest Blog --}}
     <section>
-        <div class="relative items-center w-full px-5 pt-20 py-20 mx-auto md:px-12 lg:px-14 xl:px-24 max-w-6xl">
+        <div class="relative items-center w-full px-5 pt-20 py-20 mx-auto md:px-12 lg:px-14 xl:px-24 max-w-full">
             <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                 @foreach ($blogs->skip(4) as $data)
                     <div class="inline-flex gap-3 items-start"
@@ -129,7 +129,7 @@
                                     class="line-clamp-2 font-medium text-sm hover:line-clamp-none tracking-tight leading-7 text-dark mb-3">
                                     {{ $data->title }}
                                 </p>
-                                <p class="line-clamp-2 text-gray-500 text-xs 2xl:text-sm leading-6 font-normal">
+                                <p class="line-clamp-2 text-gray-500 text-xs 2xl:text-sm leading-6 font-light">
                                     {!! Str::limit($data->content, 100) !!}
                                 </p>
                                 <div class="flex items-center gap-2 text-xs 2xl:text-sm text-gray-400 mt-3">
