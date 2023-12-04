@@ -182,25 +182,24 @@
                     </div>
                 @endforeach
             </div>
-
-            {{-- Partners --}}
-            <div class="max-w-6xl">
-                <div class="px-4 mx-auto max-w-full sm:px-6 lg:py-8 lg:px-8" data-aos="fade-up">
-                    <div
-                        class="mt-6 grid gap-5 md:grid-flow-col lg:mt-8 swiper-container swiper-initialized swiper-horizontal">
-                        <div class="swiper-wrapper flex">
-                            @foreach ($partners as $partner)
-                                <div class="swiper-slide flex justify-center col-span-1">
-                                    <img class="blur-mode w-full h-20 object-contain"
-                                        src="{{ asset('storage/partner/' . $partner->logo) }}" alt="Partner Logo" />
-                                </div>
-                            @endforeach
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                </div>
-            </div>
     </section>
+
+    {{-- Partners --}}
+    <div class="max-w-6xl">
+        <div class="px-4 mx-auto max-w-full sm:px-6 lg:py-8 lg:px-8" data-aos="fade-up">
+            <div class="mt-6 grid gap-5 md:grid-flow-col lg:mt-8 swiper-container swiper-initialized swiper-horizontal">
+                <div class="swiper-wrapper flex">
+                    @foreach ($partners as $partner)
+                        <div class="swiper-slide flex justify-center col-span-1">
+                            <img class="blur-mode w-full h-20 object-contain"
+                                src="{{ asset('storage/partner/' . $partner->logo) }}" alt="Partner Logo" />
+                        </div>
+                    @endforeach
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
 
     @push('js-internal')
         <script>
