@@ -4,13 +4,13 @@
     {{-- Hero --}}
     <section class="relative flex items-center w-full"
         style="background-color:#E1ECF0; background-image: url('<?= asset('assets/SG-WIWIT-01.svg') ?>'); background-size: cover; background-position: right top">
-        <div class="relative items-center w-full px-5 pt-20 pb-20 md:pb-0 mx-auto md:px-12 lg:px-14 xl:px-0 max-w-6xl">
+        <div class="relative items-center w-full px-5 pt-20 pb-20 md:pb-0 mx-auto md:px-12 lg:px-14 max-w-7xl">
             <div class="relative flex-col items-start m-auto align-middle">
                 <div class="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-4">
                     <div class="relative items-center gap-12 m-auto lg:inline-flex sm:order-first">
                         <div class="max-w-xl text-center lg:text-left">
                             <div>
-                                <p class="text-sm 2xl:text-xl text-dark font-light">
+                                <p class="text-sm md:text-xl text-dark font-light">
                                     Hi, I’m Wiwit 👋
                                 </p>
                                 <p class="text-2xl font-semibold tracking-tight text-dark sm:text-5xl">
@@ -42,8 +42,8 @@
 
     {{-- Features --}}
     <section>
-        <div class="relative items-center w-full px-5 py-28 mx-auto md:px-12 lg:px-14 xl:px-0 max-w-6xl">
-            <p class="text-2xl 2xl:text-3xl font-semibold text-dark max-w-sm mx-auto text-center">
+        <div class="relative items-center w-full px-5 py-28 mx-auto md:px-12 lg:px-14 md:px-0 max-w-6xl">
+            <p class="text-2xl sm:text-4xl font-semibold tracking-tight text-dark max-w-sm mx-auto text-center">
                 Solution for every
                 business need<span class="text-primary">.</span>
             </p>
@@ -53,7 +53,7 @@
                     <p class="mt-5 text-lg font-medium leading-6 text-dark">
                         Public Course
                     </p>
-                    <p class="mt-3 text-sm 2xl:text-md text-gray-500 line-clamp-3 hover:line-clamp-none">
+                    <p class="mt-3 text-sm md:text-md text-gray-500 line-clamp-3 hover:line-clamp-none">
                         Pentahelix public course that focuses on solutions to address pentahelix issues
                     </p>
                 </div>
@@ -63,7 +63,7 @@
                     <p class="mt-5 text-lg font-medium leading-6 text-dark">
                         In House Training
                     </p>
-                    <p class="mt-3 text-sm 2xl:text-md text-gray-500 line-clamp-3 hover:line-clamp-none">
+                    <p class="mt-3 text-sm md:text-md text-gray-500 line-clamp-3 hover:line-clamp-none">
                         Adjustment of Budget Design (RAB) & Work Reference Framework (KAK) in accordance with pentahelix
                         needs alongside the target of the established goal
                     </p>
@@ -74,7 +74,7 @@
                     <p class="mt-5 text-lg font-medium leading-6 text-dark">
                         Research & Project
                     </p>
-                    <p class="mt-3 text-sm 2xl:text-md text-gray-500 line-clamp-3 hover:line-clamp-none">
+                    <p class="mt-3 text-sm md:text-md text-gray-500 line-clamp-3 hover:line-clamp-none">
                         Research and projects for academics, government, nonprofit organizations, and communities
                     </p>
                 </div>
@@ -84,7 +84,7 @@
                     <p class="mt-5 text-lg font-medium leading-6 text-dark">
                         Coaching & Training Executive
                     </p>
-                    <p class="mt-3 text-sm 2xl:text-md text-gray-500 line-clamp-3 hover:line-clamp-none">
+                    <p class="mt-3 text-sm md:text-md text-gray-500 line-clamp-3 hover:line-clamp-none">
                         Navigating leaders in managing organizational complexity, including handling multi-stakeholders
                         both within and outside the organization, and developing leadership in the aspects of
                         communication and interpersonal relationships
@@ -96,11 +96,11 @@
 
     {{-- Personalized --}}
     <section>
-        <div class="relative items-center w-full px-5 py-8 mx-auto md:px-12 lg:px-14 xl:px-0 max-w-lg text-center">
-            <p class="text-2xl 2xl:text-3xl font-semibold text-dark">
+        <div class="relative items-center w-full px-5 py-8 mx-auto md:px-12 lg:px-14 md:px-0 max-w-lg text-center">
+            <p class="text-2xl sm:text-4xl font-semibold tracking-tight text-dark">
                 Need a personalized solution<span class="text-primary">?</span>
             </p>
-            <p class="text-sm 2xl:text-md text-gray-500 mt-3 max-w-md mx-auto">
+            <p class="text-sm md:text-md text-gray-500 mt-3 max-w-md mx-auto">
                 I assist companies in developing and implementing effective risk management strategies.
             </p>
             <div class="mt-7">
@@ -117,33 +117,34 @@
         <div class="relative items-center w-full px-5 py-24 mx-auto md:px-12 lg:px-16 max-w-6xl">
             <div class="w-full mx-auto text-left">
                 <div class="relative flex-col items-center m-auto align-middle">
-                    <div class="items-center gap-12 text-left lg:gap-24 lg:inline-flex">
+                    <div class="items-center gap-8 text-left lg:inline-flex">
                         <div class="order-first block w-full mt-12 lg:mt-0">
-                            <img class="object-cover object-center w-[452px] h-[536px] rounded-xl mx-auto lg:ml-auto"
+                            <img class="object-cover object-center w-3/4 h-3/4 md:w-[452px] md:h-[536px] rounded-xl mx-auto lg:ml-auto"
                                 alt="hero" src="{{ asset('assets/empower.jpg') }}">
                         </div>
                         <div class="flex flex-col mt-6 lg:mt-0">
-                            <div>
-                                <p class="text-2xl font-semibold tracking-tight text-dark sm:text-4xl">
+                            <div class="flex items-center justify-center">
+                                <p
+                                    class="text-2xl sm:text-4xl md:max-w-full max-w-md font-semibold tracking-tight text-dark text-center md:text-start">
                                     Empowering you to make sound financial decision.
                                 </p>
                             </div>
-                            <p class="mt-5 text-sm 2xl:text-md leading-7 text-gray-500">
+                            <p class="mt-5 text-sm md:text-md leading-7 text-gray-500 text-center md:text-start">
                                 My mission is to empower you with the knowledge and tools you need
                             </p>
-                            <div class="mt-4 space-y-3">
+                            <div class="mt-4 space-y-3 grid grid-flow-row">
                                 <div
-                                    class="inline-flex items-center py-3.5 px-12 bg-[#FAFBFD] text-dark rounded-lg w-fit">
+                                    class="inline-flex w-fit justify-center items-center py-3.5 px-12 bg-[#FAFBFD] text-dark rounded-lg md:w-full">
                                     <ion-icon name="checkmark-circle-outline" class="w-6 h-6 mr-2"></ion-icon>
                                     <span class="font-medium">Project Management</span>
                                 </div>
                                 <div
-                                    class="inline-flex items-center py-3.5 px-12 bg-[#FAFBFD] text-dark rounded-lg w-fit">
+                                    class="inline-flex w-fit justify-center items-center py-3.5 px-12 bg-[#FAFBFD] text-dark rounded-lg md:w-full">
                                     <ion-icon name="checkmark-circle-outline" class="w-6 h-6 mr-2"></ion-icon>
                                     <span class="font-medium">Entrepreneurship</span>
                                 </div>
                                 <div
-                                    class="inline-flex items-center py-3.5 px-12 bg-[#FAFBFD] text-dark rounded-lg w-fit">
+                                    class="inline-flex w-fit justify-center items-center py-3.5 px-12 bg-[#FAFBFD] text-dark rounded-lg md:w-full">
                                     <ion-icon name="checkmark-circle-outline" class="w-6 h-6 mr-2"></ion-icon>
                                     <span class="font-medium">Economy and Business</span>
                                 </div>
@@ -169,7 +170,7 @@
                         <img src="{{ $data->avatar ? asset('storage/testimonial/' . $data->avatar) : asset('assets/default.png') }}"
                             class="bg-gray-300 rounded-full mx-auto border border-gray-100 mt-12 w-60 h-60 object-center object-cover"
                             alt="">
-                        <div class="text-xs 2xl:text-sm px-4">
+                        <div class="text-xs md:text-sm px-4">
                             <p class="mt-8 text-gray-500 leading-7">
                                 “{{ $data->testimonial }}”
                             </p>

@@ -109,7 +109,10 @@
             @endforeach
 
         </div>
-        <a href=""
-            class="text-[#133D4F] font-normal flex justify-end text-sm text-right hover:text-green-700">Back To Top</a>
+        <div class="flex justify-center md:justify-end mt-4">
+            <a href=""
+                class="text-[#133D4F] font-normal flex justify-end text-sm text-center md:text-right hover:text-green-700">Back
+                To Top</a>
+        </div>
     </div>
 </footer>
