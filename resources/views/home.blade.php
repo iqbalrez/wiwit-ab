@@ -182,8 +182,8 @@
                 @endforeach
             </div>
 
-            {{-- Partner --}}
-            <div class="mx-auto mt-24">
+            {{-- Partners --}}
+            <section class="py-12">
                 <div class="">
                     <div class="px-4 mx-auto max-w-7xl sm:px-6 lg:py-8 lg:px-8" data-aos="fade-up">
                         <div class="mt-6 grid gap-5 md:grid-flow-col lg:mt-8 swiper-container">
@@ -199,7 +199,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
     </section>
 
     @push('js-internal')
