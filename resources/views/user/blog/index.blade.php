@@ -51,7 +51,8 @@
                     <p class="line-clamp-3 font-semibold text-xl tracking-tight leading-7 text-dark mb-3">
                         {{ $blogs->take(1)->first()->title }}
                     </p>
-                    <p class="line-clamp-2 text-gray-500 text-xs 2xl:text-sm leading-6 font-light">
+                    <p class="line-clamp-2 text-gray-500 text-xs 2xl:text-sm leading-6 font-light"
+                        style="color: slategray !important">
                         {!! Str::limit($blogs->take(1)->first()->content, 100) !!}
                     </p>
                 </div>
