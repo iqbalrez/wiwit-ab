@@ -252,5 +252,17 @@
                 },
             });
         </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var mySwiper = new Swiper('.carousel-container', {
+                    direction: 'horizontal',
+                    loop: true,
+                    autoplay: {
+                        delay: 5000, // Adjust this value to set the delay time in milliseconds
+                    },
+                });
+            });
+        </script>
     @endpush
 </x-guest-layout>
