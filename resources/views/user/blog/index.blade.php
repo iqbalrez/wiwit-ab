@@ -87,9 +87,9 @@
                                         class="line-clamp-2 font-semibold text-md hover:line-clamp-none tracking-tight leading-7 text-dark mb-2">
                                         {{ $data->title }}
                                     </p>
-                                    {{-- <p class="line-clamp-2 text-gray-500 text-xs 2xl:text-sm leading-6 font-normal">
+                                    <p class="line-clamp-2 text-gray-500 text-xs 2xl:text-sm leading-6 font-normal">
                                         {!! Str::limit($data->content, 100) !!}
-                                    </p> --}}
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -102,7 +102,7 @@
 
     {{-- Latest Blog --}}
     <section>
-        <div class="relative items-center w-full px-5 pt-20 py-20 mx-auto md:px-12 lg:px-14 xl:px-24 max-w-full">
+        <div class="relative items-center w-full px-5 pt-20 py-20 mx-auto md:px-12 lg:px-14 xl:px-24 max-w-6xl">
             <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                 @foreach ($blogs->skip(4) as $data)
                     <div class="inline-flex gap-3 items-start"
@@ -115,7 +115,7 @@
                         <div>
                             <div class="flex gap-3 items-center mb-2">
                                 <div
-                                    class="flex items-center rounded-lg justify-center py-2 text-sm px-6 text-white bg-gray-700">
+                                    class="flex items-center rounded-lg justify-center py-2 text-sm px-6 text-white bg-primary">
                                     <span>
                                         {{ $data->blogCategory->name ?? 'Uncategorized' }}
                                     </span>
@@ -129,9 +129,9 @@
                                     class="line-clamp-2 font-medium text-sm hover:line-clamp-none tracking-tight leading-7 text-dark mb-3">
                                     {{ $data->title }}
                                 </p>
-                                {{-- <p class="line-clamp-2 text-gray-500 text-xs 2xl:text-sm leading-6 font-normal">
+                                <p class="line-clamp-2 text-gray-500 text-xs 2xl:text-sm leading-6 font-normal">
                                     {!! Str::limit($data->content, 100) !!}
-                                </p> --}}
+                                </p>
                                 <div class="flex items-center gap-2 text-xs 2xl:text-sm text-gray-400 mt-3">
                                     <ion-icon name="eye-outline"></ion-icon> {{ $data->view_count }}
                                 </div>

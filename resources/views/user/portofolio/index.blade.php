@@ -90,9 +90,6 @@
                         </p>
                     </div>
                 </div>
-                <div class="lg:ml-auto mt-4 lg:mt-32 text-primary hover:text-dark">
-                    <a href="#" class="font-normal text-sm ">Explore More Works</a>
-                </div>
             </div>
 
             <div>
@@ -131,7 +128,7 @@
                                                                     <div class="flex items-center gap-x-2">
                                                                         <p
                                                                             class="text-sm text-black 2xl:text-sm font-semibold">
-                                                                            Release Buku“{{ $data->title }}” </p>
+                                                                            {{ $data->title }} </p>
                                                                     </div>
 
                                                                 </div>
