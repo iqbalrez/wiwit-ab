@@ -118,7 +118,8 @@
                                                     id="course-list">
                                                     @foreach ($category->works as $data)
                                                         <div class="w-64 rounded-xl mx-auto mb-8 border h-fit">
-                                                            <a href="#">
+                                                            <a target="_blank"
+                                                                href="{{ asset('storage/works/' . $data->photo) }}">
                                                                 <img class="rounded-t-xl h-44 object-center rounded-xl object-cover w-full"
                                                                     src="{{ asset('storage/works/' . $data->photo) }}"
                                                                     alt="" />
@@ -135,7 +136,8 @@
                                                                 <a href="#">
                                                                     <h5
                                                                         class="mb-2 text-xs 2xl:text-sm font-normal text-[#757575]">
-                                                                        {{ $data->date }} </h5>
+                                                                        {{ \Carbon\Carbon::parse($data->date)->format('d F Y') }}
+                                                                    </h5>
                                                                 </a>
 
 
@@ -164,7 +166,9 @@
             <div class="col-span-3">
                 <p class="font-bold text-3xl text-black text-center">On The Cutting Edge<span
                         class="text-primary">.</span></p>
-                <p class="font-normal text-center max-w-lg text-sm text-[#757575] mt-3 mx-auto">With over 22 years of
+                <p class="font-normal text-center max-w-lg text-sm text-[#757575] mt-3 mx-auto leading-relaxed">With
+                    over
+                    22 years of
                     valuable experience, my portfolio website reflects a journey marked by continuous growth and
                     expertise in my field. xThese numbers aren't just statistics—they represent a wealth of
                     relationships and a
@@ -203,14 +207,15 @@
                 <p class="font-semibold text-2xl mt-8 items-start tracking-normal text-dark">
                     Business Insights
                 </p>
-                <p class="mt-4 text-[#757575] text-normal text-sm max-w-xs">Engage with compelling narratives and
+                <p class="mt-4 text-[#757575] text-normal text-sm max-w-xs leading-relaxed">Engage with compelling
+                    narratives and
                     discover a tapestry of
                     perspectives that
                     inform, entertain, and spark meaningful conversations. Welcome to a corner of the digital realm
                     where ideas take flight. </p>
 
                 <div>
-                    <a href="#"
+                    <a href="{{ route('blog.index') }}"
                         class="bg-[#67BD65] text-white rounded-3xl px-9 text-xs 2xl:text-sm flex items-center w-fit mt-8 py-3.5">
                         Read
                         The Blog</a>
