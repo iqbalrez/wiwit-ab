@@ -2,17 +2,10 @@
     @section('title', 'Message')
     <div class="relative overflow-x-auto rounded-lg custom-box-shadow  overflow-y-auto">
         <div class="md:flex items-center space-y-3 md:space-y-0 justify-between p-4 bg-white ">
-            <div>
-                <button data-modal-target="default-modal" data-modal-toggle="default-modal" onclick="btnAdd()"
-                    class="block text-white bg-dark hover:bg-dark focus:ring-4 focus:outline-none focus:ring-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center"
-                    type="button">
-                    Add message
-                </button>
-            </div>
             <div class="relative">
                 <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                    <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                        fill="none" viewBox="0 0 20 20">
+                    <svg class="w-4 h-4 text-gray-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 20 20">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                             d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                     </svg>
@@ -48,7 +41,7 @@
                             {{ $data->email }}
                         </td>
                         <td class="px-6 py-4 w-1/2">
-                            {{ $data->message }}
+                            {{ Str::limit($data->message, 100) }}
                         </td>
                         <td class="px-6 py-4 space-x-3">
                             <ion-icon name="create" class="w-6 h-6 text-orange-600 cursor-pointer"
@@ -73,7 +66,7 @@
                 <!-- Modal header -->
                 <div class="flex items-start justify-between p-4 border-b rounded-t">
                     <h3 class="text-md font-semibold text-gray-900">
-                        Add message
+                        Detail message
                     </h3>
                     <button type="button"
                         class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ml-auto inline-flex justify-center items-center"
@@ -97,13 +90,7 @@
                         <x-textarea id="message" label="Message" required name="message" value="" placeholder=""
                             class="" />
                     </div>
-                    <!-- Modal footer -->
-                    <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b">
-                        <button type="submit"
-                            class="text-white bg-dark hover:bg-dark focus:ring-4 focus:outline-none focus:ring-dark font-medium rounded-lg text-sm px-5 py-2.5 text-center">Submit</button>
-                        <button data-modal-hide="default-modal" type="button"
-                            class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10">Decline</button>
-                    </div>
+
                 </form>
             </div>
         </div>
@@ -150,12 +137,6 @@
 
     @push('js-internal')
         <script>
-            function btnAdd() {
-                $('#default-modal form').trigger('reset');
-                let url = "{{ route('admin.message.store') }}";
-                $('#default-modal form').attr('action', url);
-            }
-
             function btnEdit(id) {
                 let url = "{{ route('admin.message.update', ':id') }}";
                 url = url.replace(':id', id);
