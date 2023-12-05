@@ -10,7 +10,7 @@
                             <p class="text-sm 2xl:text-lg text-primary font-light">
                                 Contact Me
                             </p>
-                            <p class="text-2xl font-semibold tracking-tight text-dark sm:text-5xl">
+                            <p class="text-2xl font-bold tracking-tight text-dark sm:text-5xl">
                                 Wanna talk or ask something<span class="text-primary">?</span>
                             </p>
                             <p

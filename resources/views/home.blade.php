@@ -15,7 +15,7 @@
                                 <p class="text-sm md:text-xl text-dark font-light">
                                     Hi, I’m Wiwit 👋
                                 </p>
-                                <p class="text-2xl font-semibold tracking-tight text-dark sm:text-5xl">
+                                <p class="text-2xl font-bold tracking-tight text-dark sm:text-5xl">
                                     Risk Management Coach<span class="text-primary">.</span>
                                 </p>
                                 <p

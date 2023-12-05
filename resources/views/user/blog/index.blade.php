@@ -11,7 +11,7 @@
                             <p class="text-sm 2xl:text-lg text-primary font-light">
                                 Blog
                             </p>
-                            <p class="text-2xl font-semibold tracking-tight text-dark sm:text-5xl">
+                            <p class="text-2xl font-bold tracking-tight text-dark sm:text-5xl">
                                 Develop <br>your potential<span class="text-primary">.</span>
                             </p>
                             <p class="mx-auto lg:mx-0 mt-3 text-xl tracking-tight leading-8 text-gray-600 font-light">
