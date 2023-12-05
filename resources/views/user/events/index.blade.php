@@ -53,20 +53,21 @@
                         @foreach ($eventCategory->events as $event)
                             <div class="bg-white rounded-lg ces">
                                 <div class="w-full">
-                                    <a href="#">
+                                    <a target="_blank"
+                                        href="{{ $event->thumbnail ? asset('storage/event/' . $event->thumbnail) : asset('assets/default.png') }}">
                                         <img class="rounded-t-lg w-full h-48 bg-gray-50 object-cover object-center"
                                             src="{{ $event->thumbnail ? asset('storage/event/' . $event->thumbnail) : asset('assets/default.png') }}"
                                             alt="" />
                                     </a>
                                 </div>
                                 <div class="p-4 w-full">
-                                    <p class="mb-3 text-xs 2xl:text-sm text-gray-500">
-                                        {{ \Carbon\Carbon::parse($event->created_at)->format('d M Y') }}
+                                    <p class="mb-3 text-xs md:text-sm text-gray-500">
+                                        {{ \Carbon\Carbon::parse($event->date)->format('d M Y') }}
                                     </p>
-                                    <p class="mb-6 text-lg font-semibold text-dark line-clamp-2">
+                                    <p class="mb-3 text-lg font-semibold text-dark line-clamp-2">
                                         {{ $event->name }}
                                     </p>
-                                    <p class="text-xs 2xl:text-sm text-gray-500">
+                                    <p class="text-xs md:text-sm text-gray-500">
                                         {{ $event->location }}
                                     </p>
                                 </div>
