@@ -221,32 +221,33 @@
                     type: "GET",
                     dataType: "JSON",
                     success: function(data) {
-                        let start_date = data.start_date;
-                        let end_date = data.end_date;
+                        $('#default-modal form').attr('action', url);
+                        $('#default-modal form').trigger('reset');
+
+                        $('#default-modal form #company').val(data.company);
+                        $('#default-modal form #position').val(data.position);
 
                         // convert date to month-year format
+                        let start_date = data.start_date;
                         let start_date_arr = start_date.split('-');
                         let start_date_month = start_date_arr[1];
                         let start_date_year = start_date_arr[0];
-
-                        let end_date_arr = end_date.split('-');
-                        let end_date_month = end_date_arr[1];
-                        let end_date_year = end_date_arr[0];
-
-                        $('#default-modal form').attr('action', url);
-                        $('#default-modal form').trigger('reset');
+                        $('#default-modal form #start_date').val(start_date_year + '-' + start_date_month);
 
                         if (data.end_date == null) {
                             $('#default-modal form #is_ongoing').prop('checked', true);
                             $('#end_date_container').hide();
+                            $('#default-modal form #end_date').val(null);
                         } else {
+                            let end_date = data.end_date;
+                            let end_date_arr = end_date.split('-');
+                            let end_date_month = end_date_arr[1];
+                            let end_date_year = end_date_arr[0];
                             $('#default-modal form #is_ongoing').prop('checked', false);
                             $('#end_date_container').show();
+                            $('#default-modal form #end_date').val(end_date_year + '-' + end_date_month);
                         }
-                        $('#default-modal form #company').val(data.company);
-                        $('#default-modal form #position').val(data.position);
-                        $('#default-modal form #start_date').val(start_date_year + '-' + start_date_month);
-                        $('#default-modal form #end_date').val(end_date_year + '-' + end_date_month);
+
                         $('#default-modal form #description').val(data.description);
                         $('#default-modal form #job_type').val(data.job_type);
                     },
