@@ -49,15 +49,15 @@
                                     <h3 class="mb-3 font-semibold text-dark text-xl">
                                         {{ $data->company }}, {{ $data->job_type }}</h3>
                                     <p class="text-sm mt-3 font-normal leading-snug tracking-wide text-[#757575]">
-                                        @if ($date->start_date && $date->end_date)
-                                            @if (date('F Y', strtotime($date->start_date)) == date('F Y', strtotime($date->end_date)))
-                                                {{ date('F Y', strtotime($date->start_date)) }}
+                                        @if ($data->start_date && $data->end_date)
+                                            @if (date('F Y', strtotime($data->start_date)) == date('F Y', strtotime($data->end_date)))
+                                                {{ date('F Y', strtotime($data->start_date)) }}
                                             @else
-                                                {{ date('F Y', strtotime($date->start_date)) }} -
-                                                {{ date('F Y', strtotime($date->end_date)) }}
+                                                {{ date('F Y', strtotime($data->start_date)) }} -
+                                                {{ date('F Y', strtotime($data->end_date)) }}
                                             @endif
-                                        @elseif ($data->start_date && $data->end_date == null)
-                                            {{ date('F Y', strtotime($date->start_date)) }} -
+                                        @elseif ($data->start_date && !$data->end_date)
+                                            {{ date('F Y', strtotime($data->start_date)) }} -
                                             present
                                         @else
                                             -
