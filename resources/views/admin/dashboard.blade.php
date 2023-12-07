@@ -52,7 +52,7 @@
             </div>
 
             <div class="">
-                <p class="flex items-center text-2xl text-dark">
+                <p class="flex items-center text-xl font-bold">
                     {{ $blogs->count() }}
                 </p>
                 <p class="flex items-center text-xs 2xl:text-sm text-dark">
@@ -67,7 +67,7 @@
             </div>
 
             <div class="">
-                <p class="flex items-center text-2xl text-dark">
+                <p class="flex items-center text-xl font-bold">
                     {{ $materials->count() }}
                 </p>
                 <p class="flex items-center text-xs 2xl:text-sm text-dark">
@@ -82,7 +82,7 @@
             </div>
 
             <div class="">
-                <p class="flex items-center text-2xl text-dark">
+                <p class="flex items-center text-xl font-bold">
                     {{ $testimonials->count() }}
                 </p>
                 <p class="flex items-center text-xs 2xl:text-sm text-dark">
@@ -90,5 +90,11 @@
                 </p>
             </div>
         </div>
+    </div>
+
+    <div class="mt-4 space-y-4">
+        <h1 class="text-2xl font-bold mt-8 mb-4">Panduan</h1>
+        <iframe src="https://scribehow.com/page-embed/Panduan_Dashboard_Website_WiwitAB__3WAdDN1KTw2gl6U8oGVm6w"
+            width="100%" height="640" allowfullscreen frameborder="0"></iframe>
     </div>
 </x-app-layout>
