@@ -31,10 +31,10 @@
                         Position
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        Start Date
+                        Start
                     </th>
                     <th scope="col" class="px-6 py-3">
-                        End Date
+                        End
                     </th>
                     <th scope="col" class="px-6 py-3">
                         Description
@@ -57,10 +57,10 @@
                             {{ $data->position }}
                         </td>
                         <td class="px-6 py-4">
-                            {{ \Carbon\Carbon::parse($data->start_date)->locale('id')->isoFormat('LL') }}
+                            {{ \Carbon\Carbon::parse($data->start_date)->locale('id')->isoFormat('MMMM YYYY') }}
                         </td>
                         <td class="px-6 py-4">
-                            {{ \Carbon\Carbon::parse($data->end_date)->locale('id')->isoFormat('LL') }}
+                            {{ $data->end_date != null? \Carbon\Carbon::parse($data->end_date)->locale('id')->isoFormat('MMMM YYYY'): 'Present' }}
                         </td>
                         <td class="px-6 py-4">
                             {{ $data->description }}
@@ -112,10 +112,17 @@
                             placeholder="" class="" />
                         <x-input id="position" type="text" label="Position" required name="position" value=""
                             placeholder="" class="" />
-                        <x-input id="start_date" type="date" label="Start Date" required name="start_date"
-                            value="" placeholder="" class="" />
-                        <x-input id="end_date" type="date" label="End Date" required name="end_date"
-                            value="" placeholder="" class="" />
+                        <x-input id="start_date" type="month" label="Start" required name="start_date" value=""
+                            placeholder="" class="" />
+                        <div class="flex items-center mb-4">
+                            <input checked id="is_ongoing" type="checkbox"
+                                class="rounded border-gray-300 bg-light-pink text-primary-red focus:border-primary-red focus:ring-primary-red " />
+                            <label for="is_ongoing" class="ml-2 block text-sm text-gray-900">On going</label>
+                        </div>
+                        <div id="end_date_container">
+                            <x-input id="end_date" type="month" label="End" name="end_date" value=""
+                                placeholder="(Leave empty if still ongoing)" class="" />
+                        </div>
                         <x-textarea id="description" type="textarea" label="description" required name="description"
                             value="" placeholder="" class="" />
                         <x-input id="job_type" type='text' label="Job Type" required name="job_type"
@@ -178,7 +185,33 @@
                 $('#default-modal form').trigger('reset');
                 let url = "{{ route('admin.experience.store') }}";
                 $('#default-modal form').attr('action', url);
+                $('#end_date_container').hide();
             }
+
+            $('#default-modal form #is_ongoing').change(function() {
+                if (this.checked) {
+                    $('#end_date_container').hide();
+                    $('#end_date').val(null);
+                } else {
+                    $('#end_date_container').show();
+                }
+            });
+
+            // convert month-year format to date format so it can be stored in database
+            $('#default-modal form').submit(function() {
+
+                let start_date = $('#default-modal form #start_date').val();
+                let end_date = $('#default-modal form #end_date').val();
+
+                if (start_date != '') {
+                    $('#default-modal form #start_date').attr('type', 'date');
+                    $('#default-modal form #start_date').val(start_date + '-01');
+                }
+                if (end_date != '') {
+                    $('#default-modal form #end_date').attr('type', 'date');
+                    $('#default-modal form #end_date').val(end_date + '-01');
+                }
+            });
 
             function btnEdit(id) {
                 let url = "{{ route('admin.experience.update', ':id') }}";
@@ -188,12 +221,32 @@
                     type: "GET",
                     dataType: "JSON",
                     success: function(data) {
+                        let start_date = data.start_date;
+                        let end_date = data.end_date;
+
+                        // convert date to month-year format
+                        let start_date_arr = start_date.split('-');
+                        let start_date_month = start_date_arr[1];
+                        let start_date_year = start_date_arr[0];
+
+                        let end_date_arr = end_date.split('-');
+                        let end_date_month = end_date_arr[1];
+                        let end_date_year = end_date_arr[0];
+
                         $('#default-modal form').attr('action', url);
                         $('#default-modal form').trigger('reset');
+
+                        if (data.end_date == null) {
+                            $('#default-modal form #is_ongoing').prop('checked', true);
+                            $('#end_date_container').hide();
+                        } else {
+                            $('#default-modal form #is_ongoing').prop('checked', false);
+                            $('#end_date_container').show();
+                        }
                         $('#default-modal form #company').val(data.company);
                         $('#default-modal form #position').val(data.position);
-                        $('#default-modal form #start_date').val(data.start_date);
-                        $('#default-modal form #end_date').val(data.end_date);
+                        $('#default-modal form #start_date').val(start_date_year + '-' + start_date_month);
+                        $('#default-modal form #end_date').val(end_date_year + '-' + end_date_month);
                         $('#default-modal form #description').val(data.description);
                         $('#default-modal form #job_type').val(data.job_type);
                     },

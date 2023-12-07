@@ -33,7 +33,7 @@ class ExperienceController extends Controller
             'company' => ['required'],
             'position'   => ['required'],
             'start_date'   => ['required'],
-            'end_date'     => ['required'],
+            'end_date'     => ['nullable'],
             'description'    => ['required'],
             'job_type'    => ['required']
         ]);
@@ -52,7 +52,7 @@ class ExperienceController extends Controller
             'company' => ['required'],
             'position'   => ['required'],
             'start_date'   => ['required'],
-            'end_date'     => ['required'],
+            'end_date'     => ['nullable'],
             'description'    => ['required'],
             'job_type'    => ['required']
 
