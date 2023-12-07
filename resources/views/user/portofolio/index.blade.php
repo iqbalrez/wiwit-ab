@@ -56,7 +56,7 @@
                                                 {{ date('F Y', strtotime($date->start_date)) }} -
                                                 {{ date('F Y', strtotime($date->end_date)) }}
                                             @endif
-                                        @elseif ($date->start_date && $date->end_date == null)
+                                        @elseif ($data->start_date && $data->end_date == null)
                                             {{ date('F Y', strtotime($date->start_date)) }} -
                                             present
                                         @else
