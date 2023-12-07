@@ -168,18 +168,17 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-24">
                 @foreach ($testimonials as $data)
                     <div class="rounded-xl border-[1.5px] bg-white border-[#EDEDED] p-6 custom-box-shadow">
-                        <p class="font-semibold text-dark">{{ $data->job }}</p>
                         <img src="{{ $data->avatar ? asset('storage/testimonial/' . $data->avatar) : asset('assets/default.png') }}"
-                            class="bg-gray-300 rounded-full mx-auto border border-gray-100 mt-12 w-60 h-60 object-center object-cover"
+                            class="bg-gray-300 rounded-full mx-auto border border-gray-100 mt-4 h-28 aspect-square object-center object-cover"
                             alt="">
                         <div class="text-xs md:text-sm px-4">
-                            <p class="mt-8 text-gray-500 leading-7">
+                            <p class="mt-8 text-gray-500 leading-7 line-clamp-5 hover:line-clamp-none">
                                 “{{ $data->testimonial }}”
                             </p>
                             <p class="text-dark mt-7">
-                                <span class="font-semibold">{{ $data->name }},</span> <span
-                                    class="text-gray-500">{{ $data->position }}</span>
                             </p>
+                            <span class="font-semibold">{{ $data->name }},</span>
+                            <p class="text-gray-500">{{ $data->position }} at {{ $data->job }}</p>
                         </div>
                     </div>
                 @endforeach
@@ -187,9 +186,9 @@
     </section>
 
     {{-- Partners --}}
-    <section class="py-12 max-w-screen overflow-x-clip">
+    <section class="max-w-screen overflow-x-clip bg-[#F9FAFC]">
         <div class="">
-            <div class="px-4 x w-screen sm:px-6 lg:py-8 lg:px-8">
+            <div class="px-4 x w-screen sm:px-6 lg:py-8 lg:px-8 mb-4 lg:mb-8">
                 <div class="mt-6 gap-5 lg:mt-8 swiper-container">
                     <div class="grid mx-auto grid-flow-col swiper-wrapper">
                         @foreach ($partners as $partner)
